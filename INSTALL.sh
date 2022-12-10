@@ -1,7 +1,7 @@
 #!/bin/bash
-DIR=./build
+DIR=build
 
-if [ -d "$DIR" ];
+if [ ! -d "build" ]
 then
     mkdir build
 fi
