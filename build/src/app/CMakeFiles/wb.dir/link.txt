@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/wb.dir/wb.c.o -o wb  ../wbgen/libwbgen.a ../wbinfo/libwbinfo.a 

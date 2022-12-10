@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwbinfo.a CMakeFiles/wbinfo.dir/verifyErrorInfo.c.o
+/usr/bin/ranlib libwbinfo.a

@@ -1,0 +1,1 @@
+add_library(wbgen STATIC verify.c)

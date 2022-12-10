@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwbgen.a CMakeFiles/wbgen.dir/verify.c.o
+/usr/bin/ranlib libwbgen.a

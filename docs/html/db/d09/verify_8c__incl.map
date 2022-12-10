@@ -1,0 +1,6 @@
+<map id="src/wbgen/verify.c" name="src/wbgen/verify.c">
+<area shape="rect" id="node1" title="the system control function for wb, it basically checks the usr/bin/wb (executable) and usr/local/wb ..." alt="" coords="19,5,157,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files" alt="" coords="49,80,127,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="96,155,179,181"/>
+</map>
