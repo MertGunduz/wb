@@ -14,7 +14,7 @@
 
 #include "wbgen.h"
 
-bool verify()
+bool verify(int argc)
 {
 
 }
