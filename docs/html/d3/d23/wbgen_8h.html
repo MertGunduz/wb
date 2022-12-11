@@ -75,20 +75,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>the general wb library for generating word files  
+<p>the general wb library for generating word files and listing  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d60/wbinfo_8h_source.html">../wbinfo/wbinfo.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for wbgen.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d9f/wbgen_8h__incl.png" border="0" usemap="#asrc_2wbgen_2wbgen_8h" alt=""/></div>
 <map name="asrc_2wbgen_2wbgen_8h" id="asrc_2wbgen_2wbgen_8h">
-<area shape="rect" title="the general wb library for generating word files" alt="" coords="5,5,152,32"/>
-<area shape="rect" title=" " alt="" coords="73,155,140,181"/>
-<area shape="rect" title=" " alt="" coords="37,80,120,107"/>
-<area shape="rect" href="../../d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="144,80,283,107"/>
+<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="95,5,242,32"/>
+<area shape="rect" title=" " alt="" coords="165,155,231,181"/>
+<area shape="rect" title=" " alt="" coords="25,80,107,107"/>
+<area shape="rect" title=" " alt="" coords="131,80,206,107"/>
+<area shape="rect" title=" " alt="" coords="230,80,315,107"/>
+<area shape="rect" href="../../d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="339,80,478,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -96,9 +100,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2e/wbgen_8h__dep__incl.png" border="0" usemap="#asrc_2wbgen_2wbgen_8hdep" alt=""/></div>
 <map name="asrc_2wbgen_2wbgen_8hdep" id="asrc_2wbgen_2wbgen_8hdep">
-<area shape="rect" title="the general wb library for generating word files" alt="" coords="55,5,202,32"/>
+<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="55,5,202,32"/>
 <area shape="rect" href="../../df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
-<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it basically checks the usr/bin/wb (executable) and usr/local/wb ..." alt="" coords="133,80,271,107"/>
+<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="133,80,271,107"/>
 </map>
 </div>
 </div>
@@ -106,19 +110,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8af5038360da3cdd202091591ffde915"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a8af5038360da3cdd202091591ffde915">verify</a> ()</td></tr>
-<tr class="memdesc:a8af5038360da3cdd202091591ffde915"><td class="mdescLeft">&#160;</td><td class="mdescRight">the main function for verifying the program structure  <a href="../../d3/d23/wbgen_8h.html#a8af5038360da3cdd202091591ffde915">More...</a><br /></td></tr>
-<tr class="separator:a8af5038360da3cdd202091591ffde915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d49e97f5690191a8f29fa3fd1144d19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a0d49e97f5690191a8f29fa3fd1144d19">verify</a> (int argc)</td></tr>
+<tr class="memdesc:a0d49e97f5690191a8f29fa3fd1144d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)  <a href="../../d3/d23/wbgen_8h.html#a0d49e97f5690191a8f29fa3fd1144d19">More...</a><br /></td></tr>
+<tr class="separator:a0d49e97f5690191a8f29fa3fd1144d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>the general wb library for generating word files </p>
+<div class="textblock"><p>the general wb library for generating word files and listing </p>
 <dl class="section author"><dt>Author</dt><dd>Mehmet Mert Gunduz</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>10/12/2022 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
 <dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000003">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8af5038360da3cdd202091591ffde915"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8af5038360da3cdd202091591ffde915">&#9670;&nbsp;</a></span>verify()</h2>
+<a id="a0d49e97f5690191a8f29fa3fd1144d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d49e97f5690191a8f29fa3fd1144d19">&#9670;&nbsp;</a></span>verify()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,13 +130,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool verify </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>the main function for verifying the program structure </p>
+<p>the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if argc is 2 and file structure found, otherwise returns false </dd></dl>
 
 </div>
 </div>

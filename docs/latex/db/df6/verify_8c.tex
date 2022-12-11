@@ -2,26 +2,27 @@
 \label{verify_8c}\index{src/wbgen/verify.c@{src/wbgen/verify.c}}
 
 
-the system control function for wb, it basically checks the \uline{usr/bin/wb (executable)} and \uline{usr/local/wb (folder)}.  
+the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)  
 
 
 {\ttfamily \#include \char`\"{}wbgen.\+h\char`\"{}}\newline
-Include dependency graph for verify.\+c\+:\nopagebreak
+Include dependency graph for verify.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=285pt]{db/d09/verify_8c__incl}
+\includegraphics[width=350pt]{db/d09/verify_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{verify_8c_a0d49e97f5690191a8f29fa3fd1144d19}{verify}} (int argc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-the system control function for wb, it basically checks the \uline{usr/bin/wb (executable)} and \uline{usr/local/wb (folder)}. 
+the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) 
 
 \uline{usr/bin/wb\+:} the executable for the program
 
@@ -47,3 +48,15 @@ Mehmet Mert Gunduz
 \doxysubsubsection{\texorpdfstring{verify()}{verify()}}
 {\footnotesize\ttfamily bool verify (\begin{DoxyParamCaption}\item[{int}]{argc }\end{DoxyParamCaption})}
 
+
+
+the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if argc is 2 and file structure found, otherwise returns false 
+\end{DoxyReturn}

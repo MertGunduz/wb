@@ -1,6 +1,8 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files" alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="73,155,140,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="37,80,120,107"/>
-<area shape="rect" id="node4" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="144,80,283,107"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="95,5,242,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="165,155,231,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="25,80,107,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="131,80,206,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="230,80,315,107"/>
+<area shape="rect" id="node6" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="339,80,478,107"/>
 </map>
