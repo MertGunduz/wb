@@ -5,26 +5,41 @@
 the general wb library for printing information messages  
 
 
-{\ttfamily \#include \char`\"{}../wbgen/wbgen.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
 Include dependency graph for wbinfo.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=210pt]{d1/d99/wbinfo_8h__incl}
+\includegraphics[width=192pt]{d1/d99/wbinfo_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=228pt]{d4/d93/wbinfo_8h__dep__incl}
+\includegraphics[width=350pt]{d4/d93/wbinfo_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_a137aa83ec74421d226a90c92ec032ac9}{KNRM}}~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_a66290957baed5df3930ada4cb8caccf1}{KRED}}~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_a6825f05d3b9d619d91d79d0ef18bb8b2}{KMAG}}~\char`\"{}\textbackslash{}x1B\mbox{[}35m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_a32036c94dbb166a3f874b7efc169841f}{KCYN}}~\char`\"{}\textbackslash{}x1B\mbox{[}36m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}}~\char`\"{}\textbackslash{}x1B\mbox{[}1m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wbinfo_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}}~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{wbinfo_8h_a60ee112a263e53d5a3b4ad696b2715d8}{verify\+Error\+Info}} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{wbinfo_8h_a71fb30fc585d8838d4c70e5519244cb1}{verify\+Argc\+Error}} (int argc)
+\begin{DoxyCompactList}\small\item\em controls the argc, if the argc value equals to 1 writes \char`\"{}missing arguments\char`\"{}, if not writes \char`\"{}too many arguments\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -43,10 +58,59 @@ Mehmet Mert Gunduz
 \item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{wbinfo_8h_a60ee112a263e53d5a3b4ad696b2715d8}\label{wbinfo_8h_a60ee112a263e53d5a3b4ad696b2715d8}} 
-\index{wbinfo.h@{wbinfo.h}!verifyErrorInfo@{verifyErrorInfo}}
-\index{verifyErrorInfo@{verifyErrorInfo}!wbinfo.h@{wbinfo.h}}
-\doxysubsubsection{\texorpdfstring{verifyErrorInfo()}{verifyErrorInfo()}}
-{\footnotesize\ttfamily void verify\+Error\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wbinfo_8h_a26cdbb1a00213c810caccf21cd33a631}\label{wbinfo_8h_a26cdbb1a00213c810caccf21cd33a631}} 
+\index{wbinfo.h@{wbinfo.h}!BOLD@{BOLD}}
+\index{BOLD@{BOLD}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{BOLD}{BOLD}}
+{\footnotesize\ttfamily \#define BOLD~\char`\"{}\textbackslash{}x1B\mbox{[}1m\char`\"{}}
 
+makes the text bold \mbox{\Hypertarget{wbinfo_8h_a32036c94dbb166a3f874b7efc169841f}\label{wbinfo_8h_a32036c94dbb166a3f874b7efc169841f}} 
+\index{wbinfo.h@{wbinfo.h}!KCYN@{KCYN}}
+\index{KCYN@{KCYN}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{KCYN}{KCYN}}
+{\footnotesize\ttfamily \#define KCYN~\char`\"{}\textbackslash{}x1B\mbox{[}36m\char`\"{}}
+
+makes the text cyan color \mbox{\Hypertarget{wbinfo_8h_a6825f05d3b9d619d91d79d0ef18bb8b2}\label{wbinfo_8h_a6825f05d3b9d619d91d79d0ef18bb8b2}} 
+\index{wbinfo.h@{wbinfo.h}!KMAG@{KMAG}}
+\index{KMAG@{KMAG}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{KMAG}{KMAG}}
+{\footnotesize\ttfamily \#define KMAG~\char`\"{}\textbackslash{}x1B\mbox{[}35m\char`\"{}}
+
+makes the text magenta color \mbox{\Hypertarget{wbinfo_8h_a137aa83ec74421d226a90c92ec032ac9}\label{wbinfo_8h_a137aa83ec74421d226a90c92ec032ac9}} 
+\index{wbinfo.h@{wbinfo.h}!KNRM@{KNRM}}
+\index{KNRM@{KNRM}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{KNRM}{KNRM}}
+{\footnotesize\ttfamily \#define KNRM~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}}
+
+makes the the text normal color \mbox{\Hypertarget{wbinfo_8h_a66290957baed5df3930ada4cb8caccf1}\label{wbinfo_8h_a66290957baed5df3930ada4cb8caccf1}} 
+\index{wbinfo.h@{wbinfo.h}!KRED@{KRED}}
+\index{KRED@{KRED}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{KRED}{KRED}}
+{\footnotesize\ttfamily \#define KRED~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}}
+
+makes the text red color \mbox{\Hypertarget{wbinfo_8h_ab702106cf3b3e96750b6845ded4e0299}\label{wbinfo_8h_ab702106cf3b3e96750b6845ded4e0299}} 
+\index{wbinfo.h@{wbinfo.h}!RESET@{RESET}}
+\index{RESET@{RESET}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily \#define RESET~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}}
+
+makes the text normal 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wbinfo_8h_a71fb30fc585d8838d4c70e5519244cb1}\label{wbinfo_8h_a71fb30fc585d8838d4c70e5519244cb1}} 
+\index{wbinfo.h@{wbinfo.h}!verifyArgcError@{verifyArgcError}}
+\index{verifyArgcError@{verifyArgcError}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{verifyArgcError()}{verifyArgcError()}}
+{\footnotesize\ttfamily void verify\+Argc\+Error (\begin{DoxyParamCaption}\item[{int}]{argc }\end{DoxyParamCaption})}
+
+
+
+controls the argc, if the argc value equals to 1 writes \char`\"{}missing arguments\char`\"{}, if not writes \char`\"{}too many arguments\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & ~\newline
+ \\
+\hline
+\end{DoxyParams}

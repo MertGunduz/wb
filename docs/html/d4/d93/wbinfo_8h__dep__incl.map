@@ -1,4 +1,7 @@
 <map id="src/wbinfo/wbinfo.h" name="src/wbinfo/wbinfo.h">
-<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="29,5,179,32"/>
-<area shape="rect" id="node2" href="$dd/def/verifyErrorInfo_8c.html" title="the function for printing verify error info" alt="" coords="5,80,203,107"/>
+<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="153,5,302,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files" alt="" coords="55,80,202,107"/>
+<area shape="rect" id="node5" href="$da/d8e/verifyArgcError_8c.html" title="the function for printing verify argc count error info" alt="" coords="226,80,426,107"/>
+<area shape="rect" id="node3" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,155,108,181"/>
+<area shape="rect" id="node4" href="$db/df6/verify_8c.html" title="the system control function for wb, it basically checks the usr/bin/wb (executable) and usr/local/wb ..." alt="" coords="133,155,271,181"/>
 </map>

@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
     if (verify(argc))
     {
-        printf("good\n");
+        // code
     }
     return 0;
 }

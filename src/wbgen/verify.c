@@ -18,7 +18,17 @@ bool verify(int argc)
 {
     if (argc == 2)
     {
-        return true;
+        struct stat st; /**< for testing the directory */
+
+        if (access("/usr/bin/wb", F_OK) == 0 && stat("/usr/local/wb", &st) == 0)
+        {   
+            return true;
+        }
+        else
+        {
+            verifyFileStructureError();
+            return false;
+        }
     }
     else
     {

@@ -1,7 +1,5 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files" alt="" coords="129,5,275,32"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files" alt="" coords="55,5,202,32"/>
 <area shape="rect" id="node2" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$db/df6/verify_8c.html" title="the system control function for wb, it basically checks the usr/bin/wb (executable) and usr/local/wb ..." alt="" coords="133,80,271,107"/>
-<area shape="rect" id="node4" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="295,80,445,107"/>
-<area shape="rect" id="node5" href="$dd/def/verifyErrorInfo_8c.html" title="the function for printing verify error info" alt="" coords="271,155,469,181"/>
 </map>

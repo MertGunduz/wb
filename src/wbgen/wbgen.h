@@ -1,7 +1,7 @@
 /** 
  * @file wbgen.h
  * 
- * @brief the general wb library for generating word files
+ * @brief the general wb library for generating word files and listing
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -12,7 +12,8 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <unistd.h>
+#include <sys/stat.h>
 #include "../wbinfo/wbinfo.h"
 
-/// the main function for verifying the program structure
-bool verify();
+bool verify(int argc);
