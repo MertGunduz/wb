@@ -14,7 +14,7 @@ echo "=%= build directory created =%="
 #****************************************
 # USR-DIRECTORY CONTROL PART 
 #****************************************
-if [ -d "usr/local/wb" ] && [ -f "usr/bin/wb" ] 
+if [ -d "/usr/local/wb" ] && [ -f "/usr/bin/wb" ] 
 then
     # delete the files if they are exist in the system
     sudo rm -r /usr/local/wb
@@ -22,7 +22,7 @@ then
 fi
 
 echo "=%= file structure controlling =%="
-sleep 5
+sleep 2
 
 #****************************************
 # COMPILING AND LINKING PART 
@@ -35,7 +35,7 @@ then
 fi
 
 echo "=%= compiling and linking the project =%="
-sleep 5
+sleep 2
 
 #****************************************
 # MOVING THE EXECUTABLE TO USR/BIN PART
@@ -47,7 +47,7 @@ then
 fi
 
 echo "=%= moving the executable to usr/bin =%="
-sleep 5
+sleep 2
 
 #****************************************
 # CREATING WB FOLDER TO USR/LOCAL PART
@@ -58,7 +58,7 @@ then
 fi
 
 echo "=%= creating the wb folder to usr/local =%="
-sleep 5
+sleep 2
 
 #****************************************
 # DELETING THE SOURCE BUILD DIRECTORY
@@ -66,7 +66,7 @@ sleep 5
 cd .. && rm -r build
 
 echo "=%= removing the build directory =%="
-sleep 5
+sleep 2
 
 if [ -d "/usr/local/wb" ] && [ -f "/usr/bin/wb" ]
 then 

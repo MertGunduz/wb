@@ -16,5 +16,13 @@
 
 bool verify(int argc)
 {
-
+    if (argc == 2)
+    {
+        return true;
+    }
+    else
+    {
+        verifyArgcError(argc);
+        return false;
+    }
 }

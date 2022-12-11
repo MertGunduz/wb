@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include "../wbinfo/wbinfo.h"
 
 /// the main function for verifying the program structure
 bool verify();
