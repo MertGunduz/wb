@@ -12,8 +12,8 @@
 
 #include "wbinfo.h"
 
-/// @brief prints the mismatched argv 
-/// @param argc 
+/// @brief prints the mismatched argv and adivces to get help by writing the -h or --help argument
+/// @param argv
 void verifyArgumentError(char *argv)
 {
     fprintf(stdout, "%swb:%s invalid option: %s%s%s\n",BOLD, RESET, KMAG, argv, KNRM);

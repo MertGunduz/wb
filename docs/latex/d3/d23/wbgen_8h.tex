@@ -7,18 +7,19 @@ the general wb library for generating word files and listing
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../wbinfo/wbinfo.\+h\char`\"{}}\newline
-Include dependency graph for wbgen.\+h\+:\nopagebreak
+Include dependency graph for wbgen.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d9/d9f/wbgen_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +29,7 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{wbgen_8h_a0d49e97f5690191a8f29fa3fd1144d19}{verify}} (int argc)
+bool \mbox{\hyperlink{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}{verify}} (int argc, char $\ast$first\+Argv)
 \begin{DoxyCompactList}\small\item\em the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -49,11 +50,11 @@ Mehmet Mert Gunduz
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{wbgen_8h_a0d49e97f5690191a8f29fa3fd1144d19}\label{wbgen_8h_a0d49e97f5690191a8f29fa3fd1144d19}} 
+\mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
 \index{wbgen.h@{wbgen.h}!verify@{verify}}
 \index{verify@{verify}!wbgen.h@{wbgen.h}}
 \doxysubsubsection{\texorpdfstring{verify()}{verify()}}
-{\footnotesize\ttfamily bool verify (\begin{DoxyParamCaption}\item[{int}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool verify (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{first\+Argv }\end{DoxyParamCaption})}
 
 
 

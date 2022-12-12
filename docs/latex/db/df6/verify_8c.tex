@@ -17,8 +17,15 @@ Include dependency graph for verify.\+c\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{verify_8c_a0d49e97f5690191a8f29fa3fd1144d19}{verify}} (int argc)
+bool \mbox{\hyperlink{verify_8c_a34e1ad81b228cf24e283e219eb486004}{verify}} (int argc, char $\ast$first\+Argv)
 \begin{DoxyCompactList}\small\item\em the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{verify_8c_ad30f4f1b66d90b2a8712781f633e411a}{arguments}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}-\/a\char`\"{}, \char`\"{}-\/-\/add\char`\"{}, \char`\"{}-\/e\char`\"{}, \char`\"{}-\/-\/edit\char`\"{}, \char`\"{}-\/l\char`\"{}, \char`\"{}-\/-\/list\char`\"{}, \char`\"{}-\/h\char`\"{}, \char`\"{}-\/-\/help\char`\"{}, \char`\"{}-\/v\char`\"{}, \char`\"{}-\/-\/version\char`\"{}, \char`\"{}-\/g\char`\"{}, \char`\"{}-\/-\/github\char`\"{} \}
+\item 
+int \mbox{\hyperlink{verify_8c_a684c63284f4ca0d8a7f43af2e493313a}{arg\+Size}} = 12
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -42,11 +49,11 @@ Mehmet Mert Gunduz
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{verify_8c_a0d49e97f5690191a8f29fa3fd1144d19}\label{verify_8c_a0d49e97f5690191a8f29fa3fd1144d19}} 
+\mbox{\Hypertarget{verify_8c_a34e1ad81b228cf24e283e219eb486004}\label{verify_8c_a34e1ad81b228cf24e283e219eb486004}} 
 \index{verify.c@{verify.c}!verify@{verify}}
 \index{verify@{verify}!verify.c@{verify.c}}
 \doxysubsubsection{\texorpdfstring{verify()}{verify()}}
-{\footnotesize\ttfamily bool verify (\begin{DoxyParamCaption}\item[{int}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool verify (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{first\+Argv }\end{DoxyParamCaption})}
 
 
 
@@ -60,3 +67,18 @@ the system control function for wb, it checks the usr/bin/wb (executable) and us
 \begin{DoxyReturn}{Returns}
 true if argc is 2 and file structure found, otherwise returns false 
 \end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{verify_8c_a684c63284f4ca0d8a7f43af2e493313a}\label{verify_8c_a684c63284f4ca0d8a7f43af2e493313a}} 
+\index{verify.c@{verify.c}!argSize@{argSize}}
+\index{argSize@{argSize}!verify.c@{verify.c}}
+\doxysubsubsection{\texorpdfstring{argSize}{argSize}}
+{\footnotesize\ttfamily int arg\+Size = 12}
+
+\mbox{\Hypertarget{verify_8c_ad30f4f1b66d90b2a8712781f633e411a}\label{verify_8c_ad30f4f1b66d90b2a8712781f633e411a}} 
+\index{verify.c@{verify.c}!arguments@{arguments}}
+\index{arguments@{arguments}!verify.c@{verify.c}}
+\doxysubsubsection{\texorpdfstring{arguments}{arguments}}
+{\footnotesize\ttfamily char$\ast$ arguments\mbox{[}$\,$\mbox{]} = \{\char`\"{}-\/a\char`\"{}, \char`\"{}-\/-\/add\char`\"{}, \char`\"{}-\/e\char`\"{}, \char`\"{}-\/-\/edit\char`\"{}, \char`\"{}-\/l\char`\"{}, \char`\"{}-\/-\/list\char`\"{}, \char`\"{}-\/h\char`\"{}, \char`\"{}-\/-\/help\char`\"{}, \char`\"{}-\/v\char`\"{}, \char`\"{}-\/-\/version\char`\"{}, \char`\"{}-\/g\char`\"{}, \char`\"{}-\/-\/github\char`\"{} \}}
+

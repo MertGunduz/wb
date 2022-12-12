@@ -75,12 +75,13 @@ $(function() {
 <a href="../../d3/d23/wbgen_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../wbinfo/wbinfo.h&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d3/d23/wbgen_8h.html#a0d49e97f5690191a8f29fa3fd1144d19">verify</a>(<span class="keywordtype">int</span> argc);</div>
-<div class="ttc" id="awbgen_8h_html_a0d49e97f5690191a8f29fa3fd1144d19"><div class="ttname"><a href="../../d3/d23/wbgen_8h.html#a0d49e97f5690191a8f29fa3fd1144d19">verify</a></div><div class="ttdeci">bool verify(int argc)</div><div class="ttdoc">the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)</div><div class="ttdef"><b>Definition:</b> verify.c:20</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../wbinfo/wbinfo.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d3/d23/wbgen_8h.html#a34e1ad81b228cf24e283e219eb486004">verify</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *firstArgv);</div>
+<div class="ttc" id="awbgen_8h_html_a34e1ad81b228cf24e283e219eb486004"><div class="ttname"><a href="../../d3/d23/wbgen_8h.html#a34e1ad81b228cf24e283e219eb486004">verify</a></div><div class="ttdeci">bool verify(int argc, char *firstArgv)</div><div class="ttdoc">the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)</div><div class="ttdef"><b>Definition:</b> verify.c:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

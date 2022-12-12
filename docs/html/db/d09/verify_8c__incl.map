@@ -1,9 +1,10 @@
 <map id="src/wbgen/verify.c" name="src/wbgen/verify.c">
-<area shape="rect" id="node1" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="99,5,238,32"/>
-<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="130,80,207,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="165,229,231,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="25,155,107,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="131,155,206,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="230,155,315,181"/>
-<area shape="rect" id="node7" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="339,155,478,181"/>
+<area shape="rect" id="node1" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="148,5,287,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="179,80,256,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="215,229,281,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="27,155,109,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="134,155,205,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="229,155,304,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="328,155,413,181"/>
+<area shape="rect" id="node8" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="437,155,576,181"/>
 </map>
