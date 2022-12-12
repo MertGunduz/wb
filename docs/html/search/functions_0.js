@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_28',['main',['../df/dcd/wb_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'wb.c']]]
+  ['helpmessage_31',['helpMessage',['../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c'],['../d5/d60/wbinfo_8h.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c']]]
 ];

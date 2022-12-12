@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         }
         else if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) 
         {
-            fprintf(stdout, "help menu!\n");
+            helpMessage();
         }
         else if (strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0) 
         {
