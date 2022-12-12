@@ -24,3 +24,4 @@ void verifyArgcError(int argc);
 void verifyFileStructureError();
 void verifyArgumentError(char *argv);
 void helpMessage();
+void githubMessage();

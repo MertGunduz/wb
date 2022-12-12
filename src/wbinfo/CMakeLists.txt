@@ -1,1 +1,1 @@
-add_library(wbinfo STATIC verifyArgcError.c verifyFileStructureError.c verifyArgumentError.c helpMessage.c)
+add_library(wbinfo STATIC verifyArgcError.c verifyFileStructureError.c verifyArgumentError.c helpMessage.c githubMessage.c)
