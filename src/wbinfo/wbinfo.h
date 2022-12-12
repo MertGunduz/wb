@@ -25,3 +25,4 @@ void verifyFileStructureError();
 void verifyArgumentError(char *argv);
 void helpMessage();
 void githubMessage();
+void versionMessage();

@@ -22,7 +22,7 @@ then
 fi
 
 echo "=%= file structure controlling =%="
-sleep 2
+sleep 1
 
 #****************************************
 # COMPILING AND LINKING PART 
@@ -35,7 +35,7 @@ then
 fi
 
 echo "=%= compiling and linking the project =%="
-sleep 2
+sleep 1
 
 #****************************************
 # MOVING THE EXECUTABLE TO USR/BIN PART
@@ -47,7 +47,7 @@ then
 fi
 
 echo "=%= moving the executable to usr/bin =%="
-sleep 2
+sleep 1
 
 #****************************************
 # CREATING WB FOLDER TO USR/LOCAL PART
@@ -58,7 +58,7 @@ then
 fi
 
 echo "=%= creating the wb folder to usr/local =%="
-sleep 2
+sleep 1
 
 #****************************************
 # DELETING THE SOURCE BUILD DIRECTORY
@@ -66,7 +66,7 @@ sleep 2
 cd .. && rm -r build
 
 echo "=%= removing the build directory =%="
-sleep 2
+sleep 1
 
 if [ -d "/usr/local/wb" ] && [ -f "/usr/bin/wb" ]
 then 
