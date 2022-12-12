@@ -22,3 +22,4 @@
 
 void verifyArgcError(int argc);
 void verifyFileStructureError();
+void verifyArgumentError(char *argv);

@@ -12,8 +12,9 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include "../wbinfo/wbinfo.h"
 
-bool verify(int argc);
+bool verify(int argc, char *firstArgv);

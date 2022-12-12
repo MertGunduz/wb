@@ -14,18 +14,35 @@
 
 #include "wbgen.h"
 
+char *arguments[] = {"-a", "--add", "-e", "--edit", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github" };
+int argSize = 12;
+
 /// @brief the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)
 /// @param argc 
 /// @return true if argc is 2 and file structure found, otherwise returns false
-bool verify(int argc)
+bool verify(int argc, char *firstArgv)
 {
+    // controls the argc value
     if (argc == 2)
     {
+        // struct stat for controlling directory /usr/local/wb
         struct stat st;
 
+        // controllign the file and folder /usr/local/wb and /usr/bin/wb
         if (access("/usr/bin/wb", F_OK) == 0 && stat("/usr/local/wb", &st) == 0)
         {   
-            return true;
+            // controlling the argv[1]
+            for (int i = 0; i < argSize; i++)
+            {
+                if (strcmp(firstArgv, arguments[i]) == 0)
+                {
+                    return true;
+                }
+            }
+
+            // return false if argument not matched the arguments array values
+            verifyArgumentError(firstArgv);
+            return false;
         }
         else
         {

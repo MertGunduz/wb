@@ -15,9 +15,9 @@
 
 int main(int argc, char *argv[])
 {
-    if (verify(argc))
+    if (verify(argc, argv[1]))
     {
-        // code
+        
     }
     return 0;
 }
