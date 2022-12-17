@@ -1,9 +1,10 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="144,5,291,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="215,155,281,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,80,109,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="134,80,205,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="229,80,304,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="328,80,413,107"/>
-<area shape="rect" id="node7" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="437,80,576,107"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="217,5,364,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,80,183,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="207,80,278,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="303,80,377,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="401,80,487,107"/>
+<area shape="rect" id="node7" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="511,80,649,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="538,155,622,181"/>
 </map>

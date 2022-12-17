@@ -5,8 +5,9 @@
 the general wb library for printing information messages  
 
 
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for wbinfo.\+h\+:\nopagebreak
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+Include dependency graph for wbinfo.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -48,7 +49,11 @@ void \mbox{\hyperlink{wbinfo_8h_ad1900e7b60d6249a5a015e5734602db1}{verify\+Argum
 void \mbox{\hyperlink{wbinfo_8h_a0d89081abdea8d2a2517254608e4588c}{help\+Message}} ()
 \begin{DoxyCompactList}\small\item\em prints the help information \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbinfo_8h_aeb11d9cc5055f50328aa5bd00c0783bd}{github\+Message}} ()
-\begin{DoxyCompactList}\small\item\em prints the github source code url \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em prints the github source code url \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbinfo_8h_a500852d9b79e086a08d69408a2df9ca8}{version\+Message}} ()
+\begin{DoxyCompactList}\small\item\em prints the wb version \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbinfo_8h_a7ace3022215c46cc8d5790059f4fa795}{terminal\+Color\+Error}} ()
+\begin{DoxyCompactList}\small\item\em prints the terminal color capability error \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -64,7 +69,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000009}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000014}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -127,6 +132,16 @@ prints the github source code url
 
 prints the help information 
 
+\mbox{\Hypertarget{wbinfo_8h_a7ace3022215c46cc8d5790059f4fa795}\label{wbinfo_8h_a7ace3022215c46cc8d5790059f4fa795}} 
+\index{wbinfo.h@{wbinfo.h}!terminalColorError@{terminalColorError}}
+\index{terminalColorError@{terminalColorError}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{terminalColorError()}{terminalColorError()}}
+{\footnotesize\ttfamily void terminal\+Color\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints the terminal color capability error 
+
 \mbox{\Hypertarget{wbinfo_8h_a71fb30fc585d8838d4c70e5519244cb1}\label{wbinfo_8h_a71fb30fc585d8838d4c70e5519244cb1}} 
 \index{wbinfo.h@{wbinfo.h}!verifyArgcError@{verifyArgcError}}
 \index{verifyArgcError@{verifyArgcError}!wbinfo.h@{wbinfo.h}}
@@ -167,4 +182,14 @@ prints the mismatched argv and adivces to get help by writing the -\/h or --help
 
 
 prints error information and solving advice about the file structure error 
+
+\mbox{\Hypertarget{wbinfo_8h_a500852d9b79e086a08d69408a2df9ca8}\label{wbinfo_8h_a500852d9b79e086a08d69408a2df9ca8}} 
+\index{wbinfo.h@{wbinfo.h}!versionMessage@{versionMessage}}
+\index{versionMessage@{versionMessage}!wbinfo.h@{wbinfo.h}}
+\doxysubsubsection{\texorpdfstring{versionMessage()}{versionMessage()}}
+{\footnotesize\ttfamily void version\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints the wb version 
 

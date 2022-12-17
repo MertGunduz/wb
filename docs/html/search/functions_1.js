@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['helpmessage_35',['helpMessage',['../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c'],['../d5/d60/wbinfo_8h.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c']]]
+  ['bgcolorset_51',['bgColorSet',['../d9/db6/bgColorSet_8c.html#a6d2161f528c9a61a2bbc007317aebe93',1,'bgColorSet():&#160;bgColorSet.c'],['../d3/d23/wbgen_8h.html#a6d2161f528c9a61a2bbc007317aebe93',1,'bgColorSet():&#160;bgColorSet.c']]]
 ];

@@ -5,31 +5,44 @@
 the general wb library for generating word files and listing  
 
 
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../wbinfo/wbinfo.\+h\char`\"{}}\newline
-Include dependency graph for wbgen.\+h\+:\nopagebreak
+Include dependency graph for wbgen.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d9/d9f/wbgen_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=280pt]{d4/d2e/wbgen_8h__dep__incl}
+\includegraphics[width=350pt]{d4/d2e/wbgen_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wbgen_8h_afed046f37c4b989441f2b3ca749d384a}{PURE\+\_\+\+BLACK\+\_\+\+COLOR}}~100
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}{verify}} (int argc, char $\ast$first\+Argv)
-\begin{DoxyCompactList}\small\item\em the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_a1a2e3b5dc1ff577b72d54bac44c330ac}{add\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em the word adding menu for the wb, opens a terminal ui and asks user some data to generate word files \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{wbgen_8h_a1c4cacbf5fd9f7b1e22a44e88e620fc9}{color\+Check}} ()
+\begin{DoxyCompactList}\small\item\em checks the terminal color capabilities \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}{bg\+Color\+Set}} ()
+\begin{DoxyCompactList}\small\item\em sets the terminal to pure black and white text \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -45,10 +58,59 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000003}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000006}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wbgen_8h_afed046f37c4b989441f2b3ca749d384a}\label{wbgen_8h_afed046f37c4b989441f2b3ca749d384a}} 
+\index{wbgen.h@{wbgen.h}!PURE\_BLACK\_COLOR@{PURE\_BLACK\_COLOR}}
+\index{PURE\_BLACK\_COLOR@{PURE\_BLACK\_COLOR}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{PURE\_BLACK\_COLOR}{PURE\_BLACK\_COLOR}}
+{\footnotesize\ttfamily \#define PURE\+\_\+\+BLACK\+\_\+\+COLOR~100}
+
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wbgen_8h_a1a2e3b5dc1ff577b72d54bac44c330ac}\label{wbgen_8h_a1a2e3b5dc1ff577b72d54bac44c330ac}} 
+\index{wbgen.h@{wbgen.h}!addMenu@{addMenu}}
+\index{addMenu@{addMenu}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{addMenu()}{addMenu()}}
+{\footnotesize\ttfamily void add\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the word adding menu for the wb, opens a terminal ui and asks user some data to generate word files 
+
+$<$ word data (example\+: discreet)
+
+$<$ word type data (example\+: adjective)
+
+$<$ word description data (example\+: careful not to cause embarrassment or attract too much attention, especially by keeping something secret)
+
+$<$ word example data (example\+: The family made discreet enquiries about his background)
+
+$<$ word opposite data (example\+: indiscreet)
+
+$<$ word add date data (example\+: 05/1/2023)\mbox{\Hypertarget{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}\label{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}} 
+\index{wbgen.h@{wbgen.h}!bgColorSet@{bgColorSet}}
+\index{bgColorSet@{bgColorSet}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{bgColorSet()}{bgColorSet()}}
+{\footnotesize\ttfamily void bg\+Color\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sets the terminal to pure black and white text 
+
+\mbox{\Hypertarget{wbgen_8h_a1c4cacbf5fd9f7b1e22a44e88e620fc9}\label{wbgen_8h_a1c4cacbf5fd9f7b1e22a44e88e620fc9}} 
+\index{wbgen.h@{wbgen.h}!colorCheck@{colorCheck}}
+\index{colorCheck@{colorCheck}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{colorCheck()}{colorCheck()}}
+{\footnotesize\ttfamily bool color\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checks the terminal color capabilities 
+
 \mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
 \index{wbgen.h@{wbgen.h}!verify@{verify}}
 \index{verify@{verify}!wbgen.h@{wbgen.h}}

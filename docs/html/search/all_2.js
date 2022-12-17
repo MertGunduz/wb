@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['githubmessage_4',['githubMessage',['../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c'],['../d5/d60/wbinfo_8h.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c']]],
-  ['githubmessage_2ec_5',['githubMessage.c',['../d6/df6/githubMessage_8c.html',1,'']]]
+  ['colorcheck_8',['colorCheck',['../d1/d60/colorCheck_8c.html#a1c4cacbf5fd9f7b1e22a44e88e620fc9',1,'colorCheck():&#160;colorCheck.c'],['../d3/d23/wbgen_8h.html#a1c4cacbf5fd9f7b1e22a44e88e620fc9',1,'colorCheck():&#160;colorCheck.c']]],
+  ['colorcheck_2ec_9',['colorCheck.c',['../d1/d60/colorCheck_8c.html',1,'']]]
 ];

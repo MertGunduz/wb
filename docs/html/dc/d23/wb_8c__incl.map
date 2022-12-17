@@ -1,11 +1,11 @@
 <map id="src/app/wb.c" name="src/app/wb.c">
-<area shape="rect" id="node1" title="the main application file of wb" alt="" coords="25,5,127,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,229,72,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="34,80,118,107"/>
-<area shape="rect" id="node4" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="151,80,287,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="76,155,159,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="183,155,254,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="279,155,353,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="377,155,463,181"/>
-<area shape="rect" id="node9" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="487,155,625,181"/>
+<area shape="rect" id="node1" title="the main application file of wb" alt="" coords="239,5,342,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="223,80,359,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,155,183,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="207,155,278,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="303,155,377,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="401,155,487,181"/>
+<area shape="rect" id="node8" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="511,155,649,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="538,229,622,256"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['helpmessage_6',['helpMessage',['../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c'],['../d5/d60/wbinfo_8h.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c']]],
-  ['helpmessage_2ec_7',['helpMessage.c',['../df/de2/helpMessage_8c.html',1,'']]]
+  ['githubmessage_10',['githubMessage',['../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c'],['../d5/d60/wbinfo_8h.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c']]],
+  ['githubmessage_2ec_11',['githubMessage.c',['../d6/df6/githubMessage_8c.html',1,'']]]
 ];

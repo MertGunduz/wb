@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['githubmessage_34',['githubMessage',['../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c'],['../d5/d60/wbinfo_8h.html#aeb11d9cc5055f50328aa5bd00c0783bd',1,'githubMessage():&#160;githubMessage.c']]]
+  ['addmenu_50',['addMenu',['../dc/dda/addMenu_8c.html#a1a2e3b5dc1ff577b72d54bac44c330ac',1,'addMenu():&#160;addMenu.c'],['../d3/d23/wbgen_8h.html#a1a2e3b5dc1ff577b72d54bac44c330ac',1,'addMenu():&#160;addMenu.c']]]
 ];
