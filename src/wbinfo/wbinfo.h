@@ -10,7 +10,7 @@
  * @bug No known bugs.
 */
 
-#include <stdio.h>
+#include <ncurses.h>
 
 #define KNRM  "\x1B[0m"  /**< makes the the text normal color */
 #define KRED  "\x1B[31m" /**< makes the text red color*/
@@ -26,3 +26,4 @@ void verifyArgumentError(char *argv);
 void helpMessage();
 void githubMessage();
 void versionMessage();
+void terminalColorError();

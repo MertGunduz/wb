@@ -10,11 +10,16 @@
  * @bug No known bugs.
 */
 
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include "../wbinfo/wbinfo.h"
 
+#define PURE_BLACK_COLOR 100
+
 bool verify(int argc, char *firstArgv);
+void addMenu();
+bool colorCheck();
+void bgColorSet();

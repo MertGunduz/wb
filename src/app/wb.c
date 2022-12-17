@@ -10,17 +10,19 @@
  * @bug No known bugs.
 */
 
-#include <stdio.h>
-#include <ncurses.h>
 #include "../wbgen/wbgen.h"
 
 int main(int argc, char *argv[])
 {
     if (verify(argc, argv[1]))
     {
-        if (strcmp(argv[1], "-a") == 0 || strcmp(argv[1], "--add") == 0)
+        if (strcmp(argv[1], "-s") == 0 || strcmp(argv[1], "--settings") == 0)
         {
-            fprintf(stdout, "add menu!\n");
+            fprintf(stdout, "settings menu!\n");
+        }
+        else if (strcmp(argv[1], "-a") == 0 || strcmp(argv[1], "--add") == 0)
+        {
+            addMenu();
         }
         else if (strcmp(argv[1], "-e") == 0 || strcmp(argv[1], "--edit") == 0) 
         {
@@ -42,6 +44,14 @@ int main(int argc, char *argv[])
         {
             githubMessage();
         }
+        else if (strcmp(argv[1], "-E") == 0 || strcmp(argv[1], "--export") == 0) 
+        {
+            fprintf(stdout, "export menu!\n");
+        }    
+        else if (strcmp(argv[1], "-I") == 0 || strcmp(argv[1], "--import") == 0) 
+        {
+            fprintf(stdout, "import menu!\n");
+        }    
     }
     return 0;
 }

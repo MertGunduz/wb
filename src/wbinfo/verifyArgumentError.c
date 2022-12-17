@@ -16,6 +16,6 @@
 /// @param argv
 void verifyArgumentError(char *argv)
 {
-    fprintf(stdout, "%swb:%s invalid option: %s%s%s\n",BOLD, RESET, KMAG, argv, KNRM);
+    fprintf(stdout, "%swb:%s invalid option, %s%s%s\n",BOLD, RESET, KMAG, argv, KNRM);
     fprintf(stdout, "%swb:%s try %s--help or -h%s for more information\n",BOLD, RESET, KMAG, KNRM);
 }

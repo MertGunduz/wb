@@ -1,1 +1,1 @@
-add_library(wbgen STATIC verify.c)
+add_library(wbgen STATIC verify.c addMenu.c colorCheck.c bgColorSet.c)

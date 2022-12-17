@@ -15,5 +15,5 @@
 /// @brief prints the wb version
 void versionMessage()
 {
-    fprintf(stdout, "%swb%s version: %s1.0.0%s\n", BOLD, RESET, KMAG, KNRM);
+    fprintf(stdout, "%swb:%s version %s1.0.0%s\n", BOLD, RESET, KMAG, KNRM);
 }

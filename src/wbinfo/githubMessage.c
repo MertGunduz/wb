@@ -15,5 +15,5 @@
 /// @brief prints the github source code url
 void githubMessage()
 {
-    fprintf(stdout, "%swb%s github url: %shttps://github.com/MertGunduz/wb%s\n", BOLD, RESET, KMAG, KNRM);
+    fprintf(stdout, "%swb:%s %shttps://github.com/MertGunduz/wb%s\n", BOLD, RESET, KMAG, KNRM);
 }
