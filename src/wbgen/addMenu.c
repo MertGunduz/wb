@@ -35,6 +35,35 @@ void addMenu()
         exit(0);
     }
 
+    WINDOW *topPanel = newwin(1, COLS, 0, 0);
+
+    if (topPanel != NULL)
+    {
+        init_pair(100, PURE_BLACK_COLOR, COLOR_WHITE);
+
+        wbkgd(topPanel, COLOR_PAIR(100));
+
+        /* date & time */
+        time_t T = time(NULL);
+        struct tm tm = *localtime(&T);
+
+        sprintf(wordDate, "%02d/%02d/%04d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+
+        /* top panel information printing */
+        mvwprintw(topPanel, 0, 1, "ADD MENU");
+        mvwprintw(topPanel, 0, (COLS - 2) / 2, "wb");
+        mvwprintw(topPanel, 0, COLS - strlen(wordDate) - 1, "%s", wordDate);
+       
+        /* refresh the top panel */
+        refresh();
+        wrefresh(topPanel);
+
+        /* curs set 0 */
+        curs_set(0);
+    } 
+
     getch();
+
+    delwin(topPanel);
     endwin();
 }
