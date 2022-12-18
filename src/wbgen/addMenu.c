@@ -244,6 +244,30 @@ void addMenu()
     refresh();
     wrefresh(wordWindow);
 
+    /* word file generation part */
+    char wordFilePath[128]; 
+    char wordsFilePath[128];
+
+    sprintf(wordFilePath, "%s/.wb/%s.txt", getenv("HOME"), word);
+    sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
+
+    /* adding the word name to the words list file */
+    FILE *wordsFile = fopen(wordsFilePath, "a");
+
+    if (wordsFile != NULL)
+    {
+        fprintf(wordsFile, "%s\n", word);
+        fclose(wordsFile);
+    }
+
+    FILE *wordFile = fopen(wordFilePath, "w");
+
+    if (wordFile != NULL)
+    {
+        fprintf(wordFile, "%s:%s:%s:%s:%s:%s\n", word, wordType, wordOpposite, wordDesc, wordExample, wordDate);
+        fclose(wordFile);
+    }
+
     delwin(topPanel);
     delwin(wordWindow);
     delwin(wordTypeWindow);

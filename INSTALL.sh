@@ -14,10 +14,10 @@ echo "=%= build directory created =%="
 #****************************************
 # USR-DIRECTORY CONTROL PART 
 #****************************************
-if [ -d "/usr/local/wb" ] && [ -f "/usr/bin/wb" ] 
+if [ -d "$HOME/.wb" ] && [ -f "/usr/bin/wb" ] 
 then
     # delete the files if they are exist in the system
-    sudo rm -r /usr/local/wb
+    sudo rm -r "$HOME/.wb"
     sudo rm /usr/bin/wb
 fi
 
@@ -50,14 +50,17 @@ echo "=%= moving the executable to usr/bin =%="
 sleep 1
 
 #****************************************
-# CREATING WB FOLDER TO USR/LOCAL PART
+# CREATING WB FOLDER TO HOME PART
 #****************************************
-if [ ! -d "/usr/local/wb" ]
+if [ ! -d "$HOME/.wb" ]
 then
-    sudo mkdir /usr/local/wb
+    mkdir "$HOME/.wb"
+    sudo chmod 775 "$HOME/.wb"
+    touch "$HOME/.wb/words.txt"
+    sudo chmod 775 "$HOME/.wb/words.txt"
 fi
 
-echo "=%= creating the wb folder to usr/local =%="
+echo "=%= creating the wb folder to home =%="
 sleep 1
 
 #****************************************
@@ -68,7 +71,7 @@ cd .. && rm -r build
 echo "=%= removing the build directory =%="
 sleep 1
 
-if [ -d "/usr/local/wb" ] && [ -f "/usr/bin/wb" ]
+if [ -d "$HOME/.wb" ] && [ -f "/usr/bin/wb" ] && [ -f "$HOME/.wb/words.txt" ]
 then 
     sudo echo "=%= wb installation succesful =%="
 else

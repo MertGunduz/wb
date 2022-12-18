@@ -26,7 +26,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
 
     wmove(window, 1, wordstrlen + 2);
 
-    for (int i = 0; i < lim; i++)
+    for (int i = 0; i <= lim; i++)
     {
         if (ct != 0)
         {
@@ -42,7 +42,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
                 break;
             }
         }
-
+        
         if (dataChar != 127)
         {
             string[sc] = dataChar;
@@ -71,7 +71,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
                 mvwdelch(window, 1, i +  wordstrlen + 2);
                 i--;
             }
-       }
+        }
 
         mvwdelch(window, 2, winX -1);
         mvwdelch(window, 2, winX -2);
@@ -90,7 +90,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
         {
             mvwprintw(window, 2, getmaxx(window) - 2 - locationSetter, "%d", ct);
         }
-        else if (ct == 0)
+        else if (ct <= 0)
         {
             mvwprintw(window, 2, getmaxx(window) - 2 - locationSetter, "0");
         } 
@@ -110,9 +110,12 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
             }
 
             wmove(window, 1, winX - 2);
-            wdelch(window);            
+            wdelch(window);
         }
     }
+
+    /* adding a null terminator to the string */
+    string[sc++] = '\0';
 
     isBreached = false; isDotsPlaced = false;
     echo();
