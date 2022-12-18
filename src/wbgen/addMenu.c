@@ -233,16 +233,16 @@ void addMenu()
     /******************************************
     * WORD INPUT
     ******************************************/    
-    wmove(wordWindow, 1, 7);
-    refresh();
 
-    // method
-    textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word);
+    // string initializations
+    textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word, 0);
+    textInput(wordTypeWindow, wordTypeCt, strlen("WORD TYPE:"), getmaxx(wordTypeWindow), wordType, 1);
+    textInput(oppositeWordWindow, wordOppositeCt, strlen("WORD OPPOSITE:"), getmaxx(oppositeWordWindow), wordOpposite, 0);
+    textInput(wordDescWindow, wordDescCt, strlen("WORD DESCRIPTION:"), getmaxx(wordDescWindow), wordDesc, 0);
+    textInput(wordExampleWindow, wordExCt, strlen("WORD EXAMPLE:"), getmaxx(wordExampleWindow), wordExample, 0);
 
     refresh();
     wrefresh(wordWindow);
-
-    getch();
 
     delwin(topPanel);
     delwin(wordWindow);

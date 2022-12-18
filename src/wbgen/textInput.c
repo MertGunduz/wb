@@ -16,13 +16,17 @@
 /// @param wordstrlen 
 /// @param winX
 /// @param string
-void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string)
+/// @param locationSetter
+void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter)
 {
+    int lim = ct;
     int sc = 0;
     char dataChar;
     bool isBreached, isDotsPlaced;
 
-    for (int i = 0; i < 64; i++)
+    wmove(window, 1, wordstrlen + 2);
+
+    for (int i = 0; i < lim; i++)
     {
         if (ct != 0)
         {
@@ -48,13 +52,13 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string)
         }
         else
         {            
-            if (ct != 64)
+            if (ct != lim)
             {
                 sc--; 
                 string[sc] = '\0';
 
                 ct++;
-                
+
                 mvwdelch(window, 1, i + wordstrlen + 3);
                 mvwdelch(window, 1, i + wordstrlen + 2);
                 mvwdelch(window, 1, i + wordstrlen + 1);
@@ -72,22 +76,23 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string)
         mvwdelch(window, 2, winX -1);
         mvwdelch(window, 2, winX -2);
         mvwdelch(window, 2, winX -3);
+        mvwdelch(window, 2, winX -4);
 
         if (ct >= 100)
         {
-            mvwprintw(window, 2, getmaxx(window) - 4, "%d", ct);
+            mvwprintw(window, 2, getmaxx(window) - 4 - locationSetter, "%d", ct);
         }
         else if (ct >= 10)
         {
-            mvwprintw(window, 2, getmaxx(window) - 3, "%d", ct);
+            mvwprintw(window, 2, getmaxx(window) - 3 - locationSetter, "%d", ct);
         }
         else if (ct > 0)
         {
-            mvwprintw(window, 2, getmaxx(window) - 2, "%d", ct);
+            mvwprintw(window, 2, getmaxx(window) - 2 - locationSetter, "%d", ct);
         }
         else if (ct == 0)
         {
-            mvwprintw(window, 2, getmaxx(window) - 2, "0");
+            mvwprintw(window, 2, getmaxx(window) - 2 - locationSetter, "0");
         } 
 
         if (!isBreached)
@@ -109,5 +114,6 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string)
         }
     }
 
+    isBreached = false; isDotsPlaced = false;
     echo();
 }

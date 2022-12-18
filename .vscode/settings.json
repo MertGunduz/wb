@@ -3,6 +3,7 @@
         "stdbool.h": "c",
         "ncurses.h": "c",
         "stat.h": "c",
-        "wbgen.h": "c"
+        "wbgen.h": "c",
+        "wbinfo.h": "c"
     }
 }
