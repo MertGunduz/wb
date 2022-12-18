@@ -19,7 +19,8 @@ Include dependency graph for wbgen.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{d9/d9f/wbgen_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,7 +42,9 @@ void \mbox{\hyperlink{wbgen_8h_a1a2e3b5dc1ff577b72d54bac44c330ac}{add\+Menu}} ()
 bool \mbox{\hyperlink{wbgen_8h_a1c4cacbf5fd9f7b1e22a44e88e620fc9}{color\+Check}} ()
 \begin{DoxyCompactList}\small\item\em checks the terminal color capabilities \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}{bg\+Color\+Set}} ()
-\begin{DoxyCompactList}\small\item\em sets the terminal to pure black and white text \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em sets the terminal to pure black and white text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_a763877a3a68abe401e43e6a5391a995a}{text\+Input}} (WINDOW $\ast$window, int ct, int wordstrlen, int winX, char $\ast$string)
+\begin{DoxyCompactList}\small\item\em the function for working with the text input system \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -57,7 +60,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000006}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000007}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -100,6 +103,29 @@ sets the terminal to pure black and white text
 
 checks the terminal color capabilities 
 
+\mbox{\Hypertarget{wbgen_8h_a763877a3a68abe401e43e6a5391a995a}\label{wbgen_8h_a763877a3a68abe401e43e6a5391a995a}} 
+\index{wbgen.h@{wbgen.h}!textInput@{textInput}}
+\index{textInput@{textInput}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{textInput()}{textInput()}}
+{\footnotesize\ttfamily void text\+Input (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{int}]{ct,  }\item[{int}]{wordstrlen,  }\item[{int}]{winX,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+the function for working with the text input system 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em ct} & \\
+\hline
+{\em wordstrlen} & \\
+\hline
+{\em winX} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
 \index{wbgen.h@{wbgen.h}!verify@{verify}}
 \index{verify@{verify}!wbgen.h@{wbgen.h}}

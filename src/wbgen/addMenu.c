@@ -20,8 +20,18 @@ void addMenu()
     char wordExample[257]; /* word example data (example: The family made discreet enquiries about his background)*/
     char wordOpposite[65]; /* word opposite data (example: indiscreet)*/
     char wordDate[33]; /* word add date data (example: 05/1/2023)*/
+    char dataChar = ' '; /* for getching the data */
+
+    int x,y; /* for window data */
+
+    int wordCt = 64;
+    int wordTypeCt = 64;
+    int wordDescCt = 256;
+    int wordExCt = 256;
+    int wordOppositeCt = 64;
 
     initscr();
+    keypad(stdscr, true);
         
     if (colorCheck())
     {
@@ -71,8 +81,11 @@ void addMenu()
    if (wordWindow != NULL)
    {
         wbkgd(wordWindow, COLOR_PAIR(100));
+
+        getmaxyx(wordWindow, y, x);
         
         mvwprintw(wordWindow, 1, 1, "WORD: ");
+        mvwprintw(wordWindow, 2, x - 3, "%d", wordCt);
 
         /* move to input textbox */
         //wmove(wordWindow, 1, 7);
@@ -94,7 +107,19 @@ void addMenu()
     {
         wbkgd(wordTypeWindow, COLOR_PAIR(100));
         
+        getmaxyx(wordTypeWindow, y, x);
+
         mvwprintw(wordTypeWindow, 1, 1, "WORD TYPE: ");
+
+        /* writing the number counter to the right edge */
+        if (COLS % 2 == 0)
+        {
+            mvwprintw(wordTypeWindow, 2, x - 4, "%d", wordTypeCt);
+        }
+        else
+        {
+            mvwprintw(wordTypeWindow, 2, x - 3, "%d", wordTypeCt);
+        }
 
         /* move to input textbox */
         //wmove(wordTypeWindow, 1, 7);
@@ -115,8 +140,12 @@ void addMenu()
     if (oppositeWordWindow != NULL)
     {
         wbkgd(oppositeWordWindow, COLOR_PAIR(100));
-        
+
+        getmaxyx(oppositeWordWindow, y, x);
+
         mvwprintw(oppositeWordWindow, 1, 1, "WORD OPPOSITE: ");
+        
+        mvwprintw(oppositeWordWindow, 2, x - 3, "%d", wordOppositeCt);
 
         /* move to input textbox */
         //wmove(oppositeWordWindow, 1, 7);
@@ -137,8 +166,12 @@ void addMenu()
     if (wordDescWindow != NULL)
     {
         wbkgd(wordDescWindow, COLOR_PAIR(100));
+
+        getmaxyx(wordDescWindow, y, x);
         
         mvwprintw(wordDescWindow, 1, 1, "WORD DESCRIPTION: ");
+
+        mvwprintw(wordDescWindow, 2, x - 4, "%d", wordDescCt);
 
         /* move to input textbox */
         //wmove(wordDescWindow, 1, 7);
@@ -159,8 +192,12 @@ void addMenu()
     if (wordExampleWindow != NULL)
     {
         wbkgd(wordExampleWindow, COLOR_PAIR(100));
+
+        getmaxyx(wordExampleWindow, y, x);
         
         mvwprintw(wordExampleWindow, 1, 1, "WORD EXAMPLE: ");
+
+        mvwprintw(wordExampleWindow, 2, x - 4, "%d", wordExCt);
 
         /* move to input textbox */
         //wmove(wordExampleWindow, 1, 7);
@@ -191,7 +228,19 @@ void addMenu()
         }
     }
 
-    curs_set(0);
+    refresh();
+
+    /******************************************
+    * WORD INPUT
+    ******************************************/    
+    wmove(wordWindow, 1, 7);
+    refresh();
+
+    // method
+    textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word);
+
+    refresh();
+    wrefresh(wordWindow);
 
     getch();
 

@@ -106,12 +106,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2e/wbgen_8h__dep__incl.png" border="0" usemap="#asrc_2wbgen_2wbgen_8hdep" alt=""/></div>
 <map name="asrc_2wbgen_2wbgen_8hdep" id="asrc_2wbgen_2wbgen_8hdep">
-<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="334,5,481,32"/>
+<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="433,5,579,32"/>
 <area shape="rect" href="../../df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" href="../../dc/dda/addMenu_8c.html" title="the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word file..." alt="" coords="133,80,295,107"/>
 <area shape="rect" href="../../d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
 <area shape="rect" href="../../d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,80,693,107"/>
-<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="718,80,857,107"/>
+<area shape="rect" href="../../d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="718,80,881,107"/>
+<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="905,80,1043,107"/>
 </map>
 </div>
 </div>
@@ -136,13 +137,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a6d2161f528c9a61a2bbc007317aebe93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a6d2161f528c9a61a2bbc007317aebe93">bgColorSet</a> ()</td></tr>
 <tr class="memdesc:a6d2161f528c9a61a2bbc007317aebe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the terminal to pure black and white text  <a href="../../d3/d23/wbgen_8h.html#a6d2161f528c9a61a2bbc007317aebe93">More...</a><br /></td></tr>
 <tr class="separator:a6d2161f528c9a61a2bbc007317aebe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763877a3a68abe401e43e6a5391a995a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a763877a3a68abe401e43e6a5391a995a">textInput</a> (WINDOW *window, int ct, int wordstrlen, int winX, char *string)</td></tr>
+<tr class="memdesc:a763877a3a68abe401e43e6a5391a995a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function for working with the text input system  <a href="../../d3/d23/wbgen_8h.html#a763877a3a68abe401e43e6a5391a995a">More...</a><br /></td></tr>
+<tr class="separator:a763877a3a68abe401e43e6a5391a995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>the general wb library for generating word files and listing </p>
 <dl class="section author"><dt>Author</dt><dd>Mehmet Mert Gunduz</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>10/12/2022 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
-<dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000006">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000007">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="afed046f37c4b989441f2b3ca749d384a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afed046f37c4b989441f2b3ca749d384a">&#9670;&nbsp;</a></span>PURE_BLACK_COLOR</h2>
@@ -213,6 +217,64 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>checks the terminal color capabilities </p>
+
+</div>
+</div>
+<a id="a763877a3a68abe401e43e6a5391a995a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763877a3a68abe401e43e6a5391a995a">&#9670;&nbsp;</a></span>textInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void textInput </td>
+          <td>(</td>
+          <td class="paramtype">WINDOW *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wordstrlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>winX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the function for working with the text input system </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td></td></tr>
+    <tr><td class="paramname">ct</td><td></td></tr>
+    <tr><td class="paramname">wordstrlen</td><td></td></tr>
+    <tr><td class="paramname">winX</td><td></td></tr>
+    <tr><td class="paramname">string</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

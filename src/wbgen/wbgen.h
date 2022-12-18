@@ -24,3 +24,4 @@ bool verify(int argc, char *firstArgv);
 void addMenu();
 bool colorCheck();
 void bgColorSet();
+void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string);

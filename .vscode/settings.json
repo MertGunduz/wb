@@ -2,6 +2,7 @@
     "files.associations": {
         "stdbool.h": "c",
         "ncurses.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "wbgen.h": "c"
     }
 }
