@@ -34,12 +34,14 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
     int i = 0;
     int iR;
 
+    int sc = 0;
+
     bool isReached;
 
     /* go to the first position */
     firstPosition(window, wordstrlen);
 
-    do 
+    do
     {
         mc = wgetch(window);
 
@@ -47,6 +49,9 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
         {
             if (ct != limit)
             {
+                sc--;
+                string[sc] = '\0'; 
+                
                 ct++;
 
                 // deleting character
@@ -63,6 +68,12 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
         {
             if (ct != 0)
             {
+                if (mc != KEY_ENTER && mc != '\n')
+                {
+                    string[sc] = mc; 
+                    sc++;
+                }
+                
                 ct--;
                 
                 /* if cursor is not in the last place */
@@ -86,8 +97,10 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
         }
     } while (mc != KEY_ENTER && mc != '\n');
 
+    string[sc++] = '\0';
+    
     isReached = false;
-    i = 0; iR = 0;
+    i = 0; iR = 0; sc = 0;
 }
 
 /// @brief cleans the letter counter
