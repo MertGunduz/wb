@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reset_74',['RESET',['../d5/d60/wbinfo_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'wbinfo.h']]]
+  ['pure_5fblack_5fcolor_83',['PURE_BLACK_COLOR',['../d3/d23/wbgen_8h.html#afed046f37c4b989441f2b3ca749d384a',1,'wbgen.h']]]
 ];

@@ -273,15 +273,18 @@ Functions</h2></td></tr>
 <p>the function for working with the text input system </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td></td></tr>
-    <tr><td class="paramname">ct</td><td></td></tr>
-    <tr><td class="paramname">wordstrlen</td><td></td></tr>
-    <tr><td class="paramname">winX</td><td></td></tr>
-    <tr><td class="paramname">string</td><td></td></tr>
-    <tr><td class="paramname">locationSetter</td><td></td></tr>
+    <tr><td class="paramname">window</td><td>the main window </td></tr>
+    <tr><td class="paramname">ct</td><td>the letter counter, in every input decreases by one (in backspace increases by 1) </td></tr>
+    <tr><td class="paramname">wordstrlen</td><td>the header words length (WORD: [5]) </td></tr>
+    <tr><td class="paramname">winX</td><td>the length of the window (getmaxx(window)) </td></tr>
+    <tr><td class="paramname">string</td><td>(string for initializing the data) </td></tr>
+    <tr><td class="paramname">locationSetter</td><td>the location setter for the half panels </td></tr>
   </table>
   </dd>
 </dl>
+<p>&lt; main char for taking the data one by one</p>
+<p>&lt; takes the ct and initializes it to limit, used for checking the backspace if there is no input</p>
+<p>&lt; takes the first position x</p>
 
 </div>
 </div>

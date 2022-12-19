@@ -13,8 +13,21 @@ Include dependency graph for text\+Input.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd8/textInput_8c__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{textInput_8c_aee113dc8fbaa71eff09f2dd8575d62b7}{BACKSPACE\+\_\+\+CHAR}}~127
+\item 
+\#define \mbox{\hyperlink{textInput_8c_aae865db01e31dbe4754638af380ff0d1}{INPUT\+\_\+\+BITS}}~2
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{textInput_8c_ad2101417fb014aeb60e8bcb9cb79f1f6}{clean\+Letter\+Counter}} (WINDOW $\ast$window, int winX)
+\begin{DoxyCompactList}\small\item\em cleans the letter counter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}{print\+Letter\+Counter}} (WINDOW $\ast$window, int ct, int location\+Setter, int winX)
+\begin{DoxyCompactList}\small\item\em prints the letter counter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{textInput_8c_aabed4d0431987f7ac52d60e8074bd80a}{first\+Position}} (WINDOW $\ast$window, int wordstrlen)
 \item 
 void \mbox{\hyperlink{textInput_8c_a7b17a6c72a0b183ba90901d387f1d779}{text\+Input}} (WINDOW $\ast$window, int ct, int wordstrlen, int winX, char $\ast$string, int location\+Setter)
 \begin{DoxyCompactList}\small\item\em the function for working with the text input system \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -33,7 +46,66 @@ Mehmet Mert Gunduz
 \item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{textInput_8c_aee113dc8fbaa71eff09f2dd8575d62b7}\label{textInput_8c_aee113dc8fbaa71eff09f2dd8575d62b7}} 
+\index{textInput.c@{textInput.c}!BACKSPACE\_CHAR@{BACKSPACE\_CHAR}}
+\index{BACKSPACE\_CHAR@{BACKSPACE\_CHAR}!textInput.c@{textInput.c}}
+\doxysubsubsection{\texorpdfstring{BACKSPACE\_CHAR}{BACKSPACE\_CHAR}}
+{\footnotesize\ttfamily \#define BACKSPACE\+\_\+\+CHAR~127}
+
+\mbox{\Hypertarget{textInput_8c_aae865db01e31dbe4754638af380ff0d1}\label{textInput_8c_aae865db01e31dbe4754638af380ff0d1}} 
+\index{textInput.c@{textInput.c}!INPUT\_BITS@{INPUT\_BITS}}
+\index{INPUT\_BITS@{INPUT\_BITS}!textInput.c@{textInput.c}}
+\doxysubsubsection{\texorpdfstring{INPUT\_BITS}{INPUT\_BITS}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+BITS~2}
+
+
+
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{textInput_8c_ad2101417fb014aeb60e8bcb9cb79f1f6}\label{textInput_8c_ad2101417fb014aeb60e8bcb9cb79f1f6}} 
+\index{textInput.c@{textInput.c}!cleanLetterCounter@{cleanLetterCounter}}
+\index{cleanLetterCounter@{cleanLetterCounter}!textInput.c@{textInput.c}}
+\doxysubsubsection{\texorpdfstring{cleanLetterCounter()}{cleanLetterCounter()}}
+{\footnotesize\ttfamily void clean\+Letter\+Counter (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{int}]{winX }\end{DoxyParamCaption})}
+
+
+
+cleans the letter counter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em winX} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{textInput_8c_aabed4d0431987f7ac52d60e8074bd80a}\label{textInput_8c_aabed4d0431987f7ac52d60e8074bd80a}} 
+\index{textInput.c@{textInput.c}!firstPosition@{firstPosition}}
+\index{firstPosition@{firstPosition}!textInput.c@{textInput.c}}
+\doxysubsubsection{\texorpdfstring{firstPosition()}{firstPosition()}}
+{\footnotesize\ttfamily void first\+Position (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{int}]{wordstrlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}\label{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}} 
+\index{textInput.c@{textInput.c}!printLetterCounter@{printLetterCounter}}
+\index{printLetterCounter@{printLetterCounter}!textInput.c@{textInput.c}}
+\doxysubsubsection{\texorpdfstring{printLetterCounter()}{printLetterCounter()}}
+{\footnotesize\ttfamily void print\+Letter\+Counter (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{int}]{ct,  }\item[{int}]{location\+Setter,  }\item[{int}]{winX }\end{DoxyParamCaption})}
+
+
+
+prints the letter counter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em ct} & \\
+\hline
+{\em location\+Setter} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{textInput_8c_a7b17a6c72a0b183ba90901d387f1d779}\label{textInput_8c_a7b17a6c72a0b183ba90901d387f1d779}} 
 \index{textInput.c@{textInput.c}!textInput@{textInput}}
 \index{textInput@{textInput}!textInput.c@{textInput.c}}
@@ -46,16 +118,21 @@ the function for working with the text input system
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \\
+{\em window} & the main window \\
 \hline
-{\em ct} & \\
+{\em ct} & the letter counter, in every input decreases by one (in backspace increases by 1) \\
 \hline
-{\em wordstrlen} & \\
+{\em wordstrlen} & the header words length (WORD\+: \mbox{[}5\mbox{]}) \\
 \hline
-{\em winX} & \\
+{\em winX} & the length of the window (getmaxx(window)) \\
 \hline
-{\em string} & \\
+{\em string} & (string for initializing the data) \\
 \hline
-{\em location\+Setter} & \\
+{\em location\+Setter} & the location setter for the half panels \\
 \hline
 \end{DoxyParams}
+$<$ main char for taking the data one by one
+
+$<$ takes the ct and initializes it to limit, used for checking the backspace if there is no input
+
+$<$ takes the first position x

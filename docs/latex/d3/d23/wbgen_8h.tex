@@ -114,20 +114,24 @@ the function for working with the text input system
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \\
+{\em window} & the main window \\
 \hline
-{\em ct} & \\
+{\em ct} & the letter counter, in every input decreases by one (in backspace increases by 1) \\
 \hline
-{\em wordstrlen} & \\
+{\em wordstrlen} & the header words length (WORD\+: \mbox{[}5\mbox{]}) \\
 \hline
-{\em winX} & \\
+{\em winX} & the length of the window (getmaxx(window)) \\
 \hline
-{\em string} & \\
+{\em string} & (string for initializing the data) \\
 \hline
-{\em location\+Setter} & \\
+{\em location\+Setter} & the location setter for the half panels \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
+$<$ main char for taking the data one by one
+
+$<$ takes the ct and initializes it to limit, used for checking the backspace if there is no input
+
+$<$ takes the first position x\mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
 \index{wbgen.h@{wbgen.h}!verify@{verify}}
 \index{verify@{verify}!wbgen.h@{wbgen.h}}
 \doxysubsubsection{\texorpdfstring{verify()}{verify()}}
