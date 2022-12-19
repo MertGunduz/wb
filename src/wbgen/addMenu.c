@@ -31,6 +31,7 @@ void addMenu()
     int wordOppositeCt = 64;
 
     initscr();
+    noecho();
     keypad(stdscr, true);
         
     if (colorCheck())

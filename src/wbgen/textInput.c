@@ -11,104 +11,83 @@
 #include "wbgen.h"
 
 #define BACKSPACE_CHAR 127
+#define INPUT_BITS 2
 
 void cleanLetterCounter(WINDOW *window, int winX);
-void printLetterCounter(WINDOW *window, int ct, int locationSetter);
-bool breachControl(WINDOW *window, int i, int winX, int wordstrlen);
+void printLetterCounter(WINDOW *window, int ct, int locationSetter, int winX);
+void firstPosition(WINDOW *window, int wordstrlen);
 
 /// @brief the function for working with the text input system
-/// @param window 
-/// @param ct 
-/// @param wordstrlen 
-/// @param winX
-/// @param string
-/// @param locationSetter
+/// @param window the main window
+/// @param ct the letter counter, in every input decreases by one (in backspace increases by 1)
+/// @param wordstrlen the header words length (WORD: [5])
+/// @param winX the length of the window (getmaxx(window))
+/// @param string (string for initializing the data)
+/// @param locationSetter the location setter for the half panels
 void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter)
 {
-    int lim = ct;
+    char mc; /**< main char for taking the data one by one */
+
+    int limit = ct; /**< takes the ct and initializes it to limit, used for checking the backspace if there is no input */ 
+    int firstPositionX = wordstrlen + 2; /**< takes the first position x*/
+
     int i = 0;
-    int sc = 0;
-    char dataChar;
-    bool isBreached, isDotsPlaced;
+    int iR;
 
-    /* moves to the window header text input */
-    wmove(window, 1, wordstrlen + 2);
+    bool isReached;
 
-    do
+    /* go to the first position */
+    firstPosition(window, wordstrlen);
+
+    do 
     {
-        /* controls if breached */
-        isBreached = breachControl(window, i, winX, wordstrlen);
+        mc = wgetch(window);
 
-        /* input */
-        dataChar = wgetch(window);
-
-        if (isDotsPlaced)
+        if (mc == BACKSPACE_CHAR)
         {
-            wmove(window, 1, winX - 1);
-        }
-        
-        if (dataChar != BACKSPACE_CHAR)
-        {
-            string[sc] = dataChar;
-            sc++; 
-
-            ct--;
-        }
-        else
-        {            
-            if (ct != lim)
+            if (ct != limit)
             {
-                sc--; 
-                string[sc] = '\0';
-
                 ct++;
 
-                mvwdelch(window, 1, i + wordstrlen + 3);
-                mvwdelch(window, 1, i + wordstrlen + 2);
-                mvwdelch(window, 1, i + wordstrlen + 1);
+                // deleting character
+                if (i <= iR + 1)
+                {
+                    mvwdelch(window, 1, getcurx(window) - 1);
+                    isReached = false;
+                }
 
-                i = i - 2;
-            }
-            else
-            {
-                mvwdelch(window, 1, i + wordstrlen + 3);
-                mvwdelch(window, 1, i +  wordstrlen + 2);
                 i--;
             }
         }
-
-        /* cleans the letter counter part [64]-[256] */
-        cleanLetterCounter(window, winX);
-        
-        /* pritns the letter counter */
-        printLetterCounter(window, ct, locationSetter);
-
-        if (!isBreached)
-        {
-            wmove(window, 1, wordstrlen + 3 + i);
-        }
         else
         {
-            if (!isDotsPlaced)
+            if (ct != 0)
             {
-                mvwaddch(window, 1, wordstrlen + 3 + i, '.');
-                mvwaddch(window, 1, wordstrlen + 3 + i + 1, '.');
-                mvwaddch(window, 1, wordstrlen + 3 + i + 2, '.');
-                isDotsPlaced = true;
-                noecho();
-                curs_set(0);
+                ct--;
+                
+                /* if cursor is not in the last place */
+                if (!isReached)
+                {
+                    if (getcurx(window) + 1 + locationSetter != winX - 1)
+                    {
+                        waddch(window, mc);
+                    }
+                    else
+                    {
+                        waddch(window, '~');
+                        isReached = true;
+
+                        iR = i;
+                    }
+                }
+
+                i++;
             }
         }
+    } while (mc != KEY_ENTER && mc != '\n');
 
-        i++;
-    } while (dataChar != KEY_ENTER && dataChar != '\n');
-
-    /* adding a null terminator to the string */
-    string[sc++] = '\0';
-
-    isBreached = false; isDotsPlaced = false;
-    echo();
-    curs_set(1);
+    isReached = false;
+    i = 0; iR = 0;
 }
 
 /// @brief cleans the letter counter
@@ -126,8 +105,10 @@ void cleanLetterCounter(WINDOW *window, int winX)
 /// @param window 
 /// @param ct 
 /// @param locationSetter 
-void printLetterCounter(WINDOW *window, int ct, int locationSetter)
+void printLetterCounter(WINDOW *window, int ct, int locationSetter, int winX)
 {
+    cleanLetterCounter(window, winX);
+
     if (ct >= 100)
     {
         mvwprintw(window, 2, getmaxx(window) - 4 - locationSetter, "%d", ct);
@@ -146,16 +127,7 @@ void printLetterCounter(WINDOW *window, int ct, int locationSetter)
     } 
 }
 
-/// @brief controls if the input breaches the window border
-/// @param window 
-/// @param i 
-/// @param winX 
-/// @param wordstrlen 
-/// @return 
-bool breachControl(WINDOW *window, int i, int winX, int wordstrlen)
+void firstPosition(WINDOW *window, int wordstrlen)
 {
-    if (i == winX - wordstrlen - 7)
-    {
-        return true;
-    } 
+    wmove(window, 1, wordstrlen + 2);
 }
