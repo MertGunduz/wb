@@ -8,7 +8,6 @@
  * @author Mehmet Mert Gunduz
  * 
  * @date 12/10/2022
- * @version 1.0.0
  * @bug No known bugs.
 */
 

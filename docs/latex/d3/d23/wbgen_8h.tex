@@ -43,7 +43,9 @@ bool \mbox{\hyperlink{wbgen_8h_a1c4cacbf5fd9f7b1e22a44e88e620fc9}{color\+Check}}
 void \mbox{\hyperlink{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}{bg\+Color\+Set}} ()
 \begin{DoxyCompactList}\small\item\em sets the terminal to pure black and white text \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}{text\+Input}} (WINDOW $\ast$window, int ct, int wordstrlen, int winX, char $\ast$string, int location\+Setter)
-\begin{DoxyCompactList}\small\item\em the function for working with the text input system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the function for working with the text input system \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}{fullrefresh}} (WINDOW $\ast$window)
+\begin{DoxyCompactList}\small\item\em refreshes the stdscr and the specified window \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -59,7 +61,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000007}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000008}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -102,6 +104,21 @@ sets the terminal to pure black and white text
 
 checks the terminal color capabilities 
 
+\mbox{\Hypertarget{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}\label{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}} 
+\index{wbgen.h@{wbgen.h}!fullrefresh@{fullrefresh}}
+\index{fullrefresh@{fullrefresh}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{fullrefresh()}{fullrefresh()}}
+{\footnotesize\ttfamily void fullrefresh (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+refreshes the stdscr and the specified window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}\label{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}} 
 \index{wbgen.h@{wbgen.h}!textInput@{textInput}}
 \index{textInput@{textInput}!wbgen.h@{wbgen.h}}
@@ -127,11 +144,7 @@ the function for working with the text input system
 {\em location\+Setter} & the location setter for the half panels \\
 \hline
 \end{DoxyParams}
-$<$ main char for taking the data one by one
-
-$<$ takes the ct and initializes it to limit, used for checking the backspace if there is no input
-
-$<$ takes the first position x\mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
+\mbox{\Hypertarget{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}\label{wbgen_8h_a34e1ad81b228cf24e283e219eb486004}} 
 \index{wbgen.h@{wbgen.h}!verify@{verify}}
 \index{verify@{verify}!wbgen.h@{wbgen.h}}
 \doxysubsubsection{\texorpdfstring{verify()}{verify()}}

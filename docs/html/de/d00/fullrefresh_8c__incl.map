@@ -1,0 +1,12 @@
+<map id="src/wbgen/fullrefresh.c" name="src/wbgen/fullrefresh.c">
+<area shape="rect" id="node1" title="refreshes the stdscr and the specified window" alt="" coords="255,5,425,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="301,80,379,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,155,183,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="207,155,278,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="303,155,377,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="401,155,465,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="489,155,575,181"/>
+<area shape="rect" id="node9" href="$d5/d60/wbinfo_8h.html" title="the general wb library for printing information messages" alt="" coords="599,155,737,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="626,229,710,256"/>
+</map>

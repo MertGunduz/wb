@@ -11,6 +11,7 @@
 #include "wbgen.h"
 
 /// @brief refreshes the stdscr and the specified window
+/// @param window
 void fullrefresh(WINDOW *window)
 {
     refresh();

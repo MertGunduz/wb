@@ -1,17 +1,18 @@
 <map id="src/wbinfo/wbinfo.h" name="src/wbinfo/wbinfo.h">
-<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="1170,5,1319,32"/>
-<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="433,87,579,114"/>
-<area shape="rect" id="node9" href="$d6/df6/githubMessage_8c.html" title="the function for printing the github source code information" alt="" coords="603,87,806,114"/>
-<area shape="rect" id="node10" href="$df/de2/helpMessage_8c.html" title="the function for printing the help information" alt="" coords="831,87,1021,114"/>
-<area shape="rect" id="node11" href="$d3/d49/terminalColorError_8c.html" title="the function for printing terminal color capability error" alt="" coords="1045,80,1228,121"/>
-<area shape="rect" id="node12" href="$da/d8e/verifyArgcError_8c.html" title="the function for printing verify function argc count error info" alt="" coords="1253,87,1453,114"/>
-<area shape="rect" id="node13" href="$d8/d73/verifyArgumentError_8c.html" title="the function for printing verify argv mismatch" alt="" coords="1477,80,1671,121"/>
-<area shape="rect" id="node14" href="$df/d4d/verifyFileStructureError_8c.html" title="the function for printing verify function file structure availability error info" alt="" coords="1696,80,1908,121"/>
-<area shape="rect" id="node15" href="$d9/d70/versionMessage_8c.html" title="the function for printing the wb version" alt="" coords="1931,87,2142,114"/>
+<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="1270,5,1419,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="533,87,679,114"/>
+<area shape="rect" id="node10" href="$d6/df6/githubMessage_8c.html" title="the function for printing the github source code information" alt="" coords="703,87,906,114"/>
+<area shape="rect" id="node11" href="$df/de2/helpMessage_8c.html" title="the function for printing the help information" alt="" coords="931,87,1121,114"/>
+<area shape="rect" id="node12" href="$d3/d49/terminalColorError_8c.html" title="the function for printing terminal color capability error" alt="" coords="1145,80,1328,121"/>
+<area shape="rect" id="node13" href="$da/d8e/verifyArgcError_8c.html" title="the function for printing verify function argc count error info" alt="" coords="1353,87,1553,114"/>
+<area shape="rect" id="node14" href="$d8/d73/verifyArgumentError_8c.html" title="the function for printing verify argv mismatch" alt="" coords="1577,80,1771,121"/>
+<area shape="rect" id="node15" href="$df/d4d/verifyFileStructureError_8c.html" title="the function for printing verify function file structure availability error info" alt="" coords="1796,80,2008,121"/>
+<area shape="rect" id="node16" href="$d9/d70/versionMessage_8c.html" title="the function for printing the wb version" alt="" coords="2031,87,2242,114"/>
 <area shape="rect" id="node3" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,169,108,196"/>
 <area shape="rect" id="node4" href="$dc/dda/addMenu_8c.html" title="the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word file..." alt="" coords="133,169,295,196"/>
 <area shape="rect" id="node5" href="$d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,169,495,196"/>
 <area shape="rect" id="node6" href="$d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,169,693,196"/>
-<area shape="rect" id="node7" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="718,169,881,196"/>
-<area shape="rect" id="node8" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="905,169,1043,196"/>
+<area shape="rect" id="node7" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="718,169,889,196"/>
+<area shape="rect" id="node8" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="913,169,1075,196"/>
+<area shape="rect" id="node9" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="1099,169,1238,196"/>
 </map>

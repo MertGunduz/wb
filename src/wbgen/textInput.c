@@ -26,17 +26,14 @@ void firstPosition(WINDOW *window, int wordstrlen);
 /// @param locationSetter the location setter for the half panels
 void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter)
 {
-    char mc; /**< main char for taking the data one by one */
+    char mc; /* main char for taking the data one by one */
 
-    int limit = ct; /**< takes the ct and initializes it to limit, used for checking the backspace if there is no input */ 
-    int firstPositionX = wordstrlen + 2; /**< takes the first position x*/
+    int limit = ct; /* takes the ct and initializes it to limit, used for checking the backspace if there is no input */ 
+    int firstPositionX = wordstrlen + 2; /* takes the first position x*/
+    int i = 0, iR; /* the cursor location control variables */
+    int sc = 0; /* string indexer */
 
-    int i = 0;
-    int iR;
-
-    int sc = 0;
-
-    bool isReached = false;
+    bool isReached = false; /* controls the border breach of cursor */
 
     /* go to the first position */
     firstPosition(window, wordstrlen);
@@ -147,6 +144,9 @@ void printLetterCounter(WINDOW *window, int ct, int locationSetter, int winX)
     } 
 }
 
+/// @brief sends the cursor to the start position
+/// @param window 
+/// @param wordstrlen 
 void firstPosition(WINDOW *window, int wordstrlen)
 {
     wmove(window, 1, wordstrlen + 2);

@@ -28,7 +28,7 @@ void \mbox{\hyperlink{textInput_8c_ad2101417fb014aeb60e8bcb9cb79f1f6}{clean\+Let
 void \mbox{\hyperlink{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}{print\+Letter\+Counter}} (WINDOW $\ast$window, int ct, int location\+Setter, int winX)
 \begin{DoxyCompactList}\small\item\em prints the letter counter \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{textInput_8c_aabed4d0431987f7ac52d60e8074bd80a}{first\+Position}} (WINDOW $\ast$window, int wordstrlen)
-\item 
+\begin{DoxyCompactList}\small\item\em sends the cursor to the start position \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{textInput_8c_a7b17a6c72a0b183ba90901d387f1d779}{text\+Input}} (WINDOW $\ast$window, int ct, int wordstrlen, int winX, char $\ast$string, int location\+Setter)
 \begin{DoxyCompactList}\small\item\em the function for working with the text input system \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -43,7 +43,7 @@ Mehmet Mert Gunduz
 18/12/2022 
 \end{DoxyDate}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000006}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -86,6 +86,18 @@ cleans the letter counter
 \doxysubsubsection{\texorpdfstring{firstPosition()}{firstPosition()}}
 {\footnotesize\ttfamily void first\+Position (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{int}]{wordstrlen }\end{DoxyParamCaption})}
 
+
+
+sends the cursor to the start position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em wordstrlen} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}\label{textInput_8c_ac64f75cfaf6996429d0745dfe297967e}} 
 \index{textInput.c@{textInput.c}!printLetterCounter@{printLetterCounter}}
 \index{printLetterCounter@{printLetterCounter}!textInput.c@{textInput.c}}
@@ -131,8 +143,3 @@ the function for working with the text input system
 {\em location\+Setter} & the location setter for the half panels \\
 \hline
 \end{DoxyParams}
-$<$ main char for taking the data one by one
-
-$<$ takes the ct and initializes it to limit, used for checking the backspace if there is no input
-
-$<$ takes the first position x
