@@ -26,3 +26,4 @@ bool colorCheck();
 void bgColorSet();
 void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter);
 void fullrefresh(WINDOW *window);
+void listMenu();
