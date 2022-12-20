@@ -60,8 +60,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
                     mvwdelch(window, 1, getcurx(window) - 1);
                     isReached = false;
                     
-                    refresh();
-                    wrefresh(window);
+                    fullrefresh(window);
                 }
 
                 i--;

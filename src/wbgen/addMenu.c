@@ -70,8 +70,7 @@ void addMenu()
         mvwprintw(topPanel, 0, COLS - strlen(wordDate) - 1, "%s", wordDate);
        
         /* refresh the top panel */
-        refresh();
-        wrefresh(topPanel);
+        fullrefresh(topPanel);
     } 
 
     /******************************************
@@ -88,15 +87,8 @@ void addMenu()
         mvwprintw(wordWindow, 1, 1, "WORD: ");
         mvwprintw(wordWindow, 2, x - 3, "%d", wordCt);
 
-        /* move to input textbox */
-        //wmove(wordWindow, 1, 7);
-
         /* refresh the word window */
-        refresh();
-        wrefresh(wordWindow);
-
-        /* take input */
-        //wgetnstr(wordWindow, word, 64);
+        fullrefresh(wordWindow);
     }
     
     /******************************************
@@ -122,15 +114,8 @@ void addMenu()
             mvwprintw(wordTypeWindow, 2, x - 3, "%d", wordTypeCt);
         }
 
-        /* move to input textbox */
-        //wmove(wordTypeWindow, 1, 7);
-
-        /* refresh the word window */
-        refresh();
-        wrefresh(wordTypeWindow);
-
-        /* take input */
-        //wgetnstr(wordTypeWindow, word, 64);
+        /* refresh the word type window */
+        fullrefresh(wordTypeWindow);
     }
 
     /******************************************
@@ -145,18 +130,11 @@ void addMenu()
         getmaxyx(oppositeWordWindow, y, x);
 
         mvwprintw(oppositeWordWindow, 1, 1, "WORD OPPOSITE: ");
-        
         mvwprintw(oppositeWordWindow, 2, x - 3, "%d", wordOppositeCt);
 
-        /* move to input textbox */
-        //wmove(oppositeWordWindow, 1, 7);
 
         /* refresh the word window */
-        refresh();
-        wrefresh(oppositeWordWindow);
-
-        /* take input */
-        //wgetnstr(oppositeWordWindow, word, 64);
+        fullrefresh(oppositeWordWindow);
     }
 
     /******************************************
@@ -171,18 +149,10 @@ void addMenu()
         getmaxyx(wordDescWindow, y, x);
         
         mvwprintw(wordDescWindow, 1, 1, "WORD DESCRIPTION: ");
-
         mvwprintw(wordDescWindow, 2, x - 4, "%d", wordDescCt);
 
-        /* move to input textbox */
-        //wmove(wordDescWindow, 1, 7);
-
         /* refresh the word window */
-        refresh();
-        wrefresh(wordDescWindow);
-
-        /* take input */
-        //wgetnstr(wordDescWindow, word, 64);
+        fullrefresh(wordDescWindow);
     }
 
     /******************************************
@@ -197,18 +167,10 @@ void addMenu()
         getmaxyx(wordExampleWindow, y, x);
         
         mvwprintw(wordExampleWindow, 1, 1, "WORD EXAMPLE: ");
-
         mvwprintw(wordExampleWindow, 2, x - 4, "%d", wordExCt);
 
-        /* move to input textbox */
-        //wmove(wordExampleWindow, 1, 7);
-
         /* refresh the word window */
-        refresh();
-        wrefresh(wordExampleWindow);
-
-        /* take input */
-        //wgetnstr(wordExampleWindow, word, 64);
+        fullrefresh(wordExampleWindow);
     }
 
     /******************************************
@@ -237,24 +199,19 @@ void addMenu()
 
     // string initializations
     textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word, 0);
-
-    refresh(); wrefresh(wordWindow);
+    fullrefresh(wordWindow);
 
     textInput(wordTypeWindow, wordTypeCt, strlen("WORD TYPE:"), getmaxx(wordTypeWindow), wordType, 1);
-
-    refresh(); wrefresh(wordTypeWindow);
+    fullrefresh(wordTypeWindow);
 
     textInput(oppositeWordWindow, wordOppositeCt, strlen("WORD OPPOSITE:"), getmaxx(oppositeWordWindow), wordOpposite, 0);
-
-    refresh(); wrefresh(oppositeWordWindow);
+    fullrefresh(oppositeWordWindow);
 
     textInput(wordDescWindow, wordDescCt, strlen("WORD DESCRIPTION:"), getmaxx(wordDescWindow), wordDesc, 0);
-
-    refresh(); wrefresh(wordDescWindow);
+    fullrefresh(wordDescWindow);
 
     textInput(wordExampleWindow, wordExCt, strlen("WORD EXAMPLE:"), getmaxx(wordExampleWindow), wordExample, 0);
-
-    refresh(); wrefresh(wordExampleWindow);
+    fullrefresh(wordExampleWindow);
 
     /* word file generation part */
     char wordFilePath[128]; 
