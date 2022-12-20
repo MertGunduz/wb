@@ -95,6 +95,11 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
                 i++;
             }
         }
+
+        int beforeLocation = getcurx(window);
+        printLetterCounter(window, ct, locationSetter, winX);
+        wmove(window, 1, beforeLocation);
+
     } while (mc != KEY_ENTER && mc != '\n');
 
     string[sc++] = '\0';
