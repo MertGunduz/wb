@@ -132,7 +132,6 @@ void addMenu()
         mvwprintw(oppositeWordWindow, 1, 1, "WORD OPPOSITE: ");
         mvwprintw(oppositeWordWindow, 2, x - 3, "%d", wordOppositeCt);
 
-
         /* refresh the word window */
         fullrefresh(oppositeWordWindow);
     }
@@ -196,8 +195,6 @@ void addMenu()
     /******************************************
     * WORD INPUT
     ******************************************/    
-
-    // string initializations
     textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word, 0);
     fullrefresh(wordWindow);
 
@@ -213,7 +210,9 @@ void addMenu()
     textInput(wordExampleWindow, wordExCt, strlen("WORD EXAMPLE:"), getmaxx(wordExampleWindow), wordExample, 0);
     fullrefresh(wordExampleWindow);
 
-    /* word file generation part */
+    /******************************************
+    * WORD FILE GENERATION
+    ******************************************/   
     char wordFilePath[128]; 
     char wordsFilePath[128];
 
