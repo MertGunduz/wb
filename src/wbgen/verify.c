@@ -27,8 +27,16 @@ bool verify(int argc, char *firstArgv)
         // struct stat for controlling directory /usr/local/wb
         struct stat st;
 
-        // controllign the file and folder /usr/local/wb and /usr/bin/wb
-        if (access("/usr/bin/wb", F_OK) == 0 && stat("/usr/local/wb", &st) == 0)
+        // .wb paths
+        char folderPath[128]; 
+        char wordsFilePath[128];
+
+        // making the path strings 
+        sprintf(folderPath, "%s/.wb", getenv("HOME"));
+        sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
+
+        // controllign the file and folder /usr/local/wb and home/.wb
+        if (access("/usr/bin/wb", F_OK) == 0 && access(wordsFilePath, F_OK) == 0 && stat(folderPath, &st) == 0)
         {   
             // controlling the argv[1]
             for (int i = 0; i < argSize; i++)
