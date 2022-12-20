@@ -237,13 +237,24 @@ void addMenu()
 
     // string initializations
     textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word, 0);
+
+    refresh(); wrefresh(wordWindow);
+
     textInput(wordTypeWindow, wordTypeCt, strlen("WORD TYPE:"), getmaxx(wordTypeWindow), wordType, 1);
+
+    refresh(); wrefresh(wordTypeWindow);
+
     textInput(oppositeWordWindow, wordOppositeCt, strlen("WORD OPPOSITE:"), getmaxx(oppositeWordWindow), wordOpposite, 0);
+
+    refresh(); wrefresh(oppositeWordWindow);
+
     textInput(wordDescWindow, wordDescCt, strlen("WORD DESCRIPTION:"), getmaxx(wordDescWindow), wordDesc, 0);
+
+    refresh(); wrefresh(wordDescWindow);
+
     textInput(wordExampleWindow, wordExCt, strlen("WORD EXAMPLE:"), getmaxx(wordExampleWindow), wordExample, 0);
 
-    refresh();
-    wrefresh(wordWindow);
+    refresh(); wrefresh(wordExampleWindow);
 
     /* word file generation part */
     char wordFilePath[128]; 

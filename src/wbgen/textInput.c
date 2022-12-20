@@ -36,7 +36,7 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
 
     int sc = 0;
 
-    bool isReached;
+    bool isReached = false;
 
     /* go to the first position */
     firstPosition(window, wordstrlen);
@@ -59,6 +59,9 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
                 {
                     mvwdelch(window, 1, getcurx(window) - 1);
                     isReached = false;
+                    
+                    refresh();
+                    wrefresh(window);
                 }
 
                 i--;
