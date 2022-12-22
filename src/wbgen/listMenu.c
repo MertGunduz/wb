@@ -167,6 +167,16 @@ void listMenu()
     {
         wbkgd(useWindow, COLOR_PAIR(100));
 
+        waddch(useWindow, ' ');
+
+        wattron(useWindow, A_BOLD);
+        waddch(useWindow, '[');
+        waddch(useWindow, 'q');
+        waddch(useWindow, ']');
+        wattroff(useWindow, A_BOLD);
+        
+        wprintw(useWindow, " to exit");
+
         fullrefresh(useWindow);
     }
 
