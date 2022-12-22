@@ -195,7 +195,10 @@ void listMenu()
         travelInput = getch();
     } while (travelInput != 'q');
     
-    getch();
+    delwin(topPanel);
+    delwin(listTopPanel);
+    delwin(listPanel);
+    delwin(useWindow);
     endwin();
 }
 
