@@ -170,6 +170,26 @@ void listMenu()
         fullrefresh(useWindow);
     }
 
+    /******************************************
+    * BACKGROUND PATTERN DESIGN
+    ******************************************/
+    attron(COLOR_PAIR(101));
+
+    for (int i = 0; i < COLS; i++)
+    {
+        mvprintw(lengthOfList + 5, i, "_");
+    }
+
+    for (int i = lengthOfList + 6; i < LINES; i++)
+    {
+        for (int j = 0; j < COLS; j=j+3)
+        {
+            mvprintw(i, j, "wb ");
+        }
+    }
+
+    refresh();
+
     do
     {
         travelInput = getch();
