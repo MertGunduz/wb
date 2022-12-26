@@ -25,19 +25,41 @@ void listMenu()
     char wordReaderTrashVar[65];
     char wordsFilePath[128]; 
     int totalWords = 0;
+    int wct = 0;
+
+    /* file path variable initialization */
+    sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
 
     /******************************************
     * FILE READING START
     ******************************************/
-    sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
+    /* file total line reading */
+    FILE *wordsLineFile = fopen(wordsFilePath, "r");
+    totalWords = takeFileLength(wordsLineFile);
+    fclose(wordsLineFile);
 
-    FILE *file = fopen(wordsFilePath, "r");
-    totalWords = takeFileLength(file);
+    /* initialize the size of the totalwords, the variable for storing all the words */
+    char words[totalWords][65];
+
+    /* file words reading */
+    FILE *wordsFile = fopen(wordsFilePath, "r");
+
+    if (wordsFile == NULL)
+    {
+        // can't access reading the file message
+        exit(0);
+    }
+
+    while (!feof(wordsFile))
+    {
+        fgets(words[wct], 64, wordsFile);
+        wct++;
+    }
 
     initscr();
     noecho();
     keypad(stdscr, true);
-    
+
     if (colorCheck())
     {
         start_color();
@@ -139,6 +161,9 @@ void listMenu()
         fullrefresh(listTopPanel);
     }
 
+    /******************************************
+    * LIST PANEL START
+    ******************************************/
     WINDOW *listPanel;
 
     if (LINES >= 19)
@@ -176,6 +201,9 @@ void listMenu()
 
     int lengthOfList = getmaxy(listPanel);
 
+    /******************************************
+    *  USE WINDOW START
+    ******************************************/
     WINDOW *useWindow = newwin(1, COLS, lengthOfList + 4, 0);
 
     if (useWindow != NULL)
