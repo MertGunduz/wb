@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset_27',['RESET',['../d5/d60/wbinfo_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'wbinfo.h']]]
+  ['printlettercounter_27',['printLetterCounter',['../d0/d94/textInput_8c.html#ac64f75cfaf6996429d0745dfe297967e',1,'textInput.c']]],
+  ['pure_5fblack_5fcolor_28',['PURE_BLACK_COLOR',['../d3/d23/wbgen_8h.html#afed046f37c4b989441f2b3ca749d384a',1,'wbgen.h']]]
 ];

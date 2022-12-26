@@ -12,6 +12,7 @@
 
 void spaceAdder(WINDOW *window, int spacer);
 int takeFileLength(FILE *file);
+void resetCleaners(int *counter, char *string);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -22,8 +23,17 @@ void listMenu()
     char travelInput;
 
     /* file related variables */
-    char wordReaderTrashVar[65];
-    char wordsFilePath[128]; 
+    char wordReaderTrashVar[65]; /* file line reader trash var */
+    
+    char wordsFilePath[128];  /* words.txt path */
+    char wordFilePath[128];  /* path for words */
+
+    char wordTaker[64]; /* for cleaning the last /n in the txt file */
+    char charTaker; /* for taking the char until /n */
+    int ctC = 0;
+
+    char totalLine[1025]; /* total line taker for word files */
+
     int totalWords = 0;
     int wct = 0;
 
@@ -56,6 +66,11 @@ void listMenu()
         wct++;
     }
 
+    fclose(wordsFile);
+
+    /******************************************
+    * NCURSES START
+    ******************************************/
     initscr();
     noecho();
     keypad(stdscr, true);
@@ -183,16 +198,43 @@ void listMenu()
 
         if (LINES >= 19)
         {
-            for (int i = 0; i < 15; i++)
+            if (wct >= 19)
             {
-                mvwprintw(listPanel, i, 1, "%d", i);
+                wct = 19;
+            }
+
+            for (int i = 0; i < wct - 1; i++)
+            {
+                /* cleaning the \n from the words */
+                do
+                {  
+                    charTaker = words[i][ctC];
+
+                    wordTaker[ctC] = charTaker;
+                    ctC++;
+                } while (words[i][ctC] != '\n');
+
+                wordTaker[ctC] = '\0';
+
+                /* the word file path generation */
+                sprintf(wordFilePath, "%s/.wb/%s.txt", getenv("HOME"), wordTaker);
+
+                mvwprintw(listPanel, i, 1, "%s", wordFilePath);
+
+                /* resetting the cleaner variables */
+                resetCleaners(&ctC, wordTaker);
+            }
+
+            for (int i = wct - 1; i < 19; i++)
+            {
+                mvwprintw(listPanel, i, 1, "NO DATA");
             }
         }
         else
         {
             for (int i = 0; i < LINES - 5; i++)
             {
-                mvwprintw(listPanel, i, 1, "%d", i);
+
             }
         }
 
@@ -296,4 +338,10 @@ int takeFileLength(FILE *file)
     totalWords--;
 
     return totalWords;
+}
+
+void resetCleaners(int *counter, char *string)
+{
+    string[0] = '\0';
+    *counter = 0;
 }

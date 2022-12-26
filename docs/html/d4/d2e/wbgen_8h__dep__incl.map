@@ -1,10 +1,11 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="533,5,679,32"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="631,5,778,32"/>
 <area shape="rect" id="node2" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$dc/dda/addMenu_8c.html" title="the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word file..." alt="" coords="133,80,295,107"/>
 <area shape="rect" id="node4" href="$d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
 <area shape="rect" id="node5" href="$d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,80,693,107"/>
 <area shape="rect" id="node6" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="718,80,889,107"/>
-<area shape="rect" id="node7" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="913,80,1075,107"/>
-<area shape="rect" id="node8" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="1099,80,1238,107"/>
+<area shape="rect" id="node7" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="913,80,1072,107"/>
+<area shape="rect" id="node8" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1097,80,1259,107"/>
+<area shape="rect" id="node9" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="1283,80,1422,107"/>
 </map>
