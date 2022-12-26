@@ -11,18 +11,33 @@
 #include "wbgen.h"
 
 void spaceAdder(WINDOW *window, int spacer);
+int takeFileLength(FILE *file);
 
 /// @brief the main function for displaying the words
 void listMenu()
 {
-    char wordDate[33]; /* word add date data (example: 05/1/2023)*/
+    /* ui related variables */
+    char wordDate[33];
     int spacer;
     char travelInput;
+
+    /* file related variables */
+    char wordReaderTrashVar[65];
+    char wordsFilePath[128]; 
+    int totalWords = 0;
+
+    /******************************************
+    * FILE READING START
+    ******************************************/
+    sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
+
+    FILE *file = fopen(wordsFilePath, "r");
+    totalWords = takeFileLength(file);
 
     initscr();
     noecho();
     keypad(stdscr, true);
-
+    
     if (colorCheck())
     {
         start_color();
@@ -212,6 +227,9 @@ void listMenu()
     endwin();
 }
 
+/// @brief the function for setting the resolution of ui
+/// @param window 
+/// @param spacer 
 void spaceAdder(WINDOW *window, int spacer)
 {
     if (spacer > 0)
@@ -225,4 +243,29 @@ void spaceAdder(WINDOW *window, int spacer)
     {
         waddch(window, ' ');
     }
+}
+
+/// @brief the function for taking the total lines in a txt file 
+/// @param file 
+/// @return total lines of the text
+int takeFileLength(FILE *file)
+{
+    int totalWords = 0;
+    char wordReaderTrashVar[65];
+
+    if (file == NULL)
+    {
+        exit(0);
+    }
+
+    while (!feof(file))
+    {
+        fgets(wordReaderTrashVar, 64, file);
+        totalWords++;
+    }
+
+    /* corrector for totalwords */
+    totalWords--;
+
+    return totalWords;
 }
