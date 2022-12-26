@@ -232,10 +232,38 @@ void listMenu()
         }
         else
         {
-            for (int i = 0; i < LINES - 5; i++)
+            if (wct > LINES - 5)
             {
-
+                wct = LINES - 5;
             }
+
+            for (int i = 0; i < wct - 1; i++)
+            {
+                /* cleaning the \n from the words */
+                do
+                {  
+                    charTaker = words[i][ctC];
+
+                    wordTaker[ctC] = charTaker;
+                    ctC++;
+                } while (words[i][ctC] != '\n');
+
+                wordTaker[ctC] = '\0';
+
+                /* the word file path generation */
+                sprintf(wordFilePath, "%s/.wb/%s.txt", getenv("HOME"), wordTaker);
+
+                mvwprintw(listPanel, i, 1, "%s", wordFilePath);
+
+                /* resetting the cleaner variables */
+                resetCleaners(&ctC, wordTaker);
+            }
+
+            for (int i = wct - 1; i < LINES - 5; i++)
+            {
+                mvwprintw(listPanel, i, 1, "NO DATA");
+            }
+            
         }
 
         fullrefresh(listPanel);
