@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (wordsFile == NULL)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// can&#39;t access reading the file message</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="../../d6/d3c/fileReadErrorMessage_8c.html#af614c9921498e05357ce38b40207797f">fileReadErrorMessage</a>();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        exit(0);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
@@ -476,118 +476,120 @@ $(function() {
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span> (file == NULL)</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        exit(0);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">while</span> (!feof(file))</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        fgets(wordReaderTrashVar, 64, file);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        totalWords++;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="comment">/* corrector for totalwords */</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    totalWords--;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">return</span> totalWords;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
-<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">  436</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">resetCleaners</a>(<span class="keywordtype">int</span> *counter, <span class="keywordtype">char</span> *<span class="keywordtype">string</span>)</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordtype">string</span>[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    *counter = 0;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
-<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">  450</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">getWordData</a>(<span class="keywordtype">char</span> *totalLine, <span class="keywordtype">char</span> *wWordData, <span class="keywordtype">char</span> *wTypeData, <span class="keywordtype">char</span> *wOppositeData, <span class="keywordtype">char</span> *wdescData, <span class="keywordtype">char</span> *wExData, <span class="keywordtype">char</span> *wDateData)</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;{</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">/* tokenizing string */</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordtype">int</span> tlCt = 0, clCt = 0;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordtype">int</span> wordI = 0, typeI = 0, oppositeI = 0, descI = 0, exI = 0, dateI = 0;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    {</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keywordflow">if</span> (totalLine[tlCt] != <span class="charliteral">&#39;:&#39;</span>)</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        {</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;            <span class="keywordflow">switch</span> (clCt)</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                    wWordData[wordI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                    wordI++;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                    wTypeData[typeI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    typeI++;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                    wOppositeData[oppositeI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                    oppositeI++;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    wdescData[descI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    descI++;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    wExData[exI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    exI++;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="keywordflow">case</span> 5:</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                    wDateData[dateI] = totalLine[tlCt];</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    dateI++;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            }</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        }</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        {</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            clCt++;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        }</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        tlCt++;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    } <span class="keywordflow">while</span> (totalLine[tlCt] != <span class="charliteral">&#39;\0&#39;</span>);</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="comment">/* adding the null terminators */</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    wWordData[wordI] = <span class="charliteral">&#39;\0&#39;</span>; </div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    wTypeData[typeI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    wOppositeData[oppositeI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    wdescData[descI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    wExData[exI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    wDateData[dateI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;}</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160; </div>
-<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">  510</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">writeSubstringedData</a>(WINDOW *window, <span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> dataLen, <span class="keywordtype">int</span> totalLen)</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    wattron(window, A_ITALIC);</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    </div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; totalLen; i++)</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    {</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">if</span> (i &lt; dataLen)</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        {</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            waddch(window, data[i]);</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        }</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        {</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            waddch(window, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        }</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    }</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordflow">if</span> (dataLen &gt; totalLen)</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    {</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        waddch(window, <span class="charliteral">&#39;~&#39;</span>);</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    }</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    {</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        waddch(window, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    }</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    wattroff(window, A_ITALIC);</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;}</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <a class="code" href="../../d6/d3c/fileReadErrorMessage_8c.html#af614c9921498e05357ce38b40207797f">fileReadErrorMessage</a>();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        exit(0);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">while</span> (!feof(file))</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        fgets(wordReaderTrashVar, 64, file);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        totalWords++;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="comment">/* corrector for totalwords */</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    totalWords--;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">return</span> totalWords;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;}</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">  437</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">resetCleaners</a>(<span class="keywordtype">int</span> *counter, <span class="keywordtype">char</span> *<span class="keywordtype">string</span>)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;{</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">string</span>[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    *counter = 0;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">  451</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">getWordData</a>(<span class="keywordtype">char</span> *totalLine, <span class="keywordtype">char</span> *wWordData, <span class="keywordtype">char</span> *wTypeData, <span class="keywordtype">char</span> *wOppositeData, <span class="keywordtype">char</span> *wdescData, <span class="keywordtype">char</span> *wExData, <span class="keywordtype">char</span> *wDateData)</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;{</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="comment">/* tokenizing string */</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordtype">int</span> tlCt = 0, clCt = 0;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordtype">int</span> wordI = 0, typeI = 0, oppositeI = 0, descI = 0, exI = 0, dateI = 0;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="keywordflow">if</span> (totalLine[tlCt] != <span class="charliteral">&#39;:&#39;</span>)</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            <span class="keywordflow">switch</span> (clCt)</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                    wWordData[wordI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                    wordI++;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    wTypeData[typeI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                    typeI++;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                    wOppositeData[oppositeI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                    oppositeI++;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    wdescData[descI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    descI++;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    wExData[exI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                    exI++;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    wDateData[dateI] = totalLine[tlCt];</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                    dateI++;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            }</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            clCt++;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        }</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        tlCt++;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    } <span class="keywordflow">while</span> (totalLine[tlCt] != <span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">/* adding the null terminators */</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    wWordData[wordI] = <span class="charliteral">&#39;\0&#39;</span>; </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    wTypeData[typeI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    wOppositeData[oppositeI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    wdescData[descI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    wExData[exI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    wDateData[dateI] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;}</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160; </div>
+<div class="line"><a name="l00511"></a><span class="lineno"><a class="line" href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">  511</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">writeSubstringedData</a>(WINDOW *window, <span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> dataLen, <span class="keywordtype">int</span> totalLen)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;{</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    wattron(window, A_ITALIC);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    </div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; totalLen; i++)</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    {</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordflow">if</span> (i &lt; dataLen)</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            waddch(window, data[i]);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        }</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            waddch(window, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        }</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordflow">if</span> (dataLen &gt; totalLen)</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    {</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        waddch(window, <span class="charliteral">&#39;~&#39;</span>);</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    }</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        waddch(window, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    }</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160; </div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    wattroff(window, A_ITALIC);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;}</div>
 <div class="ttc" id="abgColorSet_8c_html_a6d2161f528c9a61a2bbc007317aebe93"><div class="ttname"><a href="../../d9/db6/bgColorSet_8c.html#a6d2161f528c9a61a2bbc007317aebe93">bgColorSet</a></div><div class="ttdeci">void bgColorSet()</div><div class="ttdoc">sets the terminal to pure black and white text</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db6/bgColorSet_8c_source.html#l00014">bgColorSet.c:14</a></div></div>
 <div class="ttc" id="acolorCheck_8c_html_a1c4cacbf5fd9f7b1e22a44e88e620fc9"><div class="ttname"><a href="../../d1/d60/colorCheck_8c.html#a1c4cacbf5fd9f7b1e22a44e88e620fc9">colorCheck</a></div><div class="ttdeci">bool colorCheck()</div><div class="ttdoc">checks the terminal color capabilities</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d60/colorCheck_8c_source.html#l00014">colorCheck.c:14</a></div></div>
+<div class="ttc" id="afileReadErrorMessage_8c_html_af614c9921498e05357ce38b40207797f"><div class="ttname"><a href="../../d6/d3c/fileReadErrorMessage_8c.html#af614c9921498e05357ce38b40207797f">fileReadErrorMessage</a></div><div class="ttdeci">void fileReadErrorMessage()</div><div class="ttdoc">prints the file access error message</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3c/fileReadErrorMessage_8c_source.html#l00015">fileReadErrorMessage.c:15</a></div></div>
 <div class="ttc" id="afullrefresh_8c_html_aa960f4b7c58112aeeb450e5086a351c1"><div class="ttname"><a href="../../d9/dee/fullrefresh_8c.html#aa960f4b7c58112aeeb450e5086a351c1">fullrefresh</a></div><div class="ttdeci">void fullrefresh(WINDOW *window)</div><div class="ttdoc">refreshes the stdscr and the specified window</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dee/fullrefresh_8c_source.html#l00015">fullrefresh.c:15</a></div></div>
-<div class="ttc" id="alistMenu_8c_html_a0b8ea6096da074c12591eef387d98af4"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">resetCleaners</a></div><div class="ttdeci">void resetCleaners(int *counter, char *string)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00436">listMenu.c:436</a></div></div>
+<div class="ttc" id="alistMenu_8c_html_a0b8ea6096da074c12591eef387d98af4"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4">resetCleaners</a></div><div class="ttdeci">void resetCleaners(int *counter, char *string)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00437">listMenu.c:437</a></div></div>
 <div class="ttc" id="alistMenu_8c_html_a364128ace59f632906327076ae5cfb7f"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#a364128ace59f632906327076ae5cfb7f">spaceAdder</a></div><div class="ttdeci">void spaceAdder(WINDOW *window, int spacer)</div><div class="ttdoc">the function for setting the resolution of ui</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00393">listMenu.c:393</a></div></div>
 <div class="ttc" id="alistMenu_8c_html_a6fa09f63d5d398890dc110049e937a97"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#a6fa09f63d5d398890dc110049e937a97">takeFileLength</a></div><div class="ttdeci">int takeFileLength(FILE *file)</div><div class="ttdoc">the function for taking the total lines in a txt file</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00414">listMenu.c:414</a></div></div>
-<div class="ttc" id="alistMenu_8c_html_aa63cb705cadce514926c1217449832bb"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">getWordData</a></div><div class="ttdeci">void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData)</div><div class="ttdoc">the function for extracting the data from total word line</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00450">listMenu.c:450</a></div></div>
+<div class="ttc" id="alistMenu_8c_html_aa63cb705cadce514926c1217449832bb"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#aa63cb705cadce514926c1217449832bb">getWordData</a></div><div class="ttdeci">void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData)</div><div class="ttdoc">the function for extracting the data from total word line</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00451">listMenu.c:451</a></div></div>
 <div class="ttc" id="alistMenu_8c_html_ac9be5d869b73a8e605f33dc4c1f5b588"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#ac9be5d869b73a8e605f33dc4c1f5b588">listMenu</a></div><div class="ttdeci">void listMenu()</div><div class="ttdoc">the main function for displaying the words</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00020">listMenu.c:20</a></div></div>
-<div class="ttc" id="alistMenu_8c_html_accffc9df0d0d9cc8d80a9ec8ef61f125"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">writeSubstringedData</a></div><div class="ttdeci">void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen)</div><div class="ttdoc">the function for placing the datas pixel perfect</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00510">listMenu.c:510</a></div></div>
+<div class="ttc" id="alistMenu_8c_html_accffc9df0d0d9cc8d80a9ec8ef61f125"><div class="ttname"><a href="../../d0/d54/listMenu_8c.html#accffc9df0d0d9cc8d80a9ec8ef61f125">writeSubstringedData</a></div><div class="ttdeci">void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen)</div><div class="ttdoc">the function for placing the datas pixel perfect</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d54/listMenu_8c_source.html#l00511">listMenu.c:511</a></div></div>
 <div class="ttc" id="aterminalColorError_8c_html_a7ace3022215c46cc8d5790059f4fa795"><div class="ttname"><a href="../../d3/d49/terminalColorError_8c.html#a7ace3022215c46cc8d5790059f4fa795">terminalColorError</a></div><div class="ttdeci">void terminalColorError()</div><div class="ttdoc">prints the terminal color capability error</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d49/terminalColorError_8c_source.html#l00015">terminalColorError.c:15</a></div></div>
 <div class="ttc" id="awbgen_8h_html"><div class="ttname"><a href="../../d3/d23/wbgen_8h.html">wbgen.h</a></div><div class="ttdoc">the general wb library for generating word files and listing</div></div>
 <div class="ttc" id="awbgen_8h_html_afed046f37c4b989441f2b3ca749d384a"><div class="ttname"><a href="../../d3/d23/wbgen_8h.html#afed046f37c4b989441f2b3ca749d384a">PURE_BLACK_COLOR</a></div><div class="ttdeci">#define PURE_BLACK_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d23/wbgen_8h_source.html#l00021">wbgen.h:21</a></div></div>
