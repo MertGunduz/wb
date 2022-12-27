@@ -14,6 +14,7 @@ void spaceAdder(WINDOW *window, int spacer);
 int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
 void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
+void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -135,7 +136,7 @@ void listMenu()
 
         if (COLS >= 45)
         {
-            spacer = COLS - 45;
+            spacer = COLS - 35;
             spacer = spacer / 5;
 
             wprintw(listTopPanel,  "WORD");
@@ -158,8 +159,8 @@ void listMenu()
         }
         else
         {
-            spacer = COLS - 35;
-            spacer = spacer / 4;
+            spacer = COLS - 24;
+            spacer = spacer / 5;
 
             wprintw(listTopPanel,  "WORD");
             spaceAdder(listTopPanel, spacer);
@@ -237,22 +238,22 @@ void listMenu()
 
                 wmove(listPanel, i, 1);
 
-                wprintw(listPanel,  "%s", wWordData);
+                writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3);
                 spaceAdder(listPanel, spacer);
 
-                wprintw(listPanel,  "%s", wTypeData);
+                writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3);
                 spaceAdder(listPanel, spacer);
 
-                wprintw(listPanel,  "%s", wOppositeData);
+                writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7);
                 spaceAdder(listPanel, spacer);
 
-                wprintw(listPanel,  "%s", wdescData);
+                writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10);
                 spaceAdder(listPanel, spacer);
 
-                wprintw(listPanel,  "%s", wExData);
+                writeSubstringedData(listPanel, wExData, strlen(wExData), 1);
                 spaceAdder(listPanel, spacer);
 
-                wprintw(listPanel,  "%s", wDateData);
+                writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3);
                 spaceAdder(listPanel, spacer);
 
                 /* resetting the cleaner variables */
@@ -499,4 +500,37 @@ void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppos
     wdescData[descI] = '\0';
     wExData[exI] = '\0';
     wDateData[dateI] = '\0';
+}
+
+/// @brief the function for placing the datas pixel perfect
+/// @param window 
+/// @param data 
+/// @param dataLen 
+/// @param totalLen 
+void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen)
+{
+    wattron(window, A_ITALIC);
+    
+    for (int i = 0; i < totalLen; i++)
+    {
+        if (i < dataLen)
+        {
+            waddch(window, data[i]);
+        }
+        else
+        {
+            waddch(window, ' ');
+        }
+    }
+
+    if (dataLen > totalLen)
+    {
+        waddch(window, '~');
+    }
+    else
+    {
+        waddch(window, ' ');
+    }
+
+    wattroff(window, A_ITALIC);
 }
