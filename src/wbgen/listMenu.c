@@ -13,6 +13,7 @@
 void spaceAdder(WINDOW *window, int spacer);
 int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
+void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -32,7 +33,14 @@ void listMenu()
     char charTaker; /* for taking the char until /n */
     int ctC = 0;
 
+    /* word.txt single file data */
     char totalLine[1025]; /* total line taker for word files */
+    char wWordData[65];
+    char wTypeData[65];
+    char wOppositeData[65];
+    char wdescData[257];
+    char wExData[257];
+    char wDateData[33];
 
     int totalWords = 0;
     int wct = 0;
@@ -127,7 +135,6 @@ void listMenu()
 
         if (COLS >= 43)
         {
-
             spacer = COLS - 43;
             spacer = spacer / 4;
 
@@ -219,7 +226,34 @@ void listMenu()
                 /* the word file path generation */
                 sprintf(wordFilePath, "%s/.wb/%s.txt", getenv("HOME"), wordTaker);
 
-                mvwprintw(listPanel, i, 1, "%s", wordFilePath);
+                FILE *wordTxtFile = fopen(wordFilePath, "r");
+
+                fgets(totalLine, 1024, wordTxtFile);
+
+                /* extracting the total line into different variables */
+                getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
+
+                fclose(wordTxtFile);
+
+                wmove(listPanel, i, 1);
+
+                wprintw(listPanel,  "%s", wWordData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wTypeData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wOppositeData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wdescData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wExData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wDateData);
+                spaceAdder(listPanel, spacer);
 
                 /* resetting the cleaner variables */
                 resetCleaners(&ctC, wordTaker);
@@ -253,7 +287,34 @@ void listMenu()
                 /* the word file path generation */
                 sprintf(wordFilePath, "%s/.wb/%s.txt", getenv("HOME"), wordTaker);
 
-                mvwprintw(listPanel, i, 1, "%s", wordFilePath);
+                FILE *wordTxtFile = fopen(wordFilePath, "r");
+
+                fgets(totalLine, 1024, wordTxtFile);
+
+                /* extracting the total line into different variables */
+                getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
+
+                fclose(wordTxtFile);
+
+                wmove(listPanel, i, 1);
+
+                wprintw(listPanel,  "%s", wWordData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wTypeData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wOppositeData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wdescData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wExData);
+                spaceAdder(listPanel, spacer);
+
+                wprintw(listPanel,  "%s", wDateData);
+                spaceAdder(listPanel, spacer);
 
                 /* resetting the cleaner variables */
                 resetCleaners(&ctC, wordTaker);
@@ -372,4 +433,67 @@ void resetCleaners(int *counter, char *string)
 {
     string[0] = '\0';
     *counter = 0;
+}
+
+/// @brief the function for extracting the data from total word line
+/// @param totalLine 
+/// @param wWordData 
+/// @param wTypeData 
+/// @param wOppositeData 
+/// @param wdescData 
+/// @param wExData 
+/// @param wDateData 
+void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData)
+{
+    /* tokenizing string */
+    int tlCt = 0, clCt = 0;
+    int wordI = 0, typeI = 0, oppositeI = 0, descI = 0, exI = 0, dateI = 0;
+
+    do
+    {
+        if (totalLine[tlCt] != ':')
+        {
+            switch (clCt)
+            {
+                case 0:
+                    wWordData[wordI] = totalLine[tlCt];
+                    wordI++;
+                    break;
+                case 1:
+                    wTypeData[typeI] = totalLine[tlCt];
+                    typeI++;
+                    break;
+                case 2:
+                    wOppositeData[oppositeI] = totalLine[tlCt];
+                    oppositeI++;
+                    break;
+                case 3:
+                    wdescData[descI] = totalLine[tlCt];
+                    descI++;
+                    break;
+                case 4:
+                    wExData[exI] = totalLine[tlCt];
+                    exI++;
+                    break;
+                case 5:
+                    wDateData[dateI] = totalLine[tlCt];
+                    dateI++;
+                    break;
+            }
+        }
+        else
+        {
+            clCt++;
+        }
+
+        tlCt++;
+    } while (totalLine[tlCt] != '\0');
+
+    /* adding the null terminators */
+    wWordData[wordI] = '\0'; 
+    wTypeData[typeI] = '\0';
+    wOppositeData[oppositeI] = '\0';
+    wdescData[descI] = '\0';
+    wExData[exI] = '\0';
+    wDateData[dateI] = '\0';
 }
