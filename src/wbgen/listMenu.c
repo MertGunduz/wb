@@ -65,7 +65,7 @@ void listMenu()
 
     if (wordsFile == NULL)
     {
-        // can't access reading the file message
+        fileReadErrorMessage();
         exit(0);
     }
 
@@ -418,6 +418,7 @@ int takeFileLength(FILE *file)
 
     if (file == NULL)
     {
+        fileReadErrorMessage();
         exit(0);
     }
 
