@@ -133,10 +133,10 @@ void listMenu()
 
         waddch(listTopPanel, ' ');
 
-        if (COLS >= 43)
+        if (COLS >= 45)
         {
-            spacer = COLS - 43;
-            spacer = spacer / 4;
+            spacer = COLS - 45;
+            spacer = spacer / 5;
 
             wprintw(listTopPanel,  "WORD");
             spaceAdder(listTopPanel, spacer);
@@ -150,7 +150,7 @@ void listMenu()
             wprintw(listTopPanel,  "DESCRIPTION");
             spaceAdder(listTopPanel, spacer);
             
-            wprintw(listTopPanel,  "EXAMPLE");
+            wprintw(listTopPanel,  "EX");
             spaceAdder(listTopPanel, spacer);
                 
             wprintw(listTopPanel,  "DATE");
@@ -167,13 +167,13 @@ void listMenu()
             wprintw(listTopPanel,  "TYPE");
             spaceAdder(listTopPanel, spacer);
             
-            wprintw(listTopPanel,  "OPP...");
+            wprintw(listTopPanel,  "OPP");
             spaceAdder(listTopPanel, spacer);
 
-            wprintw(listTopPanel,  "DESC...");
+            wprintw(listTopPanel,  "DESC");
             spaceAdder(listTopPanel, spacer);
             
-            wprintw(listTopPanel,  "EX...");
+            wprintw(listTopPanel,  "EX");
             spaceAdder(listTopPanel, spacer);
                 
             wprintw(listTopPanel,  "DATE");
@@ -391,7 +391,7 @@ void listMenu()
 /// @param spacer 
 void spaceAdder(WINDOW *window, int spacer)
 {
-    if (spacer > 0)
+    if (spacer > 1)
     {
         for (int i = 0; i < spacer; i++)
         {
@@ -400,7 +400,10 @@ void spaceAdder(WINDOW *window, int spacer)
     }
     else
     {
-        waddch(window, ' ');
+        for (int i = 0; i < 2; i++)
+        {
+            waddch(window, ' ');
+        }
     }
 }
 
