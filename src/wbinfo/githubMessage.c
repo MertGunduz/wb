@@ -16,6 +16,6 @@ void githubMessage()
 {
     fprintf(stdout, "wb %shttps://github.com/MertGunduz/wb%s\n\n", KMAG, KNRM);
     fprintf(stdout, "contributing to wb\n");
-    fprintf(stdout, "you can open issues if you have errors: %shttps://github.com/MertGunduz/wb/issues/new%s\n", KMAG, KNRM);
-    fprintf(stdout, "you can solve the issues and pull request to repo: %shttps://github.com/MertGunduz/wb/issues%s\n", KMAG, KNRM);
+    fprintf(stdout, "open issues: %shttps://github.com/MertGunduz/wb/issues/new%s\n", KMAG, KNRM);
+    fprintf(stdout, "solve the issues and pull request: %shttps://github.com/MertGunduz/wb/issues%s\n", KMAG, KNRM);
 }
