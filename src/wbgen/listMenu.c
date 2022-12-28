@@ -273,23 +273,24 @@ void listMenu()
 
                 wmove(listPanel, i, 1);
 
-                wprintw(listPanel,  "%s", wWordData);
-                spaceAdder(listPanel, spacer);
-
-                wprintw(listPanel,  "%s", wTypeData);
-                spaceAdder(listPanel, spacer);
-
-                wprintw(listPanel,  "%s", wOppositeData);
-                spaceAdder(listPanel, spacer);
-
-                wprintw(listPanel,  "%s", wdescData);
-                spaceAdder(listPanel, spacer);
-
-                wprintw(listPanel,  "%s", wExData);
-                spaceAdder(listPanel, spacer);
-
-                wprintw(listPanel,  "%s", wDateData);
-                spaceAdder(listPanel, spacer);
+                if (isTerminalBig)
+                {
+                    writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
+                    writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
+                    writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                    writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                }
+                else
+                {
+                    writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
+                    writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                    writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                }
 
                 /* resetting the cleaner variables */
                 resetCleaners(&ctC, wordTaker);
