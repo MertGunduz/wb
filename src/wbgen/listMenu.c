@@ -14,7 +14,7 @@ void spaceAdder(WINDOW *window, int spacer);
 int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
 void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
-void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen);
+void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -23,6 +23,7 @@ void listMenu()
     char wordDate[33];
     int spacer;
     char travelInput;
+    bool isTerminalBig;
 
     /* file related variables */
     char wordReaderTrashVar[65]; /* file line reader trash var */
@@ -30,7 +31,7 @@ void listMenu()
     char wordsFilePath[128];  /* words.txt path */
     char wordFilePath[128];  /* path for words */
 
-    char wordTaker[64]; /* for cleaning the last /n in the txt file */
+    char wordTaker[65]; /* for cleaning the last /n in the txt file */
     char charTaker; /* for taking the char until /n */
     int ctC = 0;
 
@@ -156,10 +157,12 @@ void listMenu()
                 
             wprintw(listTopPanel,  "DATE");
             spaceAdder(listTopPanel, spacer);
+
+            isTerminalBig = true;
         }
         else
         {
-            spacer = COLS - 24;
+            spacer = COLS - 23;
             spacer = spacer / 5;
 
             wprintw(listTopPanel,  "WORD");
@@ -179,6 +182,8 @@ void listMenu()
                 
             wprintw(listTopPanel,  "DATE");
             spaceAdder(listTopPanel, spacer);
+
+            isTerminalBig = false;
         }
 
         fullrefresh(listTopPanel);
@@ -238,23 +243,24 @@ void listMenu()
 
                 wmove(listPanel, i, 1);
 
-                writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3);
-                spaceAdder(listPanel, spacer);
-
-                writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3);
-                spaceAdder(listPanel, spacer);
-
-                writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7);
-                spaceAdder(listPanel, spacer);
-
-                writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10);
-                spaceAdder(listPanel, spacer);
-
-                writeSubstringedData(listPanel, wExData, strlen(wExData), 1);
-                spaceAdder(listPanel, spacer);
-
-                writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3);
-                spaceAdder(listPanel, spacer);
+                if (isTerminalBig)
+                {
+                    writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
+                    writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
+                    writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                    writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                }
+                else
+                {
+                    writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
+                    writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
+                    writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                    writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                }
 
                 /* resetting the cleaner variables */
                 resetCleaners(&ctC, wordTaker);
@@ -508,29 +514,59 @@ void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppos
 /// @param data 
 /// @param dataLen 
 /// @param totalLen 
-void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen)
+void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast)
 {
     wattron(window, A_ITALIC);
-    
-    for (int i = 0; i < totalLen; i++)
+
+    if (!isLast)
     {
-        if (i < dataLen)
+        for (int i = 0; i < totalLen + spacerValue - 2; i++)
         {
-            waddch(window, data[i]);
+            if (i < dataLen)
+            {
+                waddch(window, data[i]);
+            }
+            else
+            {
+                waddch(window, ' ');
+            }
         }
-        else
+    }
+    else
+    {
+        for (int i = 0; i < totalLen; i++)
         {
-            waddch(window, ' ');
+            if (i < dataLen)
+            {
+                waddch(window, data[i]);
+            }
+            else
+            {
+                waddch(window, ' ');
+            }
         }
     }
 
-    if (dataLen > totalLen)
+    if (dataLen > totalLen + spacerValue)
     {
         waddch(window, '~');
     }
     else
     {
+        if (!isLast)
+        {
+            waddch(window, ' ');
+        }
+    }
+
+    if (!isLast)
+    {
         waddch(window, ' ');
+        waddch(window, ' ');
+    }
+    else
+    {
+        waddch(window, '~');
     }
 
     wattroff(window, A_ITALIC);
