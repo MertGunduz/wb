@@ -15,6 +15,7 @@ int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
 void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
+void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -140,24 +141,8 @@ void listMenu()
             spacer = COLS - 35;
             spacer = spacer / 5;
 
-            wprintw(listTopPanel,  "WORD");
-            spaceAdder(listTopPanel, spacer);
-
-            wprintw(listTopPanel,  "TYPE");
-            spaceAdder(listTopPanel, spacer);
-            
-            wprintw(listTopPanel,  "OPPOSITE");
-            spaceAdder(listTopPanel, spacer);
-
-            wprintw(listTopPanel,  "DESCRIPTION");
-            spaceAdder(listTopPanel, spacer);
-            
-            wprintw(listTopPanel,  "EX");
-            spaceAdder(listTopPanel, spacer);
-                
-            wprintw(listTopPanel,  "DATE");
-            spaceAdder(listTopPanel, spacer);
-
+            /* methoooood */
+            createTopListPanel(listTopPanel, "WORD", "TYPE", "OPPOSITE", "DESCRIPTION", "EX", "DATE", spacer);
             isTerminalBig = true;
         }
         else
@@ -165,24 +150,7 @@ void listMenu()
             spacer = COLS - 23;
             spacer = spacer / 5;
 
-            wprintw(listTopPanel,  "WORD");
-            spaceAdder(listTopPanel, spacer);
-
-            wprintw(listTopPanel,  "TYPE");
-            spaceAdder(listTopPanel, spacer);
-            
-            wprintw(listTopPanel,  "OPP");
-            spaceAdder(listTopPanel, spacer);
-
-            wprintw(listTopPanel,  "DESC");
-            spaceAdder(listTopPanel, spacer);
-            
-            wprintw(listTopPanel,  "EX");
-            spaceAdder(listTopPanel, spacer);
-                
-            wprintw(listTopPanel,  "DATE");
-            spaceAdder(listTopPanel, spacer);
-
+            createTopListPanel(listTopPanel, "WORD", "TYPE", "OPP", "DESC", "EX", "DATE", spacer);
             isTerminalBig = false;
         }
 
@@ -580,4 +548,34 @@ void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen,
     }
 
     wattroff(window, A_ITALIC);
+}
+
+/// @brief the function for creating the top list panel
+/// @param listTopPanel 
+/// @param word1 
+/// @param word2 
+/// @param word3 
+/// @param word4 
+/// @param word5 
+/// @param word6 
+/// @param spacer 
+void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer)
+{
+    wprintw(listTopPanel,  "%s", word1);
+    spaceAdder(listTopPanel, spacer);
+
+    wprintw(listTopPanel,  "%s", word2);
+    spaceAdder(listTopPanel, spacer);
+            
+    wprintw(listTopPanel,  "%s", word3);
+    spaceAdder(listTopPanel, spacer);
+    
+    wprintw(listTopPanel,  "%s", word4);
+    spaceAdder(listTopPanel, spacer);
+            
+    wprintw(listTopPanel,  "%s", word5);
+    spaceAdder(listTopPanel, spacer);
+                
+    wprintw(listTopPanel,  "%s", word6);
+    spaceAdder(listTopPanel, spacer);
 }
