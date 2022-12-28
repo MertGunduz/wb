@@ -514,6 +514,8 @@ void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppos
 /// @param data 
 /// @param dataLen 
 /// @param totalLen 
+/// @param spacerValue
+/// @param isLast
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast)
 {
     wattron(window, A_ITALIC);

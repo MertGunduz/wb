@@ -24,7 +24,7 @@ void \mbox{\hyperlink{listMenu_8c_a0b8ea6096da074c12591eef387d98af4}{reset\+Clea
 \item 
 void \mbox{\hyperlink{listMenu_8c_aa63cb705cadce514926c1217449832bb}{get\+Word\+Data}} (char $\ast$total\+Line, char $\ast$w\+Word\+Data, char $\ast$w\+Type\+Data, char $\ast$w\+Opposite\+Data, char $\ast$wdesc\+Data, char $\ast$w\+Ex\+Data, char $\ast$w\+Date\+Data)
 \begin{DoxyCompactList}\small\item\em the function for extracting the data from total word line \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{listMenu_8c_accffc9df0d0d9cc8d80a9ec8ef61f125}{write\+Substringed\+Data}} (WINDOW $\ast$window, char $\ast$data, int data\+Len, int total\+Len)
+void \mbox{\hyperlink{listMenu_8c_af2b915a91667255ef982bcdafea1d2de}{write\+Substringed\+Data}} (WINDOW $\ast$window, char $\ast$data, int data\+Len, int total\+Len, int spacer\+Value, bool is\+Last)
 \begin{DoxyCompactList}\small\item\em the function for placing the datas pixel perfect \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{listMenu_8c_ac9be5d869b73a8e605f33dc4c1f5b588}{list\+Menu}} ()
 \begin{DoxyCompactList}\small\item\em the main function for displaying the words \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -74,7 +74,7 @@ the function for extracting the data from total word line
 \end{DoxyParams}
 
 
-Definition at line 451 of file list\+Menu.\+c.
+Definition at line 457 of file list\+Menu.\+c.
 
 \mbox{\Hypertarget{listMenu_8c_ac9be5d869b73a8e605f33dc4c1f5b588}\label{listMenu_8c_ac9be5d869b73a8e605f33dc4c1f5b588}} 
 \index{listMenu.c@{listMenu.c}!listMenu@{listMenu}}
@@ -98,7 +98,7 @@ Definition at line 20 of file list\+Menu.\+c.
 
 
 
-Definition at line 437 of file list\+Menu.\+c.
+Definition at line 443 of file list\+Menu.\+c.
 
 \mbox{\Hypertarget{listMenu_8c_a364128ace59f632906327076ae5cfb7f}\label{listMenu_8c_a364128ace59f632906327076ae5cfb7f}} 
 \index{listMenu.c@{listMenu.c}!spaceAdder@{spaceAdder}}
@@ -120,7 +120,7 @@ the function for setting the resolution of ui
 \end{DoxyParams}
 
 
-Definition at line 393 of file list\+Menu.\+c.
+Definition at line 399 of file list\+Menu.\+c.
 
 \mbox{\Hypertarget{listMenu_8c_a6fa09f63d5d398890dc110049e937a97}\label{listMenu_8c_a6fa09f63d5d398890dc110049e937a97}} 
 \index{listMenu.c@{listMenu.c}!takeFileLength@{takeFileLength}}
@@ -142,13 +142,13 @@ total lines of the text
 \end{DoxyReturn}
 
 
-Definition at line 414 of file list\+Menu.\+c.
+Definition at line 420 of file list\+Menu.\+c.
 
-\mbox{\Hypertarget{listMenu_8c_accffc9df0d0d9cc8d80a9ec8ef61f125}\label{listMenu_8c_accffc9df0d0d9cc8d80a9ec8ef61f125}} 
+\mbox{\Hypertarget{listMenu_8c_af2b915a91667255ef982bcdafea1d2de}\label{listMenu_8c_af2b915a91667255ef982bcdafea1d2de}} 
 \index{listMenu.c@{listMenu.c}!writeSubstringedData@{writeSubstringedData}}
 \index{writeSubstringedData@{writeSubstringedData}!listMenu.c@{listMenu.c}}
 \doxysubsubsection{\texorpdfstring{writeSubstringedData()}{writeSubstringedData()}}
-{\footnotesize\ttfamily void write\+Substringed\+Data (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{char $\ast$}]{data,  }\item[{int}]{data\+Len,  }\item[{int}]{total\+Len }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void write\+Substringed\+Data (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{char $\ast$}]{data,  }\item[{int}]{data\+Len,  }\item[{int}]{total\+Len,  }\item[{int}]{spacer\+Value,  }\item[{bool}]{is\+Last }\end{DoxyParamCaption})}
 
 
 
@@ -162,11 +162,14 @@ the function for placing the datas pixel perfect
 \hline
 {\em data\+Len} & \\
 \hline
-{\em total\+Len} & ~\newline
- \\
+{\em total\+Len} & \\
+\hline
+{\em spacer\+Value} & \\
+\hline
+{\em is\+Last} & \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 511 of file list\+Menu.\+c.
+Definition at line 519 of file list\+Menu.\+c.
 
