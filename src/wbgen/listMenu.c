@@ -518,6 +518,8 @@ void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppos
 /// @param isLast
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast)
 {
+    bool controller = false;
+
     wattron(window, A_ITALIC);
 
     if (!isLast)
@@ -552,6 +554,11 @@ void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen,
     if (dataLen > totalLen + spacerValue)
     {
         waddch(window, '~');
+
+        if (isLast)
+        {
+            controller = true;
+        }
     }
     else
     {
@@ -566,7 +573,8 @@ void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen,
         waddch(window, ' ');
         waddch(window, ' ');
     }
-    else
+    
+    if (isLast && !controller)
     {
         waddch(window, '~');
     }
