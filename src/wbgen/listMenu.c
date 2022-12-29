@@ -358,14 +358,12 @@ void listMenu()
     {
         travelInput = getch();
 
-        if (travelInput == KEY_RIGHT)
+        if (travelInput == 'b')
         {
-            exit(0);
             break;
         }
-        else if (travelInput == KEY_LEFT)
+        else if (travelInput == 'n')
         {
-            exit(0);
             break;
         }
     } while (travelInput != 'q');
