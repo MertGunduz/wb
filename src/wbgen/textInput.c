@@ -42,6 +42,11 @@ void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, i
     {
         mc = wgetch(window);
 
+        if (mc == '\n')
+        {
+            break;
+        }
+
         if (mc == BACKSPACE_CHAR)
         {
             if (ct != limit)
