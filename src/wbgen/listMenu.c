@@ -16,6 +16,8 @@ void resetCleaners(int *counter, char *string);
 void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
 void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
+void seperate(WINDOW *window);
+void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -320,13 +322,14 @@ void listMenu()
 
         waddch(useWindow, ' ');
 
-        wattron(useWindow, A_BOLD);
-        waddch(useWindow, '[');
-        waddch(useWindow, 'q');
-        waddch(useWindow, ']');
-        wattroff(useWindow, A_BOLD);
-        
-        wprintw(useWindow, " to exit");
+        /* exit key */
+        writeKey(useWindow, 'q', "to exit", true);
+
+        /* previous page key */
+        writeKey(useWindow, 'b', "to go previous page", true);
+
+        /* next page key */
+        writeKey(useWindow, 'n', "to go next page", false);
 
         fullrefresh(useWindow);
     }
@@ -591,4 +594,26 @@ void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *wo
                 
     wprintw(listTopPanel,  "%s", word6);
     spaceAdder(listTopPanel, spacer);
+}
+
+void seperate(WINDOW *window)
+{
+    waddch(window, ',');
+    waddch(window, ' ');
+}
+
+void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate)
+{
+    wattron(window, A_BOLD);
+    waddch(window, '[');
+    waddch(window, key);
+    waddch(window, ']');
+    wattroff(window, A_BOLD);
+        
+    wprintw(window, " %s", keyExp);
+
+    if (isSeperate)
+    {
+        seperate(window);
+    }
 }
