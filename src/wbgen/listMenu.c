@@ -18,6 +18,7 @@ void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen,
 void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
 void seperate(WINDOW *window);
 void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate);
+void cleanPanel(WINDOW *window);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -87,6 +88,7 @@ void listMenu()
     initscr();
     noecho();
     keypad(stdscr, true);
+    curs_set(0);
 
     if (colorCheck())
     {
@@ -360,11 +362,11 @@ void listMenu()
 
         if (travelInput == 'b')
         {
-            break;
+            cleanPanel(listPanel);
         }
         else if (travelInput == 'n')
         {
-            break;
+            cleanPanel(listPanel);
         }
     } while (travelInput != 'q');
     
@@ -614,4 +616,20 @@ void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate)
     {
         seperate(window);
     }
+}
+
+void cleanPanel(WINDOW *window)
+{
+    int windowY = getmaxy(window);
+
+    for (int i = 0; i < windowY; i++)
+    {
+        wmove(window, i, 0);
+        for (int j = 0; j < COLS; j++)
+        {
+            wdelch(window);
+        }
+    }
+
+    fullrefresh(window);
 }
