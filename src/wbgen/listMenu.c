@@ -243,7 +243,7 @@ void listMenu()
         {
             if (wct > LINES - 5)
             {
-                wct = LINES - 5;
+                wct = LINES - 4;
             }
 
             for (int i = 0; i < wct - 1; i++)
@@ -296,11 +296,10 @@ void listMenu()
                 resetCleaners(&ctC, wordTaker);
             }
 
-            for (int i = wct - 1; i < LINES - 5; i++)
+            for (int i = wct - 1; i < LINES - 4; i++)
             {
                 mvwprintw(listPanel, i, 1, "NO DATA");
             }
-            
         }
 
         fullrefresh(listPanel);
