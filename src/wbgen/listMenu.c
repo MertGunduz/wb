@@ -184,6 +184,8 @@ void listMenu()
                 wct = 19;
             }
 
+            wct--;
+
             for (int i = 0; i < wct - 1; i++)
             {
                 /* cleaning the \n from the words */
@@ -352,6 +354,17 @@ void listMenu()
     do
     {
         travelInput = getch();
+
+        if (travelInput == KEY_RIGHT)
+        {
+            exit(0);
+            break;
+        }
+        else if (travelInput == KEY_LEFT)
+        {
+            exit(0);
+            break;
+        }
     } while (travelInput != 'q');
     
     delwin(topPanel);
