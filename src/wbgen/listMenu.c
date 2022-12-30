@@ -365,7 +365,7 @@ void listMenu()
 
         if (travelInput == 'b')
         {
-            if (travels - getmaxy(listPanel) >= getmaxy(listPanel))
+            if (travels - getmaxy(listPanel) >= 0)
             {
                 wclear(listPanel);
 
