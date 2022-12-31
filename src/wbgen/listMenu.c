@@ -389,42 +389,40 @@ void listMenu()
 
                     FILE *wordTxtFile2 = fopen(wordFilePath, "r");
 
-                    if (wordTxtFile2 == NULL)
+                    if (wordTxtFile2 != NULL)
                     {
-                        goto FINISH;
+                        fgets(totalLine, 1024, wordTxtFile2);
+
+                        /* extracting the total line into different variables */
+                        getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
+
+                        fclose(wordTxtFile2);
+
+                        wmove(listPanel, travelI, 1);
+
+                        if (isTerminalBig)
+                        {
+                            writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
+                            writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
+                            writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                            writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                        }
+                        else
+                        {
+                            writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
+                            writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                            writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                        }
+
+                        /* resetting the cleaner variables */
+                        resetCleaners(&ctC, wordTaker);
+                        travelI++;                    
                     }
-
-                    fgets(totalLine, 1024, wordTxtFile2);
-
-                    /* extracting the total line into different variables */
-                    getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
-
-                    fclose(wordTxtFile2);
-
-                    wmove(listPanel, travelI, 1);
-
-                    if (isTerminalBig)
-                    {
-                        writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
-                        writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
-                        writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
-                        writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
-                    }
-                    else
-                    {
-                        writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
-                        writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
-                        writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
-                    }
-
-                    /* resetting the cleaner variables */
-                    resetCleaners(&ctC, wordTaker);
-                    travelI++;
                 }
 
                 fullrefresh(listPanel);
@@ -458,42 +456,53 @@ void listMenu()
 
                     FILE *wordTxtFile2 = fopen(wordFilePath, "r");
 
-                    if (wordTxtFile2 == NULL)
+                    if (wordTxtFile2 != NULL)
                     {
-                        goto FINISH;
-                    }
+                        fgets(totalLine, 1024, wordTxtFile2);
 
-                    fgets(totalLine, 1024, wordTxtFile2);
+                        /* extracting the total line into different variables */
+                        getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
 
-                    /* extracting the total line into different variables */
-                    getWordData(totalLine, wWordData, wTypeData, wOppositeData, wdescData, wExData, wDateData);
+                        fclose(wordTxtFile2);
 
-                    fclose(wordTxtFile2);
+                        wmove(listPanel, travelI, 1);
 
-                    wmove(listPanel, travelI, 1);
+                        if (isTerminalBig)
+                        {
+                            writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
+                            writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
+                            writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                            writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                        }
+                        else
+                        {
+                            writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
+                            writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
+                            writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
+                            writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                        }
 
-                    if (isTerminalBig)
-                    {
-                        writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 7, spacer, false);
-                        writeSubstringedData(listPanel, wdescData, strlen(wdescData), 10, spacer, false);
-                        writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
-                        writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
+                        /* resetting the cleaner variables */
+                        resetCleaners(&ctC, wordTaker);
+                        travelI++;
                     }
                     else
                     {
-                        writeSubstringedData(listPanel, wWordData, strlen(wWordData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wTypeData, strlen(wTypeData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wOppositeData, strlen(wOppositeData), 2, spacer, false);
-                        writeSubstringedData(listPanel, wdescData, strlen(wdescData), 3, spacer, false);
-                        writeSubstringedData(listPanel, wExData, strlen(wExData), 1, spacer, false);
-                        writeSubstringedData(listPanel, wDateData, strlen(wDateData), 3, spacer, true);
-                    }
+                        /* resetting the cleaner variables */
+                        resetCleaners(&ctC, wordTaker);
+                        travelI++;
 
-                    /* resetting the cleaner variables */
-                    resetCleaners(&ctC, wordTaker);
-                    travelI++;
+                        for (int i = travelI - 1; i < getmaxy(listPanel); i++)
+                        {
+                            mvwprintw(listPanel, i, 1, "NO DATA");
+                        }
+                        
+                        break;
+                    }
                 }
 
                 fullrefresh(listPanel);
@@ -505,7 +514,6 @@ void listMenu()
         fullrefresh(listPanel);
     } while (travelInput != 'q');
     
-    FINISH:
     delwin(topPanel);
     delwin(listTopPanel);
     delwin(listPanel);
