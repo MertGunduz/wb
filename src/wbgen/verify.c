@@ -13,8 +13,8 @@
 
 #include "wbgen.h"
 
-char *arguments[] = {"-s", "--settings", "-a", "--add", "-e", "--edit", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github", "-E", "--export", "-I", "--import" };
-int argSize = 18;
+char *arguments[] = {"-w", "--word", "-s", "--settings", "-a", "--add", "-e", "--edit", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github", "-E", "--export", "-I", "--import"};
+int argSize = 20;
 
 /// @brief the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)
 /// @param argc 
@@ -22,7 +22,7 @@ int argSize = 18;
 bool verify(int argc, char *firstArgv)
 {
     // controls the argc value
-    if (argc == 2)
+    if (argc == 2 || argc == 3)
     {
         // struct stat for controlling directory /usr/local/wb
         struct stat st;

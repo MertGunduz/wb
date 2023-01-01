@@ -15,7 +15,12 @@ int main(int argc, char *argv[])
 {
     if (verify(argc, argv[1]))
     {
-        if (strcmp(argv[1], "-s") == 0 || strcmp(argv[1], "--settings") == 0)
+
+        if (strcmp(argv[1], "-w") == 0 || strcmp(argv[1], "--word") == 0)
+        {
+            wordMenu(argv[2]);
+        }
+        else if (strcmp(argv[1], "-s") == 0 || strcmp(argv[1], "--settings") == 0)
         {
             fprintf(stdout, "settings menu!\n");
         }

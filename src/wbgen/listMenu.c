@@ -13,7 +13,6 @@
 void spaceAdder(WINDOW *window, int spacer);
 int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
-void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
 void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
 void seperate(WINDOW *window);
@@ -572,69 +571,6 @@ void resetCleaners(int *counter, char *string)
 {
     string[0] = '\0';
     *counter = 0;
-}
-
-/// @brief the function for extracting the data from total word line
-/// @param totalLine 
-/// @param wWordData 
-/// @param wTypeData 
-/// @param wOppositeData 
-/// @param wdescData 
-/// @param wExData 
-/// @param wDateData 
-void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData)
-{
-    /* tokenizing string */
-    int tlCt = 0, clCt = 0;
-    int wordI = 0, typeI = 0, oppositeI = 0, descI = 0, exI = 0, dateI = 0;
-
-    do
-    {
-        if (totalLine[tlCt] != ':')
-        {
-            switch (clCt)
-            {
-                case 0:
-                    wWordData[wordI] = totalLine[tlCt];
-                    wordI++;
-                    break;
-                case 1:
-                    wTypeData[typeI] = totalLine[tlCt];
-                    typeI++;
-                    break;
-                case 2:
-                    wOppositeData[oppositeI] = totalLine[tlCt];
-                    oppositeI++;
-                    break;
-                case 3:
-                    wdescData[descI] = totalLine[tlCt];
-                    descI++;
-                    break;
-                case 4:
-                    wExData[exI] = totalLine[tlCt];
-                    exI++;
-                    break;
-                case 5:
-                    wDateData[dateI] = totalLine[tlCt];
-                    dateI++;
-                    break;
-            }
-        }
-        else
-        {
-            clCt++;
-        }
-
-        tlCt++;
-    } while (totalLine[tlCt] != '\0');
-
-    /* adding the null terminators */
-    wWordData[wordI] = '\0'; 
-    wTypeData[typeI] = '\0';
-    wOppositeData[oppositeI] = '\0';
-    wdescData[descI] = '\0';
-    wExData[exI] = '\0';
-    wDateData[dateI] = '\0';
 }
 
 /// @brief the function for placing the datas pixel perfect

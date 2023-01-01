@@ -27,3 +27,5 @@ void bgColorSet();
 void textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter);
 void fullrefresh(WINDOW *window);
 void listMenu();
+void wordMenu(char *word);
+void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);

@@ -28,3 +28,5 @@ void githubMessage();
 void versionMessage();
 void terminalColorError();
 void fileReadErrorMessage();
+void nullWordError();
+void fileNotFoundError(char *word);
