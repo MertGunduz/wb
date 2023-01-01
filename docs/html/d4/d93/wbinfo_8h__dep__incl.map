@@ -18,6 +18,6 @@
 <area shape="rect" id="node7" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="718,169,889,196"/>
 <area shape="rect" id="node8" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="913,169,1072,196"/>
 <area shape="rect" id="node9" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1097,169,1259,196"/>
-<area shape="rect" id="node10" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)" alt="" coords="1283,169,1422,196"/>
+<area shape="rect" id="node10" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1283,169,1422,196"/>
 <area shape="rect" id="node11" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1446,169,1617,196"/>
 </map>

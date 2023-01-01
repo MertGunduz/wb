@@ -1,9 +1,9 @@
 /** 
  * @file verify.c
  * 
- * @brief the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)
- * @brief <u>usr/bin/wb:</u> the executable for the program
- * @brief <u>usr/local/wb:</u> the folder for the words
+ * @brief the system control function for wb, it checks the usr/bin/wb (executable) and /home/.wb (folder)
+ * @brief <u>/usr/bin/wb:</u> the executable for the program
+ * @brief <u>/home/.wb:</u> the folder for the words
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -16,7 +16,7 @@
 char *arguments[] = {"-w", "--word", "-a", "--add", "-d", "--delete", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github", "-E", "--export", "-I", "--import"};
 int argSize = 18;
 
-/// @brief the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)
+/// @brief the system control function for wb, it checks the usr/bin/wb (executable) and /home/.wb (folder)
 /// @param argc 
 /// @return true if argc is 2 and file structure found, otherwise returns false
 bool verify(int argc, char *firstArgv)
@@ -24,7 +24,7 @@ bool verify(int argc, char *firstArgv)
     // controls the argc value
     if (argc == 2 || argc == 3)
     {
-        // struct stat for controlling directory /usr/local/wb
+        // struct stat for controlling directory /home/.wb
         struct stat st;
 
         // .wb paths
@@ -35,7 +35,7 @@ bool verify(int argc, char *firstArgv)
         sprintf(folderPath, "%s/.wb", getenv("HOME"));
         sprintf(wordsFilePath, "%s/.wb/words.txt", getenv("HOME"));
 
-        // controllign the file and folder /usr/local/wb and home/.wb
+        // controllign the file and folder /usr/local/wb and /home/.wb
         if (access("/usr/bin/wb", F_OK) == 0 && access(wordsFilePath, F_OK) == 0 && stat(folderPath, &st) == 0)
         {   
             // controlling the argv[1]
