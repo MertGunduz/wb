@@ -19,7 +19,8 @@ Include dependency graph for wbgen.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{d9/d9f/wbgen_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -47,7 +48,11 @@ void \mbox{\hyperlink{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}{text\+Input}} 
 void \mbox{\hyperlink{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}{fullrefresh}} (WINDOW $\ast$window)
 \begin{DoxyCompactList}\small\item\em refreshes the stdscr and the specified window \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbgen_8h_ac9be5d869b73a8e605f33dc4c1f5b588}{list\+Menu}} ()
-\begin{DoxyCompactList}\small\item\em the main function for displaying the words \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the main function for displaying the words \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_abc9ad7e8184cb63b776446161449283d}{word\+Menu}} (char $\ast$word)
+\begin{DoxyCompactList}\small\item\em opens the word menu and shows the word and its other informations \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_aa63cb705cadce514926c1217449832bb}{get\+Word\+Data}} (char $\ast$total\+Line, char $\ast$w\+Word\+Data, char $\ast$w\+Type\+Data, char $\ast$w\+Opposite\+Data, char $\ast$wdesc\+Data, char $\ast$w\+Ex\+Data, char $\ast$w\+Date\+Data)
+\begin{DoxyCompactList}\small\item\em the function for extracting the data from total word line \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,7 +68,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000009}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000010}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -141,6 +146,38 @@ refreshes the stdscr and the specified window
 
 Definition at line 15 of file fullrefresh.\+c.
 
+\mbox{\Hypertarget{wbgen_8h_aa63cb705cadce514926c1217449832bb}\label{wbgen_8h_aa63cb705cadce514926c1217449832bb}} 
+\index{wbgen.h@{wbgen.h}!getWordData@{getWordData}}
+\index{getWordData@{getWordData}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{getWordData()}{getWordData()}}
+{\footnotesize\ttfamily void get\+Word\+Data (\begin{DoxyParamCaption}\item[{char $\ast$}]{total\+Line,  }\item[{char $\ast$}]{w\+Word\+Data,  }\item[{char $\ast$}]{w\+Type\+Data,  }\item[{char $\ast$}]{w\+Opposite\+Data,  }\item[{char $\ast$}]{wdesc\+Data,  }\item[{char $\ast$}]{w\+Ex\+Data,  }\item[{char $\ast$}]{w\+Date\+Data }\end{DoxyParamCaption})}
+
+
+
+the function for extracting the data from total word line 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Line} & \\
+\hline
+{\em w\+Word\+Data} & \\
+\hline
+{\em w\+Type\+Data} & \\
+\hline
+{\em w\+Opposite\+Data} & \\
+\hline
+{\em wdesc\+Data} & \\
+\hline
+{\em w\+Ex\+Data} & \\
+\hline
+{\em w\+Date\+Data} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file get\+Word\+Data.\+c.
+
 \mbox{\Hypertarget{wbgen_8h_ac9be5d869b73a8e605f33dc4c1f5b588}\label{wbgen_8h_ac9be5d869b73a8e605f33dc4c1f5b588}} 
 \index{wbgen.h@{wbgen.h}!listMenu@{listMenu}}
 \index{listMenu@{listMenu}!wbgen.h@{wbgen.h}}
@@ -153,7 +190,7 @@ the main function for displaying the words
 
 
 
-Definition at line 23 of file list\+Menu.\+c.
+Definition at line 22 of file list\+Menu.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}\label{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}} 
 \index{wbgen.h@{wbgen.h}!textInput@{textInput}}
@@ -205,4 +242,18 @@ true if argc is 2 and file structure found, otherwise returns false
 
 
 Definition at line 22 of file verify.\+c.
+
+\mbox{\Hypertarget{wbgen_8h_abc9ad7e8184cb63b776446161449283d}\label{wbgen_8h_abc9ad7e8184cb63b776446161449283d}} 
+\index{wbgen.h@{wbgen.h}!wordMenu@{wordMenu}}
+\index{wordMenu@{wordMenu}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{wordMenu()}{wordMenu()}}
+{\footnotesize\ttfamily void word\+Menu (\begin{DoxyParamCaption}\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+opens the word menu and shows the word and its other informations 
+
+
+
+Definition at line 14 of file word\+Menu.\+c.
 
