@@ -1,12 +1,14 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="730,5,877,32"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="934,5,1081,32"/>
 <area shape="rect" id="node2" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$dc/dda/addMenu_8c.html" title="the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word file..." alt="" coords="133,80,295,107"/>
 <area shape="rect" id="node4" href="$d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
 <area shape="rect" id="node5" href="$d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,80,693,107"/>
-<area shape="rect" id="node6" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="718,80,889,107"/>
-<area shape="rect" id="node7" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="913,80,1072,107"/>
-<area shape="rect" id="node8" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1097,80,1259,107"/>
-<area shape="rect" id="node9" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1283,80,1422,107"/>
-<area shape="rect" id="node10" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1446,80,1617,107"/>
+<area shape="rect" id="node6" href="$d4/da1/deleteMenu_8c.html" title="deletes the word from words.txt and the word file itself" alt="" coords="717,80,897,107"/>
+<area shape="rect" id="node7" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="922,80,1093,107"/>
+<area shape="rect" id="node8" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="1117,80,1276,107"/>
+<area shape="rect" id="node9" href="$da/d3b/takeFileLength_8c.html" title="the function for taking the total lines in a txt file" alt="" coords="1300,80,1499,107"/>
+<area shape="rect" id="node10" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1523,80,1686,107"/>
+<area shape="rect" id="node11" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1710,80,1849,107"/>
+<area shape="rect" id="node12" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1873,80,2043,107"/>
 </map>

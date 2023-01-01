@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['verify_47',['verify',['../db/df6/verify_8c.html#a34e1ad81b228cf24e283e219eb486004',1,'verify(int argc, char *firstArgv):&#160;verify.c'],['../d3/d23/wbgen_8h.html#a34e1ad81b228cf24e283e219eb486004',1,'verify(int argc, char *firstArgv):&#160;verify.c']]],
-  ['verify_2ec_48',['verify.c',['../db/df6/verify_8c.html',1,'']]],
-  ['verifyargcerror_49',['verifyArgcError',['../da/d8e/verifyArgcError_8c.html#a71fb30fc585d8838d4c70e5519244cb1',1,'verifyArgcError(int argc):&#160;verifyArgcError.c'],['../d5/d60/wbinfo_8h.html#a71fb30fc585d8838d4c70e5519244cb1',1,'verifyArgcError(int argc):&#160;verifyArgcError.c']]],
-  ['verifyargcerror_2ec_50',['verifyArgcError.c',['../da/d8e/verifyArgcError_8c.html',1,'']]],
-  ['verifyargumenterror_51',['verifyArgumentError',['../d8/d73/verifyArgumentError_8c.html#ad1900e7b60d6249a5a015e5734602db1',1,'verifyArgumentError(char *argv):&#160;verifyArgumentError.c'],['../d5/d60/wbinfo_8h.html#ad1900e7b60d6249a5a015e5734602db1',1,'verifyArgumentError(char *argv):&#160;verifyArgumentError.c']]],
-  ['verifyargumenterror_2ec_52',['verifyArgumentError.c',['../d8/d73/verifyArgumentError_8c.html',1,'']]],
-  ['verifyfilestructureerror_53',['verifyFileStructureError',['../df/d4d/verifyFileStructureError_8c.html#a8f11f14157d85b08fb7564b5607da472',1,'verifyFileStructureError():&#160;verifyFileStructureError.c'],['../d5/d60/wbinfo_8h.html#a8f11f14157d85b08fb7564b5607da472',1,'verifyFileStructureError():&#160;verifyFileStructureError.c']]],
-  ['verifyfilestructureerror_2ec_54',['verifyFileStructureError.c',['../df/d4d/verifyFileStructureError_8c.html',1,'']]],
-  ['versionmessage_55',['versionMessage',['../d9/d70/versionMessage_8c.html#a500852d9b79e086a08d69408a2df9ca8',1,'versionMessage():&#160;versionMessage.c'],['../d5/d60/wbinfo_8h.html#a500852d9b79e086a08d69408a2df9ca8',1,'versionMessage():&#160;versionMessage.c']]],
-  ['versionmessage_2ec_56',['versionMessage.c',['../d9/d70/versionMessage_8c.html',1,'']]]
+  ['takefilelength_44',['takeFileLength',['../da/d3b/takeFileLength_8c.html#a6fa09f63d5d398890dc110049e937a97',1,'takeFileLength(FILE *file):&#160;takeFileLength.c'],['../d3/d23/wbgen_8h.html#a6fa09f63d5d398890dc110049e937a97',1,'takeFileLength(FILE *file):&#160;takeFileLength.c']]],
+  ['takefilelength_2ec_45',['takeFileLength.c',['../da/d3b/takeFileLength_8c.html',1,'']]],
+  ['terminalcolorerror_46',['terminalColorError',['../d3/d49/terminalColorError_8c.html#a7ace3022215c46cc8d5790059f4fa795',1,'terminalColorError():&#160;terminalColorError.c'],['../d5/d60/wbinfo_8h.html#a7ace3022215c46cc8d5790059f4fa795',1,'terminalColorError():&#160;terminalColorError.c']]],
+  ['terminalcolorerror_2ec_47',['terminalColorError.c',['../d3/d49/terminalColorError_8c.html',1,'']]],
+  ['textinput_48',['textInput',['../d0/d94/textInput_8c.html#a7b17a6c72a0b183ba90901d387f1d779',1,'textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter):&#160;textInput.c'],['../d3/d23/wbgen_8h.html#a7b17a6c72a0b183ba90901d387f1d779',1,'textInput(WINDOW *window, int ct, int wordstrlen, int winX, char *string, int locationSetter):&#160;textInput.c']]],
+  ['textinput_2ec_49',['textInput.c',['../d0/d94/textInput_8c.html',1,'']]]
 ];

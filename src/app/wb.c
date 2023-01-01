@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         }
         else if (strcmp(argv[1], "-d") == 0 || strcmp(argv[1], "--delete") == 0) 
         {
-            fprintf(stdout, "delete menu!\n");
+            deleteMenu(argv[2]);
         }
         else if (strcmp(argv[1], "-l") == 0 || strcmp(argv[1], "--list") == 0) 
         {

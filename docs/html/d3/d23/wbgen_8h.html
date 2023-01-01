@@ -106,16 +106,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2e/wbgen_8h__dep__incl.png" border="0" usemap="#asrc_2wbgen_2wbgen_8hdep" alt=""/></div>
 <map name="asrc_2wbgen_2wbgen_8hdep" id="asrc_2wbgen_2wbgen_8hdep">
-<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="730,5,877,32"/>
+<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="934,5,1081,32"/>
 <area shape="rect" href="../../df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" href="../../dc/dda/addMenu_8c.html" title="the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word file..." alt="" coords="133,80,295,107"/>
 <area shape="rect" href="../../d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
 <area shape="rect" href="../../d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,80,693,107"/>
-<area shape="rect" href="../../d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="718,80,889,107"/>
-<area shape="rect" href="../../d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="913,80,1072,107"/>
-<area shape="rect" href="../../d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1097,80,1259,107"/>
-<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1283,80,1422,107"/>
-<area shape="rect" href="../../dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1446,80,1617,107"/>
+<area shape="rect" href="../../d4/da1/deleteMenu_8c.html" title="deletes the word from words.txt and the word file itself" alt="" coords="717,80,897,107"/>
+<area shape="rect" href="../../d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="922,80,1093,107"/>
+<area shape="rect" href="../../d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="1117,80,1276,107"/>
+<area shape="rect" href="../../da/d3b/takeFileLength_8c.html" title="the function for taking the total lines in a txt file" alt="" coords="1300,80,1499,107"/>
+<area shape="rect" href="../../d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1523,80,1686,107"/>
+<area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1710,80,1849,107"/>
+<area shape="rect" href="../../dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1873,80,2043,107"/>
 </map>
 </div>
 </div>
@@ -155,13 +157,19 @@ Functions</h2></td></tr>
 <tr class="memitem:aa63cb705cadce514926c1217449832bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#aa63cb705cadce514926c1217449832bb">getWordData</a> (char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData)</td></tr>
 <tr class="memdesc:aa63cb705cadce514926c1217449832bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function for extracting the data from total word line  <a href="../../d3/d23/wbgen_8h.html#aa63cb705cadce514926c1217449832bb">More...</a><br /></td></tr>
 <tr class="separator:aa63cb705cadce514926c1217449832bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b899658f70fa3bb31bebdcf3155383"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a59b899658f70fa3bb31bebdcf3155383">deleteMenu</a> (char *word)</td></tr>
+<tr class="memdesc:a59b899658f70fa3bb31bebdcf3155383"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the word from words.txt and the word file itself  <a href="../../d3/d23/wbgen_8h.html#a59b899658f70fa3bb31bebdcf3155383">More...</a><br /></td></tr>
+<tr class="separator:a59b899658f70fa3bb31bebdcf3155383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa09f63d5d398890dc110049e937a97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a6fa09f63d5d398890dc110049e937a97">takeFileLength</a> (FILE *file)</td></tr>
+<tr class="memdesc:a6fa09f63d5d398890dc110049e937a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function for taking the total lines in a txt file  <a href="../../d3/d23/wbgen_8h.html#a6fa09f63d5d398890dc110049e937a97">More...</a><br /></td></tr>
+<tr class="separator:a6fa09f63d5d398890dc110049e937a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>the general wb library for generating word files and listing </p>
 <dl class="section author"><dt>Author</dt><dd>Mehmet Mert Gunduz</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>10/12/2022 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
-<dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000010">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000012">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d3/d23/wbgen_8h_source.html">wbgen.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -242,6 +250,28 @@ Functions</h2></td></tr>
 <p>checks the terminal color capabilities </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d60/colorCheck_8c_source.html#l00014">14</a> of file <a class="el" href="../../d1/d60/colorCheck_8c_source.html">colorCheck.c</a>.</p>
+
+</div>
+</div>
+<a id="a59b899658f70fa3bb31bebdcf3155383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b899658f70fa3bb31bebdcf3155383">&#9670;&nbsp;</a></span>deleteMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteMenu </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes the word from words.txt and the word file itself </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da1/deleteMenu_8c_source.html#l00014">14</a> of file <a class="el" href="../../d4/da1/deleteMenu_8c_source.html">deleteMenu.c</a>.</p>
 
 </div>
 </div>
@@ -365,7 +395,36 @@ Functions</h2></td></tr>
 
 <p>the main function for displaying the words </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d54/listMenu_8c_source.html#l00022">22</a> of file <a class="el" href="../../d0/d54/listMenu_8c_source.html">listMenu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d54/listMenu_8c_source.html#l00021">21</a> of file <a class="el" href="../../d0/d54/listMenu_8c_source.html">listMenu.c</a>.</p>
+
+</div>
+</div>
+<a id="a6fa09f63d5d398890dc110049e937a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa09f63d5d398890dc110049e937a97">&#9670;&nbsp;</a></span>takeFileLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int takeFileLength </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the function for taking the total lines in a txt file </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>total lines of the text </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d3b/takeFileLength_8c_source.html#l00017">17</a> of file <a class="el" href="../../da/d3b/takeFileLength_8c_source.html">takeFileLength.c</a>.</p>
 
 </div>
 </div>

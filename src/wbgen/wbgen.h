@@ -29,3 +29,5 @@ void fullrefresh(WINDOW *window);
 void listMenu();
 void wordMenu(char *word);
 void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppositeData, char *wdescData, char *wExData, char *wDateData);
+void deleteMenu(char *word);
+int takeFileLength(FILE *file);

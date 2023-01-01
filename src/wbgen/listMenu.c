@@ -11,7 +11,6 @@
 #include "wbgen.h"
 
 void spaceAdder(WINDOW *window, int spacer);
-int takeFileLength(FILE *file);
 void resetCleaners(int *counter, char *string);
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
 void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
@@ -539,32 +538,6 @@ void spaceAdder(WINDOW *window, int spacer)
             waddch(window, ' ');
         }
     }
-}
-
-/// @brief the function for taking the total lines in a txt file 
-/// @param file 
-/// @return total lines of the text
-int takeFileLength(FILE *file)
-{
-    int totalWords = 0;
-    char wordReaderTrashVar[65];
-
-    if (file == NULL)
-    {
-        fileReadErrorMessage();
-        exit(0);
-    }
-
-    while (!feof(file))
-    {
-        fgets(wordReaderTrashVar, 64, file);
-        totalWords++;
-    }
-
-    /* corrector for totalwords */
-    totalWords--;
-
-    return totalWords;
 }
 
 void resetCleaners(int *counter, char *string)

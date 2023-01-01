@@ -52,7 +52,11 @@ void \mbox{\hyperlink{wbgen_8h_ac9be5d869b73a8e605f33dc4c1f5b588}{list\+Menu}} (
 void \mbox{\hyperlink{wbgen_8h_abc9ad7e8184cb63b776446161449283d}{word\+Menu}} (char $\ast$word)
 \begin{DoxyCompactList}\small\item\em opens the word menu and shows the word and its other informations \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbgen_8h_aa63cb705cadce514926c1217449832bb}{get\+Word\+Data}} (char $\ast$total\+Line, char $\ast$w\+Word\+Data, char $\ast$w\+Type\+Data, char $\ast$w\+Opposite\+Data, char $\ast$wdesc\+Data, char $\ast$w\+Ex\+Data, char $\ast$w\+Date\+Data)
-\begin{DoxyCompactList}\small\item\em the function for extracting the data from total word line \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the function for extracting the data from total word line \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_a59b899658f70fa3bb31bebdcf3155383}{delete\+Menu}} (char $\ast$word)
+\begin{DoxyCompactList}\small\item\em deletes the word from words.\+txt and the word file itself \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}{take\+File\+Length}} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em the function for taking the total lines in a txt file \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -68,7 +72,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000010}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -126,6 +130,20 @@ checks the terminal color capabilities
 
 
 Definition at line 14 of file color\+Check.\+c.
+
+\mbox{\Hypertarget{wbgen_8h_a59b899658f70fa3bb31bebdcf3155383}\label{wbgen_8h_a59b899658f70fa3bb31bebdcf3155383}} 
+\index{wbgen.h@{wbgen.h}!deleteMenu@{deleteMenu}}
+\index{deleteMenu@{deleteMenu}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{deleteMenu()}{deleteMenu()}}
+{\footnotesize\ttfamily void delete\+Menu (\begin{DoxyParamCaption}\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+deletes the word from words.\+txt and the word file itself 
+
+
+
+Definition at line 14 of file delete\+Menu.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}\label{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}} 
 \index{wbgen.h@{wbgen.h}!fullrefresh@{fullrefresh}}
@@ -190,7 +208,29 @@ the main function for displaying the words
 
 
 
-Definition at line 22 of file list\+Menu.\+c.
+Definition at line 21 of file list\+Menu.\+c.
+
+\mbox{\Hypertarget{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}\label{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}} 
+\index{wbgen.h@{wbgen.h}!takeFileLength@{takeFileLength}}
+\index{takeFileLength@{takeFileLength}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{takeFileLength()}{takeFileLength()}}
+{\footnotesize\ttfamily int take\+File\+Length (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+the function for taking the total lines in a txt file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total lines of the text 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file take\+File\+Length.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}\label{wbgen_8h_a7b17a6c72a0b183ba90901d387f1d779}} 
 \index{wbgen.h@{wbgen.h}!textInput@{textInput}}

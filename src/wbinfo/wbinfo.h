@@ -30,3 +30,4 @@ void terminalColorError();
 void fileReadErrorMessage();
 void nullWordError();
 void fileNotFoundError(char *word);
+void wordsTxtFileNotFoundError();

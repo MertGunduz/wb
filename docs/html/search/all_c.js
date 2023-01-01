@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reset_38',['RESET',['../d5/d60/wbinfo_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'wbinfo.h']]],
-  ['resetcleaners_39',['resetCleaners',['../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4',1,'listMenu.c']]]
+  ['printlettercounter_38',['printLetterCounter',['../d0/d94/textInput_8c.html#ac64f75cfaf6996429d0745dfe297967e',1,'textInput.c']]],
+  ['pure_5fblack_5fcolor_39',['PURE_BLACK_COLOR',['../d3/d23/wbgen_8h.html#afed046f37c4b989441f2b3ca749d384a',1,'wbgen.h']]]
 ];
