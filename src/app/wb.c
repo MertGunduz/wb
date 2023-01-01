@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
         {
             addMenu();
         }
-        else if (strcmp(argv[1], "-e") == 0 || strcmp(argv[1], "--edit") == 0) 
+        else if (strcmp(argv[1], "-d") == 0 || strcmp(argv[1], "--delete") == 0) 
         {
-            fprintf(stdout, "edit menu!\n");
+            fprintf(stdout, "delete menu!\n");
         }
         else if (strcmp(argv[1], "-l") == 0 || strcmp(argv[1], "--list") == 0) 
         {
