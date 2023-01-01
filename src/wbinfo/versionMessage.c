@@ -1,7 +1,7 @@
 /** 
  * @file versionMessage.c
  * 
- * @brief the function for printing the wb version
+ * @brief prints the wb version
  * 
  * @author Mehmet Mert Gunduz
  * 

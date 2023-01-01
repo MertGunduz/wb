@@ -1,7 +1,7 @@
 /** 
  * @file githubMessage.c
  * 
- * @brief the function for printing the github source code information
+ * @brief prints the github source code information
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -11,7 +11,7 @@
 
 #include "wbinfo.h"
 
-/// @brief prints the github source code url
+/// @brief prints the github source code information
 void githubMessage()
 {
     fprintf(stdout, "wb %shttps://github.com/MertGunduz/wb%s\n\n", KMAG, KNRM);

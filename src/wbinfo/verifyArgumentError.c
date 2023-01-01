@@ -1,7 +1,7 @@
 /** 
  * @file verifyArgumentError.c
  * 
- * @brief the function for printing verify argv mismatch
+ * @brief prints the verify argv mismatch
  * 
  * @author Mehmet Mert Gunduz
  * 

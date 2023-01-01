@@ -1,7 +1,7 @@
 /** 
  * @file verifyFileStructureError.c
  * 
- * @brief the function for printing verify function file structure availability error info
+ * @brief prints the verify function file structure availability error info
  * 
  * @author Mehmet Mert Gunduz
  * 

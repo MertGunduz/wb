@@ -1,7 +1,7 @@
 /** 
  * @file fileNotFoundError.c
  * 
- * @brief the function for printing false file name info
+ * @brief prints the false file name info
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -11,7 +11,7 @@
 
 #include "wbinfo.h"
 
-/// @brief the function for printing false file name info
+/// @brief prints the false file name info
 void fileNotFoundError(char *word)
 {
     fprintf(stdout, "%swb:%s file not found, %swrong file name or file doesn't exist%s\n",BOLD, RESET, KMAG, KNRM);

@@ -1,7 +1,7 @@
 /**
  * @file fileReadErrorMessage.c
  *
- * @brief the function for printing the file access error
+ * @brief prints the file access error information
  *
  * @author Artem Romanov
  *
@@ -11,7 +11,7 @@
 
 #include "wbinfo.h"
 
-/// @brief prints the file access error message
+/// @brief prints the file access error information
 void fileReadErrorMessage()
 {
     fprintf(stdout, "%swb:%s file access error, %splease check the file permissions%s\n",BOLD, RESET, KMAG, KNRM);

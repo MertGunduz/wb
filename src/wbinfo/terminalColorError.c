@@ -1,7 +1,7 @@
 /** 
  * @file terminalColorError.c
  * 
- * @brief the function for printing terminal color capability error
+ * @brief prints the terminal color capability error
  * 
  * @author Mehmet Mert Gunduz
  * 

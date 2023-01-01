@@ -1,7 +1,7 @@
 /** 
  * @file verifyArgcError.c
  * 
- * @brief the function for printing verify function argc count error info
+ * @brief prints the verify function argc count error info
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -11,6 +11,7 @@
 
 #include "wbinfo.h"
 
+/// @brief prints the verify function argc count error info
 /// @brief controls the argc, if the argc value equals to 1 writes "missing arguments", if not writes "too many arguments"
 /// @param argc 
 void verifyArgcError(int argc)

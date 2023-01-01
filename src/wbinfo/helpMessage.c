@@ -1,7 +1,7 @@
 /** 
  * @file helpMessage.c
  * 
- * @brief the function for printing the help information
+ * @brief prints the help information
  * 
  * @author Mehmet Mert Gunduz
  * 
