@@ -13,8 +13,8 @@
 
 #include "wbgen.h"
 
-char *arguments[] = {"-w", "--word", "-s", "--settings", "-a", "--add", "-e", "--edit", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github", "-E", "--export", "-I", "--import"};
-int argSize = 20;
+char *arguments[] = {"-w", "--word", "-a", "--add", "-e", "--edit", "-l", "--list", "-h", "--help", "-v", "--version", "-g", "--github", "-E", "--export", "-I", "--import"};
+int argSize = 18;
 
 /// @brief the system control function for wb, it checks the usr/bin/wb (executable) and usr/local/wb (folder)
 /// @param argc 

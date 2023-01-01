@@ -84,45 +84,41 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="../../d3/d23/wbgen_8h.html#abc9ad7e8184cb63b776446161449283d">wordMenu</a>(argv[2]);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-s&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--settings&quot;</span>) == 0)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-a&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--add&quot;</span>) == 0)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;settings menu!\n&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="../../dc/dda/addMenu_8c.html#a1a2e3b5dc1ff577b72d54bac44c330ac">addMenu</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-a&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--add&quot;</span>) == 0)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-e&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--edit&quot;</span>) == 0) </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="../../dc/dda/addMenu_8c.html#a1a2e3b5dc1ff577b72d54bac44c330ac">addMenu</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;edit menu!\n&quot;</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-e&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--edit&quot;</span>) == 0) </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-l&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--list&quot;</span>) == 0) </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;edit menu!\n&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="../../d0/d54/listMenu_8c.html#ac9be5d869b73a8e605f33dc4c1f5b588">listMenu</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-l&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--list&quot;</span>) == 0) </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-h&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--help&quot;</span>) == 0) </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="../../d0/d54/listMenu_8c.html#ac9be5d869b73a8e605f33dc4c1f5b588">listMenu</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="../../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c">helpMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-h&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--help&quot;</span>) == 0) </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-v&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--version&quot;</span>) == 0) </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c">helpMessage</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../d9/d70/versionMessage_8c.html#a500852d9b79e086a08d69408a2df9ca8">versionMessage</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-v&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--version&quot;</span>) == 0) </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-g&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--github&quot;</span>) == 0) </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../d9/d70/versionMessage_8c.html#a500852d9b79e086a08d69408a2df9ca8">versionMessage</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd">githubMessage</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-g&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--github&quot;</span>) == 0) </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-E&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--export&quot;</span>) == 0) </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd">githubMessage</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-E&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--export&quot;</span>) == 0) </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;export menu!\n&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-I&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--import&quot;</span>) == 0) </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;export menu!\n&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;import menu!\n&quot;</span>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }    </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[1], <span class="stringliteral">&quot;-I&quot;</span>) == 0 || strcmp(argv[1], <span class="stringliteral">&quot;--import&quot;</span>) == 0) </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            fprintf(stdout, <span class="stringliteral">&quot;import menu!\n&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="ttc" id="aaddMenu_8c_html_a1a2e3b5dc1ff577b72d54bac44c330ac"><div class="ttname"><a href="../../dc/dda/addMenu_8c.html#a1a2e3b5dc1ff577b72d54bac44c330ac">addMenu</a></div><div class="ttdeci">void addMenu()</div><div class="ttdoc">the word adding menu for the wb, opens a terminal ui and asks user some data to generate word files</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dda/addMenu_8c_source.html#l00015">addMenu.c:15</a></div></div>
 <div class="ttc" id="agithubMessage_8c_html_aeb11d9cc5055f50328aa5bd00c0783bd"><div class="ttname"><a href="../../d6/df6/githubMessage_8c.html#aeb11d9cc5055f50328aa5bd00c0783bd">githubMessage</a></div><div class="ttdeci">void githubMessage()</div><div class="ttdoc">prints the github source code url</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df6/githubMessage_8c_source.html#l00015">githubMessage.c:15</a></div></div>
 <div class="ttc" id="ahelpMessage_8c_html_a0d89081abdea8d2a2517254608e4588c"><div class="ttname"><a href="../../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c">helpMessage</a></div><div class="ttdeci">void helpMessage()</div><div class="ttdoc">prints the help information</div><div class="ttdef"><b>Definition:</b> <a href="../../df/de2/helpMessage_8c_source.html#l00015">helpMessage.c:15</a></div></div>

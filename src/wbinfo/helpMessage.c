@@ -18,12 +18,12 @@ void helpMessage()
     fprintf(stdout, "easily take vocabulary notes and manage them\n");
     fprintf(stdout, "example: wb --add\n\n");
     fprintf(stdout, "options and descriptions\n");
-    fprintf(stdout, "%s-s, --settings%s     opens a settings ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-a, --add%s          opens a word adding ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-e, --edit%s         opens a word editing ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-l, --list%s         opens a word list ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-E, --export%s       opens a export data ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-I, --import%s       opens a import data ui menu\n", KMAG, KNRM);
+    fprintf(stdout, "%s-w, --word%s         outputs word information\n", KMAG, KNRM);
     fprintf(stdout, "%s-h, --help%s         outputs help information\n", KMAG, KNRM);
     fprintf(stdout, "%s-v, --version%s      outputs version information\n", KMAG, KNRM);
     fprintf(stdout, "%s-g, --github%s       outputs github url information\n\n", KMAG, KNRM);

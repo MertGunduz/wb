@@ -20,10 +20,6 @@ int main(int argc, char *argv[])
         {
             wordMenu(argv[2]);
         }
-        else if (strcmp(argv[1], "-s") == 0 || strcmp(argv[1], "--settings") == 0)
-        {
-            fprintf(stdout, "settings menu!\n");
-        }
         else if (strcmp(argv[1], "-a") == 0 || strcmp(argv[1], "--add") == 0)
         {
             addMenu();
