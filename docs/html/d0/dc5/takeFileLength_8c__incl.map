@@ -1,5 +1,5 @@
 <map id="src/wbgen/takeFileLength.c" name="src/wbgen/takeFileLength.c">
-<area shape="rect" id="node1" title="the function for taking the total lines in a txt file" alt="" coords="241,5,439,32"/>
+<area shape="rect" id="node1" title="takes the total lines of a txt file" alt="" coords="241,5,439,32"/>
 <area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="301,80,379,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,88,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="113,155,183,181"/>

@@ -3,7 +3,7 @@
  * \section intro_sec Introduction
  * <hr>
  * wb is a lightweight vocabulary note management application that provides listing, deletion, insertion and showing functions.\n
- * By doing that it helps user to manage words and fasters the learning process.
+ * by doing that it helps user to manage words and fasters the learning process.
  *
  * \n
  *
@@ -58,7 +58,7 @@
  * \code{.unparsed}
  * wb -h
  * \endcode
- * if you see some output related to wb then it means it is successfully builded
+ * if there is some output related to wb then it means it is successfully builded
  *
  * \n
  *
@@ -71,7 +71,7 @@
  * wb --add
  * \endcode 
  *
- * this will open a ncurses terminal UI and will ask the user information input related to words.
+ * opens a ncurses terminal UI and prompts vocabulary data from the user
  *
  * \n
  *
@@ -81,7 +81,7 @@
  * wb --list
  * \endcode 
  *
- * this will open a ncurses terminal UI and will list every word in the words.txt file
+ * opens a ncurses terminal UI and lists every word in the words.txt file
  *
  * \n
  *
@@ -91,7 +91,7 @@
  * wb --word [WORD NAME]
  * \endcode 
  *
- * this will output the vocabulary notes of the given word in the cli argument
+ * outputs the vocabulary notes of the given word cli-argument
  *
  * \n
  *
@@ -101,7 +101,7 @@
  * wb --delete [WORD NAME]
  * \endcode 
  *
- * this will delete the word from the words.txt and the word file 
+ * deletes the word from the words.txt and the word file 
  *
  * \n
  *
@@ -111,7 +111,7 @@
  * wb --help
  * \endcode 
  *
- * this will output a detailed manuel about wb
+ * outputs a detailed manuel about wb
  *
  * \n
  *
@@ -121,7 +121,7 @@
  * wb --version
  * \endcode 
  *
- * this will output the version of wb
+ * outputs the version of wb
  *
  * \n
  * 
@@ -131,7 +131,7 @@
  * wb --github
  * \endcode 
  *
- * this will output the source code of wb
+ * outputs the source code link of wb
  *
  * \n
  *
@@ -141,7 +141,7 @@
  * wb --export
  * \endcode 
  *
- * this will create a file named wbdata.txt and export all the application data to it 
+ * creates a file named wbdata.txt and exports the application data to it 
  *
  * \n
  *
@@ -151,5 +151,5 @@
  * wb --import
  * \endcode 
  *
- * it will import the data to the system if the wb can find the file in the working directory
+ * imports the data to the system if wbdata.txt is in the working directory
 */

@@ -1,7 +1,7 @@
 /** 
  * @file takeFileLength.c
  * 
- * @brief the function for taking the total lines in a txt file 
+ * @brief takes the total lines of a txt file 
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -11,7 +11,7 @@
 
 #include "wbgen.h"
 
-/// @brief the function for taking the total lines in a txt file 
+/// @brief takes the total lines of a txt file 
 /// @param file 
 /// @return total lines of the text
 int takeFileLength(FILE *file)

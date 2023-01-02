@@ -1,8 +1,7 @@
 /**
  * @file addMenu.c
  * 
- * @brief the word adding menu for the wb, it opens a terminal ui and asks user some data to generate word files
- * @brief word, word type, word description, word sentence example, word opposite 
+ * @brief the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generate word files
  * 
  * @author Mehmet Mert Gunduz
  * @date 17/12/2022
@@ -11,7 +10,7 @@
 
 #include "wbgen.h"
 
-/// @brief the word adding menu for the wb, opens a terminal ui and asks user some data to generate word files
+/// @brief the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generate word files
 void addMenu()
 {
     char word[65]; /* word data (example: discreet)*/

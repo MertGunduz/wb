@@ -1,14 +1,14 @@
 /**
  * @file getWordData.c
  * 
- * @brief the function for extracting the data from total word line
+ * @brief extracts the data from total word line
  * 
  * @author Mehmet Mert Gunduz
  * @date 01/01/2023
  * @bug No known bugs.
 */
 
-/// @brief the function for extracting the data from total word line
+/// @brief extracts the data from total word line
 /// @param totalLine 
 /// @param wWordData 
 /// @param wTypeData 
