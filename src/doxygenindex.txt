@@ -1,0 +1,155 @@
+/*! \mainpage wb (wordbook)
+ *
+ * \section intro_sec Introduction
+ * <hr>
+ * wb is a lightweight vocabulary note management application that provides listing, deletion, insertion and showing functions.\n
+ * By doing that it helps user to manage words and fasters the learning process.
+ *
+ * \n
+ *
+ * \section programminglanguage_sec Programming Language and Tools
+ * <hr>
+ * Programming Language: C, Bash \n
+ * Compiler: GNU GCC \n
+ * Build Tool: CMake \n
+ *
+ * \n
+ *
+ * \section dependency_sec Dependencies
+ * <hr>
+ * NCurses Library \n
+ * CMake (MIN 3.22)
+ *
+ * \n
+ *
+ * \section install_sec Installation
+ * <hr>
+ * \subsection step1 Step 1: Download the Source codes
+ *
+ * https://github.com/MertGunduz/wb
+ *
+ * \n
+ *
+ * \subsection step2 Step 2: Change permissions of INSTALL.sh
+ *
+ * \code{.sh}
+ * chmod 755 INSTALL.sh
+ * \endcode
+ *
+ * running this command will change the permission of the INSTALL.sh 
+ *
+ * \n
+ *
+ * \subsection step3 Step 3: Run INSTALL.sh
+ *
+ * \code{.sh}
+ * ./INSTALL.sh
+ * \endcode
+ *
+ * running this bash file will build the application and create the folders.
+ *
+ * \note It can ask for sudo requirements.
+ *
+ * \n
+ *
+ * \subsection step4 Step 4: Test Application
+ *
+ * try running 
+ * \code{.unparsed}
+ * wb -h
+ * \endcode
+ * if you see some output related to wb then it means it is successfully builded
+ *
+ * \n
+ *
+ * \section use_sec How to use
+ * <hr>
+ *
+ * \subsection howtoaddwords Add Words
+ * \code{.unparsed}
+ * wb -a
+ * wb --add
+ * \endcode 
+ *
+ * this will open a ncurses terminal UI and will ask the user information input related to words.
+ *
+ * \n
+ *
+ * \subsection listwords List Words
+ * \code{.unparsed}
+ * wb -l
+ * wb --list
+ * \endcode 
+ *
+ * this will open a ncurses terminal UI and will list every word in the words.txt file
+ *
+ * \n
+ *
+ * \subsection showwords Show Words
+ * \code{.unparsed}
+ * wb -w [WORD NAME]
+ * wb --word [WORD NAME]
+ * \endcode 
+ *
+ * this will output the vocabulary notes of the given word in the cli argument
+ *
+ * \n
+ *
+ * \subsection deletewords Delete Words
+ * \code{.unparsed}
+ * wb -d [WORD NAME]
+ * wb --delete [WORD NAME]
+ * \endcode 
+ *
+ * this will delete the word from the words.txt and the word file 
+ *
+ * \n
+ *
+ * \subsection help Help
+ * \code{.unparsed}
+ * wb -h
+ * wb --help
+ * \endcode 
+ *
+ * this will output a detailed manuel about wb
+ *
+ * \n
+ *
+ * \subsection version Showing Version
+ * \code{.unparsed}
+ * wb -v
+ * wb --version
+ * \endcode 
+ *
+ * this will output the version of wb
+ *
+ * \n
+ * 
+ * \subsection sourcecode Showing Github
+ * \code{.unparsed}
+ * wb -g
+ * wb --github
+ * \endcode 
+ *
+ * this will output the source code of wb
+ *
+ * \n
+ *
+ * \subsection export Exporting Data
+ * \code{.unparsed}
+ * wb -E
+ * wb --export
+ * \endcode 
+ *
+ * this will create a file named wbdata.txt and export all the application data to it 
+ *
+ * \n
+ *
+ * \subsection import Importing Data
+ * \code{.unparsed}
+ * wb -I
+ * wb --import
+ * \endcode 
+ *
+ * it will import the data to the system if the wb can find the file in the working directory
+*/

@@ -1,0 +1,166 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+\DoxyHorRuler{0}
+ wb is a lightweight vocabulary note management application that provides listing, deletion, insertion and showing functions.~\newline
+By doing that it helps user to manage words and fasters the learning process.
+
+~\newline
+ \hypertarget{index_programminglanguage_sec}{}\doxysection{Programming Language and Tools}\label{index_programminglanguage_sec}
+\DoxyHorRuler{0}
+ Programming Language\+: C, Bash ~\newline
+Compiler\+: GNU GCC ~\newline
+Build Tool\+: CMake ~\newline
+ ~\newline
+ \hypertarget{index_dependency_sec}{}\doxysection{Dependencies}\label{index_dependency_sec}
+\DoxyHorRuler{0}
+ NCurses Library ~\newline
+CMake (MIN 3.\+22)
+
+~\newline
+ \hypertarget{index_install_sec}{}\doxysection{Installation}\label{index_install_sec}
+\DoxyHorRuler{0}
+ \hypertarget{index_step1}{}\doxysubsection{Step 1\+: Download the Source codes}\label{index_step1}
+\href{https://github.com/MertGunduz/wb}{\texttt{ https\+://github.\+com/\+Mert\+Gunduz/wb}}
+
+~\newline
+ \hypertarget{index_step2}{}\doxysubsection{Step 2\+: Change permissions of INSTALL.\+sh}\label{index_step2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{chmod 755 INSTALL.sh}
+
+\end{DoxyCode}
+
+
+running this command will change the permission of the INSTALL.\+sh
+
+~\newline
+ \hypertarget{index_step3}{}\doxysubsection{Step 3\+: Run INSTALL.\+sh}\label{index_step3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./INSTALL.sh}
+
+\end{DoxyCode}
+
+
+running this bash file will build the application and create the folders.
+
+\begin{DoxyNote}{Note}
+It can ask for sudo requirements.
+\end{DoxyNote}
+~\newline
+ \hypertarget{index_step4}{}\doxysubsection{Step 4\+: Test Application}\label{index_step4}
+try running 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/h}
+
+\end{DoxyCode}
+ if you see some output related to wb then it means it is successfully builded
+
+~\newline
+ \hypertarget{index_use_sec}{}\doxysection{How to use}\label{index_use_sec}
+\DoxyHorRuler{0}
+\hypertarget{index_howtoaddwords}{}\doxysubsection{Add Words}\label{index_howtoaddwords}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/a}
+\DoxyCodeLine{wb -\/-\/add}
+
+\end{DoxyCode}
+
+
+this will open a ncurses terminal UI and will ask the user information input related to words.
+
+~\newline
+ \hypertarget{index_listwords}{}\doxysubsection{List Words}\label{index_listwords}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/l}
+\DoxyCodeLine{wb -\/-\/list}
+
+\end{DoxyCode}
+
+
+this will open a ncurses terminal UI and will list every word in the words.\+txt file
+
+~\newline
+ \hypertarget{index_showwords}{}\doxysubsection{Show Words}\label{index_showwords}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/w [WORD NAME]}
+\DoxyCodeLine{wb -\/-\/word [WORD NAME]}
+
+\end{DoxyCode}
+
+
+this will output the vocabulary notes of the given word in the cli argument
+
+~\newline
+ \hypertarget{index_deletewords}{}\doxysubsection{Delete Words}\label{index_deletewords}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/d [WORD NAME]}
+\DoxyCodeLine{wb -\/-\/delete [WORD NAME]}
+
+\end{DoxyCode}
+
+
+this will delete the word from the words.\+txt and the word file
+
+~\newline
+ \hypertarget{index_help}{}\doxysubsection{Help}\label{index_help}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/h}
+\DoxyCodeLine{wb -\/-\/help}
+
+\end{DoxyCode}
+
+
+this will output a detailed manuel about wb
+
+~\newline
+ \hypertarget{index_version}{}\doxysubsection{Showing Version}\label{index_version}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/v}
+\DoxyCodeLine{wb -\/-\/version}
+
+\end{DoxyCode}
+
+
+this will output the version of wb
+
+~\newline
+ \hypertarget{index_sourcecode}{}\doxysubsection{Showing Github}\label{index_sourcecode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/g}
+\DoxyCodeLine{wb -\/-\/github}
+
+\end{DoxyCode}
+
+
+this will output the source code of wb
+
+~\newline
+ \hypertarget{index_export}{}\doxysubsection{Exporting Data}\label{index_export}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/E}
+\DoxyCodeLine{wb -\/-\/export}
+
+\end{DoxyCode}
+
+
+this will create a file named wbdata.\+txt and export all the application data to it
+
+~\newline
+ \hypertarget{index_import}{}\doxysubsection{Importing Data}\label{index_import}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wb -\/I}
+\DoxyCodeLine{wb -\/-\/import}
+
+\end{DoxyCode}
+
+
+it will import the data to the system if the wb can find the file in the working directory 
