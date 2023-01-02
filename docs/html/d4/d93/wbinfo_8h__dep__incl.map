@@ -1,26 +1,30 @@
 <map id="src/wbinfo/wbinfo.h" name="src/wbinfo/wbinfo.h">
-<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="2115,5,2265,32"/>
-<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="934,87,1081,114"/>
-<area shape="rect" id="node14" href="$de/ddb/fileNotFoundError_8c.html" title="prints the false file name info" alt="" coords="1105,87,1321,114"/>
-<area shape="rect" id="node15" href="$d6/d3c/fileReadErrorMessage_8c.html" title="prints the file access error information" alt="" coords="1345,80,1523,121"/>
-<area shape="rect" id="node16" href="$d6/df6/githubMessage_8c.html" title="prints the github source code information" alt="" coords="1547,87,1750,114"/>
-<area shape="rect" id="node17" href="$df/de2/helpMessage_8c.html" title="prints the help information" alt="" coords="1775,87,1965,114"/>
-<area shape="rect" id="node18" href="$d8/d5c/nullWordError_8c.html" title="prints null word error info" alt="" coords="1989,87,2180,114"/>
-<area shape="rect" id="node19" href="$d3/d49/terminalColorError_8c.html" title="prints the terminal color capability error" alt="" coords="2204,80,2387,121"/>
-<area shape="rect" id="node20" href="$da/d8e/verifyArgcError_8c.html" title="prints the verify function argc count error info" alt="" coords="2411,87,2611,114"/>
-<area shape="rect" id="node21" href="$d8/d73/verifyArgumentError_8c.html" title="prints the verify argv mismatch" alt="" coords="2635,80,2830,121"/>
-<area shape="rect" id="node22" href="$df/d4d/verifyFileStructureError_8c.html" title="prints the verify function file structure availability error info" alt="" coords="2855,80,3067,121"/>
-<area shape="rect" id="node23" href="$d9/d70/versionMessage_8c.html" title="prints the wb version" alt="" coords="3090,87,3301,114"/>
-<area shape="rect" id="node24" href="$d5/d6f/wordsTxtFileNotFoundError_8c.html" title="prints words.txt file not found" alt="" coords="3324,80,3523,121"/>
+<area shape="rect" id="node1" title="the general wb library for printing information messages" alt="" coords="2561,5,2710,32"/>
+<area shape="rect" id="node2" href="$d3/d23/wbgen_8h.html" title="the general wb library for generating word files and listing" alt="" coords="1039,87,1186,114"/>
+<area shape="rect" id="node15" href="$d2/d54/cantCreatewbdataFile_8c.html" title="prints can&#39;t create wbdata.txt file info" alt="" coords="1211,80,1423,121"/>
+<area shape="rect" id="node16" href="$d2/d91/exportedInfo_8c.html" title="prints the false file name info" alt="" coords="1447,87,1634,114"/>
+<area shape="rect" id="node17" href="$de/ddb/fileNotFoundError_8c.html" title="prints the false file name info" alt="" coords="1658,87,1874,114"/>
+<area shape="rect" id="node18" href="$d6/d3c/fileReadErrorMessage_8c.html" title="prints the file access error information" alt="" coords="1899,80,2076,121"/>
+<area shape="rect" id="node19" href="$d6/df6/githubMessage_8c.html" title="prints the github source code information" alt="" coords="2101,87,2303,114"/>
+<area shape="rect" id="node20" href="$df/de2/helpMessage_8c.html" title="prints the help information" alt="" coords="2328,87,2519,114"/>
+<area shape="rect" id="node21" href="$d6/d6c/noWordsInfo_8c.html" title="prints no words info" alt="" coords="2543,87,2728,114"/>
+<area shape="rect" id="node22" href="$d8/d5c/nullWordError_8c.html" title="prints null word error info" alt="" coords="2752,87,2943,114"/>
+<area shape="rect" id="node23" href="$d3/d49/terminalColorError_8c.html" title="prints the terminal color capability error" alt="" coords="2967,80,3149,121"/>
+<area shape="rect" id="node24" href="$da/d8e/verifyArgcError_8c.html" title="prints the verify function argc count error info" alt="" coords="3174,87,3374,114"/>
+<area shape="rect" id="node25" href="$d8/d73/verifyArgumentError_8c.html" title="prints the verify argv mismatch" alt="" coords="3398,80,3593,121"/>
+<area shape="rect" id="node26" href="$df/d4d/verifyFileStructureError_8c.html" title="prints the verify function file structure availability error info" alt="" coords="3617,80,3829,121"/>
+<area shape="rect" id="node27" href="$d9/d70/versionMessage_8c.html" title="prints the wb version" alt="" coords="3853,87,4063,114"/>
+<area shape="rect" id="node28" href="$d5/d6f/wordsTxtFileNotFoundError_8c.html" title="prints words.txt file not found" alt="" coords="4087,80,4285,121"/>
 <area shape="rect" id="node3" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,169,108,196"/>
 <area shape="rect" id="node4" href="$dc/dda/addMenu_8c.html" title="the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generat..." alt="" coords="133,169,295,196"/>
 <area shape="rect" id="node5" href="$d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,169,495,196"/>
 <area shape="rect" id="node6" href="$d1/d60/colorCheck_8c.html" title="checks the terminal color capabilities" alt="" coords="519,169,693,196"/>
 <area shape="rect" id="node7" href="$d4/da1/deleteMenu_8c.html" title="deletes the word from words.txt and the word file itself" alt="" coords="717,169,897,196"/>
-<area shape="rect" id="node8" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="922,169,1093,196"/>
-<area shape="rect" id="node9" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="1117,169,1276,196"/>
-<area shape="rect" id="node10" href="$da/d3b/takeFileLength_8c.html" title="takes the total lines of a txt file" alt="" coords="1300,169,1499,196"/>
-<area shape="rect" id="node11" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1523,169,1686,196"/>
-<area shape="rect" id="node12" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1710,169,1849,196"/>
-<area shape="rect" id="node13" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="1873,169,2043,196"/>
+<area shape="rect" id="node8" href="$d7/ddb/exportMenu_8c.html" title="creates a file named wbdata.txt and exports the appdata to it" alt="" coords="922,169,1103,196"/>
+<area shape="rect" id="node9" href="$d9/dee/fullrefresh_8c.html" title="refreshes the stdscr and the specified window" alt="" coords="1127,169,1298,196"/>
+<area shape="rect" id="node10" href="$d0/d54/listMenu_8c.html" title="the main function for displaying the words" alt="" coords="1323,169,1481,196"/>
+<area shape="rect" id="node11" href="$da/d3b/takeFileLength_8c.html" title="takes the total lines of a txt file" alt="" coords="1505,169,1704,196"/>
+<area shape="rect" id="node12" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1729,169,1891,196"/>
+<area shape="rect" id="node13" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="1915,169,2054,196"/>
+<area shape="rect" id="node14" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="2078,169,2249,196"/>
 </map>

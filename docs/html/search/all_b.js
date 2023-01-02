@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nullworderror_37',['nullWordError',['../d8/d5c/nullWordError_8c.html#aa6d425c656a959d7bc3be1b1f8821e3d',1,'nullWordError():&#160;nullWordError.c'],['../d5/d60/wbinfo_8h.html#aa6d425c656a959d7bc3be1b1f8821e3d',1,'nullWordError():&#160;nullWordError.c']]],
-  ['nullworderror_2ec_38',['nullWordError.c',['../d8/d5c/nullWordError_8c.html',1,'']]]
+  ['main_42',['main',['../df/dcd/wb_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'wb.c']]]
 ];

@@ -31,3 +31,6 @@ void fileReadErrorMessage();
 void nullWordError();
 void fileNotFoundError(char *word);
 void wordsTxtFileNotFoundError();
+void cantCreatewbdataFile();
+void exportedInfo();
+void noWordsInfo();

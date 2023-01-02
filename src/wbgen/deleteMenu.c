@@ -46,7 +46,6 @@ void deleteMenu(char *word)
         remove(wordFilePath);
         fclose(controlFile);
 
-        /* remove the word from the words.txt file */
         FILE *readFile = fopen(wordsFilePath, "r");
 
         if (readFile == NULL)

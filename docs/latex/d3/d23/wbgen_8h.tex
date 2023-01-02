@@ -19,7 +19,8 @@ Include dependency graph for wbgen.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{d9/d9f/wbgen_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -55,7 +56,9 @@ void \mbox{\hyperlink{wbgen_8h_aa63cb705cadce514926c1217449832bb}{get\+Word\+Dat
 void \mbox{\hyperlink{wbgen_8h_a59b899658f70fa3bb31bebdcf3155383}{delete\+Menu}} (char $\ast$word)
 \begin{DoxyCompactList}\small\item\em deletes the word from words.\+txt and the word file itself \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}{take\+File\+Length}} (FILE $\ast$file)
-\begin{DoxyCompactList}\small\item\em takes the total lines of a txt file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em takes the total lines of a txt file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_a31e8661340dd6eb461d4673b37dae13b}{export\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em creates a file named wbdata.\+txt and exports the appdata to it \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -71,7 +74,7 @@ Mehmet Mert Gunduz
 1.\+0.\+0 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000013}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -143,6 +146,20 @@ deletes the word from words.\+txt and the word file itself
 
 
 Definition at line 14 of file delete\+Menu.\+c.
+
+\mbox{\Hypertarget{wbgen_8h_a31e8661340dd6eb461d4673b37dae13b}\label{wbgen_8h_a31e8661340dd6eb461d4673b37dae13b}} 
+\index{wbgen.h@{wbgen.h}!exportMenu@{exportMenu}}
+\index{exportMenu@{exportMenu}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{exportMenu()}{exportMenu()}}
+{\footnotesize\ttfamily void export\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creates a file named wbdata.\+txt and exports the appdata to it 
+
+
+
+Definition at line 14 of file export\+Menu.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}\label{wbgen_8h_aa960f4b7c58112aeeb450e5086a351c1}} 
 \index{wbgen.h@{wbgen.h}!fullrefresh@{fullrefresh}}

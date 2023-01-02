@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
         }
         else if (strcmp(argv[1], "-E") == 0 || strcmp(argv[1], "--export") == 0) 
         {
-            fprintf(stdout, "export menu!\n");
+            exportMenu();
         }    
         else if (strcmp(argv[1], "-I") == 0 || strcmp(argv[1], "--import") == 0) 
         {

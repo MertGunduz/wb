@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['input_5fbits_29',['INPUT_BITS',['../d0/d94/textInput_8c.html#aae865db01e31dbe4754638af380ff0d1',1,'textInput.c']]]
+  ['helpmessage_33',['helpMessage',['../df/de2/helpMessage_8c.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c'],['../d5/d60/wbinfo_8h.html#a0d89081abdea8d2a2517254608e4588c',1,'helpMessage():&#160;helpMessage.c']]],
+  ['helpmessage_2ec_34',['helpMessage.c',['../df/de2/helpMessage_8c.html',1,'']]]
 ];
