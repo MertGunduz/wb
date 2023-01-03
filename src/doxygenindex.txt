@@ -58,14 +58,14 @@
  * \code{.unparsed}
  * wb -h
  * \endcode
- * if there is some output related to wb then it means it is successfully builded
+ * if there are some output related to wb then it means it is successfully builded
  *
  * \n
  *
  * \section use_sec How to use
  * <hr>
  *
- * \subsection howtoaddwords Add Words
+ * \subsection howtoaddwords Adding Words
  * \code{.unparsed}
  * wb -a
  * wb --add
@@ -75,7 +75,7 @@
  *
  * \n
  *
- * \subsection listwords List Words
+ * \subsection listwords Listing Words
  * \code{.unparsed}
  * wb -l
  * wb --list
@@ -85,7 +85,7 @@
  *
  * \n
  *
- * \subsection showwords Show Words
+ * \subsection showwords Showing Words
  * \code{.unparsed}
  * wb -w [WORD NAME]
  * wb --word [WORD NAME]
@@ -95,7 +95,7 @@
  *
  * \n
  *
- * \subsection deletewords Delete Words
+ * \subsection deletewords Deleting Words
  * \code{.unparsed}
  * wb -d [WORD NAME]
  * wb --delete [WORD NAME]
