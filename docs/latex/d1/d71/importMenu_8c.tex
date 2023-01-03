@@ -1,0 +1,87 @@
+\hypertarget{importMenu_8c}{}\doxysection{src/wbgen/import\+Menu.c File Reference}
+\label{importMenu_8c}\index{src/wbgen/importMenu.c@{src/wbgen/importMenu.c}}
+
+
+imports the exported wbdata.\+txt file  
+
+
+{\ttfamily \#include \char`\"{}wbgen.\+h\char`\"{}}\newline
+Include dependency graph for import\+Menu.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dab/importMenu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{importMenu_8c_a86822502a787a56d9c8bdb517e6a1dfa}{write\+Word}} (FILE $\ast$file, char $\ast$word)
+\begin{DoxyCompactList}\small\item\em the function for writing the words \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{importMenu_8c_a2dc572c635b4614586b7a8b62ddb67b3}{create\+Words\+Txt\+File}} (FILE $\ast$write\+File, FILE $\ast$read\+File, int total\+Words, char taker, int wct, char $\ast$word, char $\ast$trash\+Read)
+\item 
+void \mbox{\hyperlink{importMenu_8c_a3cae038e51e684a93601751ca209d9cc}{import\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em imports the exported wbdata.\+txt file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+imports the exported wbdata.\+txt file 
+
+\begin{DoxyAuthor}{Author}
+Mehmet Mert Gunduz 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/01/2023 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000009}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{importMenu_8c_a2dc572c635b4614586b7a8b62ddb67b3}\label{importMenu_8c_a2dc572c635b4614586b7a8b62ddb67b3}} 
+\index{importMenu.c@{importMenu.c}!createWordsTxtFile@{createWordsTxtFile}}
+\index{createWordsTxtFile@{createWordsTxtFile}!importMenu.c@{importMenu.c}}
+\doxysubsubsection{\texorpdfstring{createWordsTxtFile()}{createWordsTxtFile()}}
+{\footnotesize\ttfamily void create\+Words\+Txt\+File (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{write\+File,  }\item[{FILE $\ast$}]{read\+File,  }\item[{int}]{total\+Words,  }\item[{char}]{taker,  }\item[{int}]{wct,  }\item[{char $\ast$}]{word,  }\item[{char $\ast$}]{trash\+Read }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file import\+Menu.\+c.
+
+\mbox{\Hypertarget{importMenu_8c_a3cae038e51e684a93601751ca209d9cc}\label{importMenu_8c_a3cae038e51e684a93601751ca209d9cc}} 
+\index{importMenu.c@{importMenu.c}!importMenu@{importMenu}}
+\index{importMenu@{importMenu}!importMenu.c@{importMenu.c}}
+\doxysubsubsection{\texorpdfstring{importMenu()}{importMenu()}}
+{\footnotesize\ttfamily void import\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+imports the exported wbdata.\+txt file 
+
+
+
+Definition at line 17 of file import\+Menu.\+c.
+
+\mbox{\Hypertarget{importMenu_8c_a86822502a787a56d9c8bdb517e6a1dfa}\label{importMenu_8c_a86822502a787a56d9c8bdb517e6a1dfa}} 
+\index{importMenu.c@{importMenu.c}!writeWord@{writeWord}}
+\index{writeWord@{writeWord}!importMenu.c@{importMenu.c}}
+\doxysubsubsection{\texorpdfstring{writeWord()}{writeWord()}}
+{\footnotesize\ttfamily void write\+Word (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+the function for writing the words 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em word} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file import\+Menu.\+c.
+

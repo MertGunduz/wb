@@ -17,7 +17,7 @@
 int takeFileLength(FILE *file)
 {
     int totalWords = 0;
-    char wordReaderTrashVar[65];
+    char wordReaderTrashVar[1025];
 
     if (file == NULL)
     {
@@ -27,7 +27,7 @@ int takeFileLength(FILE *file)
 
     while (!feof(file))
     {
-        fgets(wordReaderTrashVar, 64, file);
+        fgets(wordReaderTrashVar, 1024, file);
         totalWords++;
     }
 

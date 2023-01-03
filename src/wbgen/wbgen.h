@@ -32,3 +32,4 @@ void getWordData(char *totalLine, char *wWordData, char *wTypeData, char *wOppos
 void deleteMenu(char *word);
 int takeFileLength(FILE *file);
 void exportMenu();
+void importMenu();

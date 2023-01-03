@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['takefilelength_2ec_96',['takeFileLength.c',['../da/d3b/takeFileLength_8c.html',1,'']]],
-  ['terminalcolorerror_2ec_97',['terminalColorError.c',['../d3/d49/terminalColorError_8c.html',1,'']]],
-  ['textinput_2ec_98',['textInput.c',['../d0/d94/textInput_8c.html',1,'']]]
+  ['nowordsinfo_2ec_99',['noWordsInfo.c',['../d6/d6c/noWordsInfo_8c.html',1,'']]],
+  ['nullworderror_2ec_100',['nullWordError.c',['../d8/d5c/nullWordError_8c.html',1,'']]]
 ];

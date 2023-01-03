@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['wordmenu_141',['wordMenu',['../d3/d23/wbgen_8h.html#abc9ad7e8184cb63b776446161449283d',1,'wordMenu(char *word):&#160;wordMenu.c'],['../dd/d3f/wordMenu_8c.html#abc9ad7e8184cb63b776446161449283d',1,'wordMenu(char *word):&#160;wordMenu.c']]],
-  ['wordstxtfilenotfounderror_142',['wordsTxtFileNotFoundError',['../d5/d60/wbinfo_8h.html#a06db56d7512fc51bb2be89929e9623e4',1,'wordsTxtFileNotFoundError():&#160;wordsTxtFileNotFoundError.c'],['../d5/d6f/wordsTxtFileNotFoundError_8c.html#a06db56d7512fc51bb2be89929e9623e4',1,'wordsTxtFileNotFoundError():&#160;wordsTxtFileNotFoundError.c']]],
-  ['writekey_143',['writeKey',['../d0/d54/listMenu_8c.html#ae0d009a528e47fbb2b8bef7f0890f0e4',1,'listMenu.c']]],
-  ['writesubstringeddata_144',['writeSubstringedData',['../d0/d54/listMenu_8c.html#af2b915a91667255ef982bcdafea1d2de',1,'listMenu.c']]]
+  ['verify_143',['verify',['../db/df6/verify_8c.html#a34e1ad81b228cf24e283e219eb486004',1,'verify(int argc, char *firstArgv):&#160;verify.c'],['../d3/d23/wbgen_8h.html#a34e1ad81b228cf24e283e219eb486004',1,'verify(int argc, char *firstArgv):&#160;verify.c']]],
+  ['verifyargcerror_144',['verifyArgcError',['../da/d8e/verifyArgcError_8c.html#a71fb30fc585d8838d4c70e5519244cb1',1,'verifyArgcError(int argc):&#160;verifyArgcError.c'],['../d5/d60/wbinfo_8h.html#a71fb30fc585d8838d4c70e5519244cb1',1,'verifyArgcError(int argc):&#160;verifyArgcError.c']]],
+  ['verifyargumenterror_145',['verifyArgumentError',['../d8/d73/verifyArgumentError_8c.html#ad1900e7b60d6249a5a015e5734602db1',1,'verifyArgumentError(char *argv):&#160;verifyArgumentError.c'],['../d5/d60/wbinfo_8h.html#ad1900e7b60d6249a5a015e5734602db1',1,'verifyArgumentError(char *argv):&#160;verifyArgumentError.c']]],
+  ['verifyfilestructureerror_146',['verifyFileStructureError',['../df/d4d/verifyFileStructureError_8c.html#a8f11f14157d85b08fb7564b5607da472',1,'verifyFileStructureError():&#160;verifyFileStructureError.c'],['../d5/d60/wbinfo_8h.html#a8f11f14157d85b08fb7564b5607da472',1,'verifyFileStructureError():&#160;verifyFileStructureError.c']]],
+  ['versionmessage_147',['versionMessage',['../d9/d70/versionMessage_8c.html#a500852d9b79e086a08d69408a2df9ca8',1,'versionMessage():&#160;versionMessage.c'],['../d5/d60/wbinfo_8h.html#a500852d9b79e086a08d69408a2df9ca8',1,'versionMessage():&#160;versionMessage.c']]]
 ];

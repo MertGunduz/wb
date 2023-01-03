@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resetcleaners_130',['resetCleaners',['../d0/d54/listMenu_8c.html#a0b8ea6096da074c12591eef387d98af4',1,'listMenu.c']]]
+  ['printlettercounter_136',['printLetterCounter',['../d0/d94/textInput_8c.html#ac64f75cfaf6996429d0745dfe297967e',1,'textInput.c']]]
 ];
