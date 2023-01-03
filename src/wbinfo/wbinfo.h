@@ -34,3 +34,4 @@ void wordsTxtFileNotFoundError();
 void cantCreatewbdataFile();
 void exportedInfo();
 void noWordsInfo();
+void importedInfo();

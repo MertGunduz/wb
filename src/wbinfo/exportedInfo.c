@@ -1,7 +1,7 @@
 /** 
  * @file exportedInfo.c
  * 
- * @brief prints the false file name info
+ * @brief prints the exportion info
  * 
  * @author Mehmet Mert Gunduz
  * 
@@ -11,7 +11,7 @@
 
 #include "wbinfo.h"
 
-/// @brief prints the false file name info
+/// @brief prints the exportion info
 void exportedInfo()
 {
     fprintf(stdout, "%swb:%s application data exported, %swbdata.txt created%s\n",BOLD, RESET, KMAG, KNRM);

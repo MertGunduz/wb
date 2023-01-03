@@ -114,4 +114,7 @@ void createWordsTxtFile(FILE *writeFile, FILE *readFile, int totalWords, char ta
     /* close file streams */
     fclose(writeFile);
     fclose(readFile);
+
+    /* write information */
+    importedInfo();
 }
