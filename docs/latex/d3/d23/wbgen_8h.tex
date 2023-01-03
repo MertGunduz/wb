@@ -59,7 +59,9 @@ int \mbox{\hyperlink{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}{take\+File\+Len
 void \mbox{\hyperlink{wbgen_8h_a31e8661340dd6eb461d4673b37dae13b}{export\+Menu}} ()
 \begin{DoxyCompactList}\small\item\em creates a file named wbdata.\+txt and exports the appdata to it \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wbgen_8h_a3cae038e51e684a93601751ca209d9cc}{import\+Menu}} ()
-\begin{DoxyCompactList}\small\item\em imports the exported wbdata.\+txt file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em imports the exported wbdata.\+txt file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wbgen_8h_ae0d009a528e47fbb2b8bef7f0890f0e4}{write\+Key}} (WINDOW $\ast$window, char key, char $\ast$key\+Exp, bool is\+Seperate)
+\begin{DoxyCompactList}\small\item\em the main function for writing keys for description windows \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -104,7 +106,7 @@ the word adding menu of the wb, it opens a terminal ui and prompts some data fro
 
 
 
-Definition at line 14 of file add\+Menu.\+c.
+Definition at line 16 of file add\+Menu.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}\label{wbgen_8h_a6d2161f528c9a61a2bbc007317aebe93}} 
 \index{wbgen.h@{wbgen.h}!bgColorSet@{bgColorSet}}
@@ -239,7 +241,7 @@ the main function for displaying the words
 
 
 
-Definition at line 21 of file list\+Menu.\+c.
+Definition at line 19 of file list\+Menu.\+c.
 
 \mbox{\Hypertarget{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}\label{wbgen_8h_a6fa09f63d5d398890dc110049e937a97}} 
 \index{wbgen.h@{wbgen.h}!takeFileLength@{takeFileLength}}
@@ -327,4 +329,30 @@ opens the word menu and shows the word and its other informations
 
 
 Definition at line 14 of file word\+Menu.\+c.
+
+\mbox{\Hypertarget{wbgen_8h_ae0d009a528e47fbb2b8bef7f0890f0e4}\label{wbgen_8h_ae0d009a528e47fbb2b8bef7f0890f0e4}} 
+\index{wbgen.h@{wbgen.h}!writeKey@{writeKey}}
+\index{writeKey@{writeKey}!wbgen.h@{wbgen.h}}
+\doxysubsubsection{\texorpdfstring{writeKey()}{writeKey()}}
+{\footnotesize\ttfamily void write\+Key (\begin{DoxyParamCaption}\item[{WINDOW $\ast$}]{window,  }\item[{char}]{key,  }\item[{char $\ast$}]{key\+Exp,  }\item[{bool}]{is\+Seperate }\end{DoxyParamCaption})}
+
+
+
+the main function for writing keys for description windows 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em key} & \\
+\hline
+{\em key\+Exp} & \\
+\hline
+{\em is\+Seperate} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file write\+Key.\+c.
 

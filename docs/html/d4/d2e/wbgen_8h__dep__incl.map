@@ -1,5 +1,5 @@
 <map id="src/wbgen/wbgen.h" name="src/wbgen/wbgen.h">
-<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="1139,5,1286,32"/>
+<area shape="rect" id="node1" title="the general wb library for generating word files and listing" alt="" coords="1239,5,1386,32"/>
 <area shape="rect" id="node2" href="$df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$dc/dda/addMenu_8c.html" title="the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generat..." alt="" coords="133,80,295,107"/>
 <area shape="rect" id="node4" href="$d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
@@ -13,4 +13,5 @@
 <area shape="rect" id="node12" href="$d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1935,80,2098,107"/>
 <area shape="rect" id="node13" href="$db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="2122,80,2261,107"/>
 <area shape="rect" id="node14" href="$dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="2285,80,2455,107"/>
+<area shape="rect" id="node15" href="$d2/d81/writeKey_8c.html" title="the main function for writing keys for description windows" alt="" coords="2480,80,2639,107"/>
 </map>

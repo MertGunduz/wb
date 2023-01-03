@@ -106,7 +106,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2e/wbgen_8h__dep__incl.png" border="0" usemap="#asrc_2wbgen_2wbgen_8hdep" alt=""/></div>
 <map name="asrc_2wbgen_2wbgen_8hdep" id="asrc_2wbgen_2wbgen_8hdep">
-<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="1139,5,1286,32"/>
+<area shape="rect" title="the general wb library for generating word files and listing" alt="" coords="1239,5,1386,32"/>
 <area shape="rect" href="../../df/dcd/wb_8c.html" title="the main application file of wb" alt="" coords="5,80,108,107"/>
 <area shape="rect" href="../../dc/dda/addMenu_8c.html" title="the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generat..." alt="" coords="133,80,295,107"/>
 <area shape="rect" href="../../d9/db6/bgColorSet_8c.html" title="sets the terminal to pure black and white text" alt="" coords="320,80,495,107"/>
@@ -120,6 +120,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="../../d0/d94/textInput_8c.html" title="the function for working with the text input system" alt="" coords="1935,80,2098,107"/>
 <area shape="rect" href="../../db/df6/verify_8c.html" title="the system control function for wb, it checks the usr/bin/wb (executable) and /home/...." alt="" coords="2122,80,2261,107"/>
 <area shape="rect" href="../../dd/d3f/wordMenu_8c.html" title="opens the word menu and shows the word and its other informations" alt="" coords="2285,80,2455,107"/>
+<area shape="rect" href="../../d2/d81/writeKey_8c.html" title="the main function for writing keys for description windows" alt="" coords="2480,80,2639,107"/>
 </map>
 </div>
 </div>
@@ -171,6 +172,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3cae038e51e684a93601751ca209d9cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#a3cae038e51e684a93601751ca209d9cc">importMenu</a> ()</td></tr>
 <tr class="memdesc:a3cae038e51e684a93601751ca209d9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">imports the exported wbdata.txt file  <a href="../../d3/d23/wbgen_8h.html#a3cae038e51e684a93601751ca209d9cc">More...</a><br /></td></tr>
 <tr class="separator:a3cae038e51e684a93601751ca209d9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d009a528e47fbb2b8bef7f0890f0e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/wbgen_8h.html#ae0d009a528e47fbb2b8bef7f0890f0e4">writeKey</a> (WINDOW *window, char key, char *keyExp, bool isSeperate)</td></tr>
+<tr class="memdesc:ae0d009a528e47fbb2b8bef7f0890f0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the main function for writing keys for description windows  <a href="../../d3/d23/wbgen_8h.html#ae0d009a528e47fbb2b8bef7f0890f0e4">More...</a><br /></td></tr>
+<tr class="separator:ae0d009a528e47fbb2b8bef7f0890f0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>the general wb library for generating word files and listing </p>
@@ -215,7 +219,7 @@ Functions</h2></td></tr>
 
 <p>the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generate word files </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dda/addMenu_8c_source.html#l00014">14</a> of file <a class="el" href="../../dc/dda/addMenu_8c_source.html">addMenu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dda/addMenu_8c_source.html#l00016">16</a> of file <a class="el" href="../../dc/dda/addMenu_8c_source.html">addMenu.c</a>.</p>
 
 </div>
 </div>
@@ -445,7 +449,7 @@ Functions</h2></td></tr>
 
 <p>the main function for displaying the words </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d54/listMenu_8c_source.html#l00021">21</a> of file <a class="el" href="../../d0/d54/listMenu_8c_source.html">listMenu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d54/listMenu_8c_source.html#l00019">19</a> of file <a class="el" href="../../d0/d54/listMenu_8c_source.html">listMenu.c</a>.</p>
 
 </div>
 </div>
@@ -603,6 +607,60 @@ Functions</h2></td></tr>
 <p>opens the word menu and shows the word and its other informations </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3f/wordMenu_8c_source.html#l00014">14</a> of file <a class="el" href="../../dd/d3f/wordMenu_8c_source.html">wordMenu.c</a>.</p>
+
+</div>
+</div>
+<a id="ae0d009a528e47fbb2b8bef7f0890f0e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d009a528e47fbb2b8bef7f0890f0e4">&#9670;&nbsp;</a></span>writeKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeKey </td>
+          <td>(</td>
+          <td class="paramtype">WINDOW *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>keyExp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isSeperate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the main function for writing keys for description windows </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td></td></tr>
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">keyExp</td><td></td></tr>
+    <tr><td class="paramname">isSeperate</td><td><br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d81/writeKey_8c_source.html#l00018">18</a> of file <a class="el" href="../../d2/d81/writeKey_8c_source.html">writeKey.c</a>.</p>
 
 </div>
 </div>

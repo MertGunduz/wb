@@ -10,6 +10,8 @@
 
 #include "wbgen.h"
 
+void saveEnter(WINDOW *window);
+
 /// @brief the word adding menu of the wb, it opens a terminal ui and prompts some data from the user to generate word files
 void addMenu()
 {
@@ -172,16 +174,34 @@ void addMenu()
     }
 
     /******************************************
+    *  USE WINDOW START
+    ******************************************/
+    WINDOW *useWindow = newwin(1, COLS, 18, 0);
+
+    if (useWindow != NULL)
+    {
+        wbkgd(useWindow, COLOR_PAIR(100));
+
+        waddch(useWindow, ' ');
+
+        /* exit key */
+        writeKey(useWindow, '>', "press enter to go next input", false);
+
+        fullrefresh(useWindow);
+    }
+
+
+    /******************************************
     * BACKGROUND PATTERN DESIGN
     ******************************************/
     attron(COLOR_PAIR(101));
 
     for (int i = 0; i < COLS; i++)
     {
-        mvprintw(17, i, "_");
+        mvprintw(19, i, "_");
     }
 
-    for (int i = 18; i < LINES; i++)
+    for (int i = 20; i < LINES; i++)
     {
         for (int j = 0; j < COLS; j=j+3)
         {
@@ -193,7 +213,7 @@ void addMenu()
 
     /******************************************
     * WORD INPUT
-    ******************************************/    
+    ******************************************/
     textInput(wordWindow, wordCt, strlen("WORD:"), getmaxx(wordWindow), word, 0);
     fullrefresh(wordWindow);
 
@@ -205,6 +225,9 @@ void addMenu()
 
     textInput(wordDescWindow, wordDescCt, strlen("WORD DESCRIPTION:"), getmaxx(wordDescWindow), wordDesc, 0);
     fullrefresh(wordDescWindow);
+
+    /* sets the use window output to save */
+    saveEnter(useWindow);
 
     textInput(wordExampleWindow, wordExCt, strlen("WORD EXAMPLE:"), getmaxx(wordExampleWindow), wordExample, 0);
     fullrefresh(wordExampleWindow);
@@ -242,4 +265,19 @@ void addMenu()
     delwin(wordDescWindow);
     delwin(wordExampleWindow);
     endwin();
+}
+
+/// @brief writes save the word to use panel 
+/// @param window 
+void saveEnter(WINDOW *window)
+{
+    /* clears the window */
+    wclear(window);
+
+    /* moves to correct location */
+    wmove(window, 0, 1);
+
+    /* changes text */
+    writeKey(window, '>', "press enter to save the word", false);
+    fullrefresh(window);
 }

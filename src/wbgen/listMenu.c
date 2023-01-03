@@ -14,8 +14,6 @@ void spaceAdder(WINDOW *window, int spacer);
 void resetCleaners(int *counter, char *string);
 void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen, int spacerValue, bool isLast);
 void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *word3, char *word4, char *word5, char *word6, int spacer);
-void seperate(WINDOW *window);
-void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate);
 
 /// @brief the main function for displaying the words
 void listMenu()
@@ -647,26 +645,4 @@ void createTopListPanel(WINDOW *listTopPanel, char *word1, char *word2, char *wo
                 
     wprintw(listTopPanel,  "%s", word6);
     spaceAdder(listTopPanel, spacer);
-}
-
-void seperate(WINDOW *window)
-{
-    waddch(window, ',');
-    waddch(window, ' ');
-}
-
-void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate)
-{
-    wattron(window, A_BOLD);
-    waddch(window, '[');
-    waddch(window, key);
-    waddch(window, ']');
-    wattroff(window, A_BOLD);
-        
-    wprintw(window, " %s", keyExp);
-
-    if (isSeperate)
-    {
-        seperate(window);
-    }
 }

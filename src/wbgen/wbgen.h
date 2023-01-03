@@ -33,3 +33,4 @@ void deleteMenu(char *word);
 int takeFileLength(FILE *file);
 void exportMenu();
 void importMenu();
+void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate);
