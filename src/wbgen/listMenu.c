@@ -588,7 +588,7 @@ void writeSubstringedData(WINDOW *window, char *data, int dataLen, int totalLen,
         }
     }
 
-    if (dataLen > totalLen + spacerValue)
+    if (dataLen > totalLen + spacerValue - 2)
     {
         waddch(window, '~');
 
