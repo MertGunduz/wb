@@ -187,8 +187,6 @@ void listMenu()
                 wct = 19;
             }
 
-            wct--;
-
             for (int i = 0; i < wct - 1; i++)
             {
                 /* cleaning the \n from the words */

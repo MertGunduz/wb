@@ -3,7 +3,6 @@
 wb is a lightweight vocabulary note management application that provides listing, deletion, insertion and showing functions.
 by doing that it helps user to manage words and fasters the learning process.
 
-
 ## Programming Language and Tools
 
 Programming Language: C, Bash <br>
