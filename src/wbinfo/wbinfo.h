@@ -35,3 +35,4 @@ void cantCreatewbdataFile();
 void exportedInfo();
 void noWordsInfo();
 void importedInfo();
+void deletedInfo(char *word);

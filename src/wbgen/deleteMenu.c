@@ -77,6 +77,9 @@ void deleteMenu(char *word)
         }
 
         fclose(writeFile);
+
+        /* write deletion information */
+        deletedInfo(word);
     }
     else
     {

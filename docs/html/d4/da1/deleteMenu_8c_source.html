@@ -141,13 +141,17 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        fclose(writeFile);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d8/d5c/nullWordError_8c.html#aa6d425c656a959d7bc3be1b1f8821e3d">nullWordError</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">/* write deletion information */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../dd/deb/deletedInfo_8c.html#a59d72236629013dbfffc93d6956451d4">deletedInfo</a>(word);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../d8/d5c/nullWordError_8c.html#aa6d425c656a959d7bc3be1b1f8821e3d">nullWordError</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="ttc" id="adeleteMenu_8c_html_a59b899658f70fa3bb31bebdcf3155383"><div class="ttname"><a href="../../d4/da1/deleteMenu_8c.html#a59b899658f70fa3bb31bebdcf3155383">deleteMenu</a></div><div class="ttdeci">void deleteMenu(char *word)</div><div class="ttdoc">deletes the word from words.txt and the word file itself</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da1/deleteMenu_8c_source.html#l00014">deleteMenu.c:14</a></div></div>
+<div class="ttc" id="adeletedInfo_8c_html_a59d72236629013dbfffc93d6956451d4"><div class="ttname"><a href="../../dd/deb/deletedInfo_8c.html#a59d72236629013dbfffc93d6956451d4">deletedInfo</a></div><div class="ttdeci">void deletedInfo(char *word)</div><div class="ttdoc">prints the deletion info</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/deb/deletedInfo_8c_source.html#l00015">deletedInfo.c:15</a></div></div>
 <div class="ttc" id="afileNotFoundError_8c_html_a480a036d88380c718087c5d2cc84b375"><div class="ttname"><a href="../../de/ddb/fileNotFoundError_8c.html#a480a036d88380c718087c5d2cc84b375">fileNotFoundError</a></div><div class="ttdeci">void fileNotFoundError(char *word)</div><div class="ttdoc">prints the false file name info</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddb/fileNotFoundError_8c_source.html#l00015">fileNotFoundError.c:15</a></div></div>
 <div class="ttc" id="anullWordError_8c_html_aa6d425c656a959d7bc3be1b1f8821e3d"><div class="ttname"><a href="../../d8/d5c/nullWordError_8c.html#aa6d425c656a959d7bc3be1b1f8821e3d">nullWordError</a></div><div class="ttdeci">void nullWordError()</div><div class="ttdoc">prints null word error info</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5c/nullWordError_8c_source.html#l00015">nullWordError.c:15</a></div></div>
 <div class="ttc" id="atakeFileLength_8c_html_a6fa09f63d5d398890dc110049e937a97"><div class="ttname"><a href="../../da/d3b/takeFileLength_8c.html#a6fa09f63d5d398890dc110049e937a97">takeFileLength</a></div><div class="ttdeci">int takeFileLength(FILE *file)</div><div class="ttdoc">takes the total lines of a txt file</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/takeFileLength_8c_source.html#l00017">takeFileLength.c:17</a></div></div>
