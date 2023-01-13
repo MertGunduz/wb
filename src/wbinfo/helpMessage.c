@@ -15,8 +15,7 @@
 void helpMessage()
 {
     fprintf(stdout, "usage: wb [OPTION]\n");
-    fprintf(stdout, "easily take vocabulary notes and manage them\n");
-    fprintf(stdout, "example: wb --add\n\n");
+    fprintf(stdout, "easily take vocabulary notes and manage them\n\n");
     fprintf(stdout, "options without arguments\n");
     fprintf(stdout, "%s-a, --add%s            opens a word generation ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-l, --list%s           opens a word list ui menu\n", KMAG, KNRM);
