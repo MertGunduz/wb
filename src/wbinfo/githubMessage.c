@@ -14,8 +14,8 @@
 /// @brief prints the github source code information
 void githubMessage()
 {
-    fprintf(stdout, "wb %shttps://github.com/MertGunduz/wb%s\n\n", KMAG, KNRM);
-    fprintf(stdout, "contributing to wb\n");
+    fprintf(stdout, "%shttps://github.com/MertGunduz/wb%s\n\n", KMAG, KNRM);
+    fprintf(stdout, "contributing to wb:\n");
     fprintf(stdout, "open issues: %shttps://github.com/MertGunduz/wb/issues/new%s\n", KMAG, KNRM);
     fprintf(stdout, "solve the issues and pull request: %shttps://github.com/MertGunduz/wb/issues%s\n", KMAG, KNRM);
 }
