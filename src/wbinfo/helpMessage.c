@@ -21,8 +21,6 @@ void helpMessage()
     fprintf(stdout, "%s-l, --list%s           opens a word list ui menu\n", KMAG, KNRM);
     fprintf(stdout, "%s-E, --export%s         exports wb data to wbdata.txt\n", KMAG, KNRM);
     fprintf(stdout, "%s-I, --import%s         imports wb data by using wbdata.txt\n", KMAG, KNRM);
-    fprintf(stdout, "%s-d, --delete%s         deletes a word file\n", KMAG, KNRM);
-    fprintf(stdout, "%s-w, --word%s           outputs word information\n", KMAG, KNRM);
     fprintf(stdout, "%s-h, --help%s           outputs help information\n", KMAG, KNRM);
     fprintf(stdout, "%s-v, --version%s        outputs version information\n", KMAG, KNRM);
     fprintf(stdout, "%s-g, --github%s         outputs github url information\n\n", KMAG, KNRM);
