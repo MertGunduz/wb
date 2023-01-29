@@ -10,6 +10,9 @@
  * @bug No known bugs.
 */
 
+#ifndef WBGEN_H
+#define WBGEN_H
+
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,3 +37,5 @@ int takeFileLength(FILE *file);
 void exportMenu();
 void importMenu();
 void writeKey(WINDOW *window, char key, char *keyExp, bool isSeperate);
+
+#endif /* WBGEN_H */

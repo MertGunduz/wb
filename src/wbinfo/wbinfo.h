@@ -10,6 +10,9 @@
  * @bug No known bugs.
 */
 
+#ifndef WBINFO_H
+#define WBINFO_H
+
 #include <ncurses.h>
 
 #define KNRM  "\x1B[0m"  /**< makes the the text normal color */
@@ -36,3 +39,5 @@ void exportedInfo();
 void noWordsInfo();
 void importedInfo();
 void deletedInfo(char *word);
+
+#endif /* WBINFO_H */
