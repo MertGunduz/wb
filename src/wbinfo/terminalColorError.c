@@ -14,6 +14,6 @@
 /// @brief prints the terminal color capability error
 void terminalColorError()
 {
-    fprintf(stdout, "%swb:%s terminal color capability error, %splease use a color-supporting terminal%s\n",BOLD, RESET, KMAG, KNRM);
-    fprintf(stdout, "%swb:%s try using %sxterm-256color%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s terminal color capability error, %splease use a color-supporting terminal%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s try using %sxterm-256color%s\n",BOLD, RESET, KMAG, KNRM);
 }

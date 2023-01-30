@@ -14,6 +14,6 @@
 /// @brief prints the file access error information
 void fileReadErrorMessage()
 {
-    fprintf(stdout, "%swb:%s file access error, %splease check the file permissions%s\n",BOLD, RESET, KMAG, KNRM);
-    fprintf(stdout, "%swb:%s try giving permission %s755%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s file access error, %splease check the file permissions%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s try giving permission %s755%s\n",BOLD, RESET, KMAG, KNRM);
 }

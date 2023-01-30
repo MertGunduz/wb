@@ -14,5 +14,5 @@
 /// @brief prints words.txt file not found
 void wordsTxtFileNotFoundError()
 {
-    fprintf(stdout, "%swb:%s words.txt not found, %splease check the /home/.wb/words.txt%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s words.txt not found, %splease check the /home/.wb/words.txt%s\n",BOLD, RESET, KMAG, KNRM);
 }

@@ -18,12 +18,12 @@ void verifyArgcError(int argc)
 {
     if (argc == 1)
     {
-        fprintf(stdout, "%swb:%s error in the size of argc, %smissing arguments%s\n",BOLD, RESET, KMAG, KNRM);
+        fprintf(stderr, "%swb:%s error in the size of argc, %smissing arguments%s\n",BOLD, RESET, KMAG, KNRM);
     }
     else
     {
-        fprintf(stdout, "%swb:%s error in the size of argc, %stoo many arguments%s\n", BOLD, RESET, KMAG, KNRM);
+        fprintf(stderr, "%swb:%s error in the size of argc, %stoo many arguments%s\n", BOLD, RESET, KMAG, KNRM);
     }
 
-    fprintf(stdout, "%swb:%s size of argc: %d\n", BOLD, RESET, argc);
+    fprintf(stderr, "%swb:%s size of argc: %d\n", BOLD, RESET, argc);
 }

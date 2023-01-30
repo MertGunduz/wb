@@ -14,5 +14,5 @@
 /// @brief prints null word error info
 void nullWordError()
 {
-    fprintf(stdout, "%swb:%s error in the word argument, %sthe word argument is missing%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s error in the word argument, %sthe word argument is missing%s\n",BOLD, RESET, KMAG, KNRM);
 }

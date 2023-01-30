@@ -14,6 +14,6 @@
 /// @brief prints the false file name info
 void fileNotFoundError(char *word)
 {
-    fprintf(stdout, "%swb:%s file not found, %swrong file name or file doesn't exist%s\n",BOLD, RESET, KMAG, KNRM);
-    fprintf(stdout, "%swb:%s file input: %s%s.txt%s\n",BOLD, RESET, KMAG, word, KNRM);
+    fprintf(stderr, "%swb:%s file not found, %swrong file name or file doesn't exist%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s file input: %s%s.txt%s\n",BOLD, RESET, KMAG, word, KNRM);
 }

@@ -14,5 +14,5 @@
 /// @brief prints no words info
 void noWordsInfo()
 {
-    fprintf(stdout, "%swb:%s no words in words.txt, %scan\'t export data%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s no words in words.txt, %scan\'t export data%s\n",BOLD, RESET, KMAG, KNRM);
 }

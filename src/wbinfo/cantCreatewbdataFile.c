@@ -14,5 +14,5 @@
 /// @brief prints can't create wbdata.txt file info
 void cantCreatewbdataFile()
 {
-    fprintf(stdout, "%swb:%s wbdata.txt not created, %splease check working directory permissions%s\n",BOLD, RESET, KMAG, KNRM);
+    fprintf(stderr, "%swb:%s wbdata.txt not created, %splease check working directory permissions%s\n",BOLD, RESET, KMAG, KNRM);
 }
